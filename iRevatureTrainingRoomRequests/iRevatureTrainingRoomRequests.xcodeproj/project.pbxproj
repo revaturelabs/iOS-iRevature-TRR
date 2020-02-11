@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D5FC7D0D23F349B600E5ECE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC7D0C23F349B600E5ECE8 /* AppDelegate.swift */; };
+		D5FC7D0F23F349B600E5ECE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC7D0E23F349B600E5ECE8 /* ViewController.swift */; };
+		D5FC7D1223F349B600E5ECE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5FC7D1023F349B600E5ECE8 /* Main.storyboard */; };
+		D5FC7D1523F349B600E5ECE8 /* iRevatureTrainingRoomRequests.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D5FC7D1323F349B600E5ECE8 /* iRevatureTrainingRoomRequests.xcdatamodeld */; };
+		D5FC7D1723F349B700E5ECE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5FC7D1623F349B700E5ECE8 /* Assets.xcassets */; };
+		D5FC7D1A23F349B700E5ECE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5FC7D1823F349B700E5ECE8 /* LaunchScreen.storyboard */; };
+		D5FC7D2523F349B700E5ECE8 /* iRevatureTrainingRoomRequestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC7D2423F349B700E5ECE8 /* iRevatureTrainingRoomRequestsTests.swift */; };
+		D5FC7D3023F349B700E5ECE8 /* iRevatureTrainingRoomRequestsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC7D2F23F349B700E5ECE8 /* iRevatureTrainingRoomRequestsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D5FC7D2123F349B700E5ECE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5FC7D0123F349B600E5ECE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5FC7D0823F349B600E5ECE8;
+			remoteInfo = iRevatureTrainingRoomRequests;
+		};
+		D5FC7D2C23F349B700E5ECE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5FC7D0123F349B600E5ECE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5FC7D0823F349B600E5ECE8;
+			remoteInfo = iRevatureTrainingRoomRequests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D5FC7D0923F349B600E5ECE8 /* iRevatureTrainingRoomRequests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRevatureTrainingRoomRequests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5FC7D0C23F349B600E5ECE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D5FC7D0E23F349B600E5ECE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D5FC7D1123F349B600E5ECE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D5FC7D1423F349B600E5ECE8 /* iRevatureTrainingRoomRequests.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iRevatureTrainingRoomRequests.xcdatamodel; sourceTree = "<group>"; };
+		D5FC7D1623F349B700E5ECE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D5FC7D1923F349B700E5ECE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D5FC7D1B23F349B700E5ECE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5FC7D2023F349B700E5ECE8 /* iRevatureTrainingRoomRequestsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iRevatureTrainingRoomRequestsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5FC7D2423F349B700E5ECE8 /* iRevatureTrainingRoomRequestsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRevatureTrainingRoomRequestsTests.swift; sourceTree = "<group>"; };
+		D5FC7D2623F349B700E5ECE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5FC7D2B23F349B700E5ECE8 /* iRevatureTrainingRoomRequestsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iRevatureTrainingRoomRequestsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5FC7D2F23F349B700E5ECE8 /* iRevatureTrainingRoomRequestsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRevatureTrainingRoomRequestsUITests.swift; sourceTree = "<group>"; };
+		D5FC7D3123F349B700E5ECE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D5FC7D0623F349B600E5ECE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5FC7D1D23F349B700E5ECE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5FC7D2823F349B700E5ECE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D5FC7D0023F349B600E5ECE8 = {
+			isa = PBXGroup;
+			children = (
+				D5FC7D0B23F349B600E5ECE8 /* iRevatureTrainingRoomRequests */,
+				D5FC7D2323F349B700E5ECE8 /* iRevatureTrainingRoomRequestsTests */,
+				D5FC7D2E23F349B700E5ECE8 /* iRevatureTrainingRoomRequestsUITests */,
+				D5FC7D0A23F349B600E5ECE8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D5FC7D0A23F349B600E5ECE8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D5FC7D0923F349B600E5ECE8 /* iRevatureTrainingRoomRequests.app */,
+				D5FC7D2023F349B700E5ECE8 /* iRevatureTrainingRoomRequestsTests.xctest */,
+				D5FC7D2B23F349B700E5ECE8 /* iRevatureTrainingRoomRequestsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D5FC7D0B23F349B600E5ECE8 /* iRevatureTrainingRoomRequests */ = {
+			isa = PBXGroup;
+			children = (
+				D5FC7D3D23F34A4C00E5ECE8 /* Account */,
+				D5FC7D0C23F349B600E5ECE8 /* AppDelegate.swift */,
+				D5FC7D0E23F349B600E5ECE8 /* ViewController.swift */,
+				D5FC7D1023F349B600E5ECE8 /* Main.storyboard */,
+				D5FC7D1623F349B700E5ECE8 /* Assets.xcassets */,
+				D5FC7D1823F349B700E5ECE8 /* LaunchScreen.storyboard */,
+				D5FC7D1B23F349B700E5ECE8 /* Info.plist */,
+				D5FC7D1323F349B600E5ECE8 /* iRevatureTrainingRoomRequests.xcdatamodeld */,
+			);
+			path = iRevatureTrainingRoomRequests;
+			sourceTree = "<group>";
+		};
+		D5FC7D2323F349B700E5ECE8 /* iRevatureTrainingRoomRequestsTests */ = {
+			isa = PBXGroup;
+			children = (
+				D5FC7D2423F349B700E5ECE8 /* iRevatureTrainingRoomRequestsTests.swift */,
+				D5FC7D2623F349B700E5ECE8 /* Info.plist */,
+			);
+			path = iRevatureTrainingRoomRequestsTests;
+			sourceTree = "<group>";
+		};
+		D5FC7D2E23F349B700E5ECE8 /* iRevatureTrainingRoomRequestsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D5FC7D2F23F349B700E5ECE8 /* iRevatureTrainingRoomRequestsUITests.swift */,
+				D5FC7D3123F349B700E5ECE8 /* Info.plist */,
+			);
+			path = iRevatureTrainingRoomRequestsUITests;
+			sourceTree = "<group>";
+		};
+		D5FC7D3D23F34A4C00E5ECE8 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D5FC7D0823F349B600E5ECE8 /* iRevatureTrainingRoomRequests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5FC7D3423F349B700E5ECE8 /* Build configuration list for PBXNativeTarget "iRevatureTrainingRoomRequests" */;
+			buildPhases = (
+				D5FC7D0523F349B600E5ECE8 /* Sources */,
+				D5FC7D0623F349B600E5ECE8 /* Frameworks */,
+				D5FC7D0723F349B600E5ECE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iRevatureTrainingRoomRequests;
+			productName = iRevatureTrainingRoomRequests;
+			productReference = D5FC7D0923F349B600E5ECE8 /* iRevatureTrainingRoomRequests.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D5FC7D1F23F349B700E5ECE8 /* iRevatureTrainingRoomRequestsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5FC7D3723F349B700E5ECE8 /* Build configuration list for PBXNativeTarget "iRevatureTrainingRoomRequestsTests" */;
+			buildPhases = (
+				D5FC7D1C23F349B700E5ECE8 /* Sources */,
+				D5FC7D1D23F349B700E5ECE8 /* Frameworks */,
+				D5FC7D1E23F349B700E5ECE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5FC7D2223F349B700E5ECE8 /* PBXTargetDependency */,
+			);
+			name = iRevatureTrainingRoomRequestsTests;
+			productName = iRevatureTrainingRoomRequestsTests;
+			productReference = D5FC7D2023F349B700E5ECE8 /* iRevatureTrainingRoomRequestsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D5FC7D2A23F349B700E5ECE8 /* iRevatureTrainingRoomRequestsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5FC7D3A23F349B700E5ECE8 /* Build configuration list for PBXNativeTarget "iRevatureTrainingRoomRequestsUITests" */;
+			buildPhases = (
+				D5FC7D2723F349B700E5ECE8 /* Sources */,
+				D5FC7D2823F349B700E5ECE8 /* Frameworks */,
+				D5FC7D2923F349B700E5ECE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5FC7D2D23F349B700E5ECE8 /* PBXTargetDependency */,
+			);
+			name = iRevatureTrainingRoomRequestsUITests;
+			productName = iRevatureTrainingRoomRequestsUITests;
+			productReference = D5FC7D2B23F349B700E5ECE8 /* iRevatureTrainingRoomRequestsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D5FC7D0123F349B600E5ECE8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = revature;
+				TargetAttributes = {
+					D5FC7D0823F349B600E5ECE8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					D5FC7D1F23F349B700E5ECE8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D5FC7D0823F349B600E5ECE8;
+					};
+					D5FC7D2A23F349B700E5ECE8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D5FC7D0823F349B600E5ECE8;
+					};
+				};
+			};
+			buildConfigurationList = D5FC7D0423F349B600E5ECE8 /* Build configuration list for PBXProject "iRevatureTrainingRoomRequests" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D5FC7D0023F349B600E5ECE8;
+			productRefGroup = D5FC7D0A23F349B600E5ECE8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D5FC7D0823F349B600E5ECE8 /* iRevatureTrainingRoomRequests */,
+				D5FC7D1F23F349B700E5ECE8 /* iRevatureTrainingRoomRequestsTests */,
+				D5FC7D2A23F349B700E5ECE8 /* iRevatureTrainingRoomRequestsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D5FC7D0723F349B600E5ECE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5FC7D1A23F349B700E5ECE8 /* LaunchScreen.storyboard in Resources */,
+				D5FC7D1723F349B700E5ECE8 /* Assets.xcassets in Resources */,
+				D5FC7D1223F349B600E5ECE8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5FC7D1E23F349B700E5ECE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5FC7D2923F349B700E5ECE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D5FC7D0523F349B600E5ECE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5FC7D1523F349B600E5ECE8 /* iRevatureTrainingRoomRequests.xcdatamodeld in Sources */,
+				D5FC7D0F23F349B600E5ECE8 /* ViewController.swift in Sources */,
+				D5FC7D0D23F349B600E5ECE8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5FC7D1C23F349B700E5ECE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5FC7D2523F349B700E5ECE8 /* iRevatureTrainingRoomRequestsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5FC7D2723F349B700E5ECE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5FC7D3023F349B700E5ECE8 /* iRevatureTrainingRoomRequestsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D5FC7D2223F349B700E5ECE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5FC7D0823F349B600E5ECE8 /* iRevatureTrainingRoomRequests */;
+			targetProxy = D5FC7D2123F349B700E5ECE8 /* PBXContainerItemProxy */;
+		};
+		D5FC7D2D23F349B700E5ECE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5FC7D0823F349B600E5ECE8 /* iRevatureTrainingRoomRequests */;
+			targetProxy = D5FC7D2C23F349B700E5ECE8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D5FC7D1023F349B600E5ECE8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D5FC7D1123F349B600E5ECE8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D5FC7D1823F349B700E5ECE8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D5FC7D1923F349B700E5ECE8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D5FC7D3223F349B700E5ECE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D5FC7D3323F349B700E5ECE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D5FC7D3523F349B700E5ECE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KX3Q6P29G3;
+				INFOPLIST_FILE = iRevatureTrainingRoomRequests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.revature.iRevatureTrainingRoomRequests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D5FC7D3623F349B700E5ECE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KX3Q6P29G3;
+				INFOPLIST_FILE = iRevatureTrainingRoomRequests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.revature.iRevatureTrainingRoomRequests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D5FC7D3823F349B700E5ECE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KX3Q6P29G3;
+				INFOPLIST_FILE = iRevatureTrainingRoomRequestsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.revature.iRevatureTrainingRoomRequestsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iRevatureTrainingRoomRequests.app/iRevatureTrainingRoomRequests";
+			};
+			name = Debug;
+		};
+		D5FC7D3923F349B700E5ECE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KX3Q6P29G3;
+				INFOPLIST_FILE = iRevatureTrainingRoomRequestsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.revature.iRevatureTrainingRoomRequestsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iRevatureTrainingRoomRequests.app/iRevatureTrainingRoomRequests";
+			};
+			name = Release;
+		};
+		D5FC7D3B23F349B700E5ECE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KX3Q6P29G3;
+				INFOPLIST_FILE = iRevatureTrainingRoomRequestsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.revature.iRevatureTrainingRoomRequestsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iRevatureTrainingRoomRequests;
+			};
+			name = Debug;
+		};
+		D5FC7D3C23F349B700E5ECE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KX3Q6P29G3;
+				INFOPLIST_FILE = iRevatureTrainingRoomRequestsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.revature.iRevatureTrainingRoomRequestsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iRevatureTrainingRoomRequests;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D5FC7D0423F349B600E5ECE8 /* Build configuration list for PBXProject "iRevatureTrainingRoomRequests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5FC7D3223F349B700E5ECE8 /* Debug */,
+				D5FC7D3323F349B700E5ECE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5FC7D3423F349B700E5ECE8 /* Build configuration list for PBXNativeTarget "iRevatureTrainingRoomRequests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5FC7D3523F349B700E5ECE8 /* Debug */,
+				D5FC7D3623F349B700E5ECE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5FC7D3723F349B700E5ECE8 /* Build configuration list for PBXNativeTarget "iRevatureTrainingRoomRequestsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5FC7D3823F349B700E5ECE8 /* Debug */,
+				D5FC7D3923F349B700E5ECE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5FC7D3A23F349B700E5ECE8 /* Build configuration list for PBXNativeTarget "iRevatureTrainingRoomRequestsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5FC7D3B23F349B700E5ECE8 /* Debug */,
+				D5FC7D3C23F349B700E5ECE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D5FC7D1323F349B600E5ECE8 /* iRevatureTrainingRoomRequests.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D5FC7D1423F349B600E5ECE8 /* iRevatureTrainingRoomRequests.xcdatamodel */,
+			);
+			currentVersion = D5FC7D1423F349B600E5ECE8 /* iRevatureTrainingRoomRequests.xcdatamodel */;
+			path = iRevatureTrainingRoomRequests.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D5FC7D0123F349B600E5ECE8 /* Project object */;
+}
