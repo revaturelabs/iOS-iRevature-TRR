@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		845D758323F49CC30099D8FF /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = D5FC7D1B23F349B700E5ECE8 /* Info.plist */; };
 		D5FC7D0D23F349B600E5ECE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC7D0C23F349B600E5ECE8 /* AppDelegate.swift */; };
 		D5FC7D0F23F349B600E5ECE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC7D0E23F349B600E5ECE8 /* ViewController.swift */; };
 		D5FC7D1223F349B600E5ECE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5FC7D1023F349B600E5ECE8 /* Main.storyboard */; };
@@ -478,6 +479,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845D758323F49CC30099D8FF /* Info.plist in Sources */,
 				D5FC7D1523F349B600E5ECE8 /* iRevatureTrainingRoomRequests.xcdatamodeld in Sources */,
 				D5FC7D0F23F349B600E5ECE8 /* ViewController.swift in Sources */,
 				D5FC7D0D23F349B600E5ECE8 /* AppDelegate.swift in Sources */,
