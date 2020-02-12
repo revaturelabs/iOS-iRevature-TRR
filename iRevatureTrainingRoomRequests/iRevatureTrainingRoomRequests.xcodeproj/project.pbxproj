@@ -648,7 +648,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KX3Q6P29G3;
-				INFOPLIST_FILE = iRevatureTrainingRoomRequests/Applicatio/ConfigurationInfo.plist;
+				INFOPLIST_FILE = iRevatureTrainingRoomRequests/Application/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.revature.iRevatureTrainingRoomRequests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -663,7 +663,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KX3Q6P29G3;
-				INFOPLIST_FILE = iRevatureTrainingRoomRequests/Applicatio/ConfigurationInfo.plist;
+				INFOPLIST_FILE = iRevatureTrainingRoomRequests/Application/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.revature.iRevatureTrainingRoomRequests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
