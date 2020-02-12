@@ -76,6 +76,214 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D514CA9B23F44611009C8D6F /* Recources */ = {
+			isa = PBXGroup;
+			children = (
+				D5FC7D1623F349B700E5ECE8 /* Assets.xcassets */,
+			);
+			path = Recources;
+			sourceTree = "<group>";
+		};
+		D514CA9C23F44626009C8D6F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D5FC7D1823F349B700E5ECE8 /* LaunchScreen.storyboard */,
+				D5FC7D1023F349B600E5ECE8 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D514CA9D23F4462F009C8D6F /* Global-Common */ = {
+			isa = PBXGroup;
+			children = (
+				D514CAA523F44709009C8D6F /* Constants */,
+				D514CAA423F44702009C8D6F /* UI Elements */,
+				D514CAA323F446FA009C8D6F /* Extensions */,
+				D514CAA223F446F3009C8D6F /* Utilities */,
+			);
+			path = "Global-Common";
+			sourceTree = "<group>";
+		};
+		D514CA9E23F4463D009C8D6F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D514CAA723F44721009C8D6F /* API */,
+				D514CAA623F4471A009C8D6F /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D514CA9F23F44662009C8D6F /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				D514CAAA23F44737009C8D6F /* Repository */,
+				D514CAA923F44732009C8D6F /* Common */,
+				D514CAA823F44729009C8D6F /* Data Access */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		D514CAA023F44694009C8D6F /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				D514CAAE23F44764009C8D6F /* Common */,
+				D514CAAD23F4475A009C8D6F /* Business Services */,
+				D514CAAC23F44750009C8D6F /* Business Logic */,
+				D514CAAB23F44747009C8D6F /* Entities */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		D514CAA123F4469C009C8D6F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D514CAB223F448C3009C8D6F /* Modules */,
+				D514CAB123F448B9009C8D6F /* Configuration */,
+				D514CAB023F448B2009C8D6F /* Protocol */,
+				D514CAAF23F448AA009C8D6F /* Delegate */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D514CAA223F446F3009C8D6F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D514CAA323F446FA009C8D6F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D514CAA423F44702009C8D6F /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "UI Elements";
+			sourceTree = "<group>";
+		};
+		D514CAA523F44709009C8D6F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		D514CAA623F4471A009C8D6F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		D514CAA723F44721009C8D6F /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		D514CAA823F44729009C8D6F /* Data Access */ = {
+			isa = PBXGroup;
+			children = (
+				D5FC7D1323F349B600E5ECE8 /* iRevatureTrainingRoomRequests.xcdatamodeld */,
+			);
+			path = "Data Access";
+			sourceTree = "<group>";
+		};
+		D514CAA923F44732009C8D6F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D514CAAA23F44737009C8D6F /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		D514CAAB23F44747009C8D6F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		D514CAAC23F44750009C8D6F /* Business Logic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Business Logic";
+			sourceTree = "<group>";
+		};
+		D514CAAD23F4475A009C8D6F /* Business Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Business Services";
+			sourceTree = "<group>";
+		};
+		D514CAAE23F44764009C8D6F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D514CAAF23F448AA009C8D6F /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				D5FC7D0C23F349B600E5ECE8 /* AppDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		D514CAB023F448B2009C8D6F /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		D514CAB123F448B9009C8D6F /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				D5FC7D1B23F349B700E5ECE8 /* Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		D514CAB223F448C3009C8D6F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D514CAB423F448EF009C8D6F /* View Controllers */,
+				D514CAB323F448E6009C8D6F /* Views */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D514CAB323F448E6009C8D6F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D514CAB423F448EF009C8D6F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D5FC7D0E23F349B600E5ECE8 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		D5FC7D0023F349B600E5ECE8 = {
 			isa = PBXGroup;
 			children = (
@@ -100,13 +308,13 @@
 			isa = PBXGroup;
 			children = (
 				D5FC7D3D23F34A4C00E5ECE8 /* Account */,
-				D5FC7D0C23F349B600E5ECE8 /* AppDelegate.swift */,
-				D5FC7D0E23F349B600E5ECE8 /* ViewController.swift */,
-				D5FC7D1023F349B600E5ECE8 /* Main.storyboard */,
-				D5FC7D1623F349B700E5ECE8 /* Assets.xcassets */,
-				D5FC7D1823F349B700E5ECE8 /* LaunchScreen.storyboard */,
-				D5FC7D1B23F349B700E5ECE8 /* Info.plist */,
-				D5FC7D1323F349B600E5ECE8 /* iRevatureTrainingRoomRequests.xcdatamodeld */,
+				D514CA9B23F44611009C8D6F /* Recources */,
+				D514CA9C23F44626009C8D6F /* Storyboards */,
+				D514CA9D23F4462F009C8D6F /* Global-Common */,
+				D514CA9E23F4463D009C8D6F /* Services */,
+				D514CA9F23F44662009C8D6F /* Persistence */,
+				D514CAA023F44694009C8D6F /* Business */,
+				D514CAA123F4469C009C8D6F /* Application */,
 			);
 			path = iRevatureTrainingRoomRequests;
 			sourceTree = "<group>";
