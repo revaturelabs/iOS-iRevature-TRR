@@ -11,6 +11,13 @@
 		845D758523F4A6760099D8FF /* LoginToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845D758423F4A6760099D8FF /* LoginToken.storyboard */; };
 		847F3D4523F72154001A4E84 /* LocationPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847F3D4423F72154001A4E84 /* LocationPicker.storyboard */; };
 		847F3D4723F727C5001A4E84 /* TrainerWorkFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847F3D4623F727C5001A4E84 /* TrainerWorkFlow.storyboard */; };
+		D5FBA1B923F71F8D00237B0A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1B823F71F8D00237B0A /* User.swift */; };
+		D5FBA1BB23F71FD300237B0A /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1BA23F71FD300237B0A /* Room.swift */; };
+		D5FBA1BD23F7203A00237B0A /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1BC23F7203A00237B0A /* Status.swift */; };
+		D5FBA1BF23F720E700237B0A /* Campuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1BE23F720E700237B0A /* Campuses.swift */; };
+		D5FBA1C123F721C000237B0A /* RoomRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1C023F721C000237B0A /* RoomRequest.swift */; };
+		D5FBA1C323F7220C00237B0A /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1C223F7220C00237B0A /* RequestType.swift */; };
+		D5FBA1C523F7224D00237B0A /* SwapRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1C423F7224D00237B0A /* SwapRequest.swift */; };
 		D5FC7D0D23F349B600E5ECE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC7D0C23F349B600E5ECE8 /* AppDelegate.swift */; };
 		D5FC7D0F23F349B600E5ECE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC7D0E23F349B600E5ECE8 /* ViewController.swift */; };
 		D5FC7D1223F349B600E5ECE8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5FC7D1023F349B600E5ECE8 /* Login.storyboard */; };
@@ -42,6 +49,13 @@
 		845D758423F4A6760099D8FF /* LoginToken.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginToken.storyboard; sourceTree = "<group>"; };
 		847F3D4423F72154001A4E84 /* LocationPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationPicker.storyboard; sourceTree = "<group>"; };
 		847F3D4623F727C5001A4E84 /* TrainerWorkFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrainerWorkFlow.storyboard; sourceTree = "<group>"; };
+		D5FBA1B823F71F8D00237B0A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D5FBA1BA23F71FD300237B0A /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		D5FBA1BC23F7203A00237B0A /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		D5FBA1BE23F720E700237B0A /* Campuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campuses.swift; sourceTree = "<group>"; };
+		D5FBA1C023F721C000237B0A /* RoomRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomRequest.swift; sourceTree = "<group>"; };
+		D5FBA1C223F7220C00237B0A /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
+		D5FBA1C423F7224D00237B0A /* SwapRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapRequest.swift; sourceTree = "<group>"; };
 		D5FC7D0923F349B600E5ECE8 /* iRevatureTrainingRoomRequests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRevatureTrainingRoomRequests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5FC7D0C23F349B600E5ECE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5FC7D0E23F349B600E5ECE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -222,6 +236,13 @@
 		D514CAAB23F44747009C8D6F /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				D5FBA1B823F71F8D00237B0A /* User.swift */,
+				D5FBA1BA23F71FD300237B0A /* Room.swift */,
+				D5FBA1BC23F7203A00237B0A /* Status.swift */,
+				D5FBA1BE23F720E700237B0A /* Campuses.swift */,
+				D5FBA1C023F721C000237B0A /* RoomRequest.swift */,
+				D5FBA1C223F7220C00237B0A /* RequestType.swift */,
+				D5FBA1C423F7224D00237B0A /* SwapRequest.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -493,8 +514,15 @@
 			files = (
 				845D758323F49CC30099D8FF /* Info.plist in Sources */,
 				D5FC7D1523F349B600E5ECE8 /* iRevatureTrainingRoomRequests.xcdatamodeld in Sources */,
+				D5FBA1C523F7224D00237B0A /* SwapRequest.swift in Sources */,
+				D5FBA1BF23F720E700237B0A /* Campuses.swift in Sources */,
+				D5FBA1C123F721C000237B0A /* RoomRequest.swift in Sources */,
+				D5FBA1BD23F7203A00237B0A /* Status.swift in Sources */,
+				D5FBA1BB23F71FD300237B0A /* Room.swift in Sources */,
 				D5FC7D0F23F349B600E5ECE8 /* ViewController.swift in Sources */,
+				D5FBA1B923F71F8D00237B0A /* User.swift in Sources */,
 				D5FC7D0D23F349B600E5ECE8 /* AppDelegate.swift in Sources */,
+				D5FBA1C323F7220C00237B0A /* RequestType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
