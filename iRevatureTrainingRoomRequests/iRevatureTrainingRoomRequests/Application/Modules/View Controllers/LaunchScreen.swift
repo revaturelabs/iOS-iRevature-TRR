@@ -9,8 +9,19 @@
 import Foundation
 
 class LaunchScreen: BaseController{
-    let userInfo = UserInfoBusinessService.getUserInfo()
+    
+    var userInfoBusinessService: UserInfoBusinessService = UserInfoBusinessService()
+
     override func viewDidAppear(_ animated: Bool) {
-        <#code#>
+        if let currentUserInfo:User = userInfoBusinessService.getUserInfo(){
+            let keepLoggedIn = currentUserInfo.keepmelogged
+            
+            if keepLoggedIn == true{
+                performSegue(withIdentifier: "HomeScreen", sender: <#T##Any?#>)
+            }
+            else{
+                performSegue(withIdentifier: "Login", sender: <#T##Any?#>)
+            }
+        }
     }
 }

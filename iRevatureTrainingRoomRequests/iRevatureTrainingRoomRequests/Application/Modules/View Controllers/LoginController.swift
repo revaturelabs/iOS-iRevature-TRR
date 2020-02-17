@@ -12,6 +12,15 @@ import os.log
 
 class LoginController: BaseController {
 
+
+    @IBOutlet weak var keepMeLoggedSwitch: UISwitch!
+    
+    @IBOutlet weak var failureMsgLabel: UILabel!
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    
+    var userInfoBusinessService: UserInfoBusinessService = UserInfoBusinessService()
     
     override func viewDidLoad() {
         
@@ -28,21 +37,7 @@ class LoginController: BaseController {
          
         }
         
-       
-        
-     
-                   
-        
     }
-
-    @IBOutlet weak var keepMeLoggedSwitch: UISwitch!
-    
-    @IBOutlet weak var failureMsgLabel: UILabel!
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
-    
-    var userInfoBusinessService: UserInfoBusinessService = UserInfoBusinessService()
     
     //Perform login - event handler for Login button
     @IBAction func loginButton(_ sender: Any) {
@@ -55,17 +50,12 @@ class LoginController: BaseController {
         
         performAuthentication(loginName: username, password: password)
         
-        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        
-    }
     
     //Do login validation
     func performAuthentication(loginName:String,password:String)
     {
-        
         
         let userKeepMeLogged = keepMeLoggedSwitch.isOn
         
@@ -91,7 +81,6 @@ class LoginController: BaseController {
             os_log("Login failed",log: OSLog.default, type: .info)
             debugPrint("Login Failed")
         }
-        
         
     }
 
