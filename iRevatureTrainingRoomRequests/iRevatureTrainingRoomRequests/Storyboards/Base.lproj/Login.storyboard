@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="LoginPage" id="BYZ-38-t0r" customClass="ViewController" customModule="iRevatureTrainingRoomRequests" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="BYZ-38-t0r" customClass="LoginController" customModule="iRevatureTrainingRoomRequests" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,7 +51,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginTokenButton:" destination="BYZ-38-t0r" eventType="touchDown" id="bY7-V9-kyD"/>
+                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchDown" id="aJd-kB-R07"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hwU-nU-R1o">
@@ -88,8 +88,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="val-aQ-5XP"/>
                     <connections>
-                        <outlet property="passwordTextField" destination="htw-Sc-w9J" id="C9H-xL-mGd"/>
-                        <outlet property="usernameTextField" destination="HLT-5S-Dm4" id="Pn3-jJ-PIi"/>
+                        <outlet property="passwordTextField" destination="htw-Sc-w9J" id="sBy-w5-ciJ"/>
+                        <outlet property="usernameTextField" destination="HLT-5S-Dm4" id="FDU-VZ-a7N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

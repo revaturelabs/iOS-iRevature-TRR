@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login Controller-->
         <scene sceneID="yWH-YD-VJI">
             <objects>
-                <viewController storyboardIdentifier="LoginToken" id="vEm-Sh-p1b" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginToken" id="vEm-Sh-p1b" customClass="LoginController" customModule="iRevatureTrainingRoomRequests" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XFo-lu-0qi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

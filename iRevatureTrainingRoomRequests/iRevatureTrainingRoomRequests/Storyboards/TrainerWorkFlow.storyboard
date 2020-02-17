@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Room Picker Controller-->
         <scene sceneID="ycZ-l5-yvK">
             <objects>
-                <viewController storyboardIdentifier="TrainerWorkFlow0" id="aut-aC-yUz" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrainerWorkFlow0" id="aut-aC-yUz" customClass="RoomPickerController" customModule="iRevatureTrainingRoomRequests" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rlc-9R-Fij">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,10 +115,10 @@
             </objects>
             <point key="canvasLocation" x="179.71014492753625" y="131.91964285714286"/>
         </scene>
-        <!--View Controller-->
+        <!--Swap Controller-->
         <scene sceneID="khN-Og-jZV">
             <objects>
-                <viewController storyboardIdentifier="TrainerWorkFlow1" id="1aD-Ho-K7f" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrainerWorkFlow1" id="1aD-Ho-K7f" customClass="SwapController" customModule="iRevatureTrainingRoomRequests" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s9s-4O-YiH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -257,10 +257,10 @@
             </objects>
             <point key="canvasLocation" x="918.84057971014499" y="131.91964285714286"/>
         </scene>
-        <!--View Controller-->
+        <!--Request Controller-->
         <scene sceneID="3fU-ye-ZSj">
             <objects>
-                <viewController storyboardIdentifier="TrainerWorkFlow2" id="mXB-5c-bgT" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrainerWorkFlow2" id="mXB-5c-bgT" customClass="RequestController" customModule="iRevatureTrainingRoomRequests" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="StR-MA-AtG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

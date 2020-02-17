@@ -11,7 +11,7 @@
         <!--Title-->
         <scene sceneID="SUi-jY-WmL">
             <objects>
-                <viewController storyboardIdentifier="LocationPicker" id="tFo-WJ-o2v" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LocationPicker" id="tFo-WJ-o2v" customClass="LocationPickerController" customModule="iRevatureTrainingRoomRequests" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jwQ-ML-luP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="submitButton:" destination="fWW-bD-EgW" eventType="touchDown" id="he2-jf-5rp"/>
+                                    <action selector="submitButton:" destination="tFo-WJ-o2v" eventType="touchDown" id="LAL-p9-zAD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLb-8A-PzG">
@@ -52,7 +52,7 @@
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
                                 <state key="normal" title="&lt; Log Out"/>
                                 <connections>
-                                    <action selector="logOutButton:" destination="fWW-bD-EgW" eventType="touchDown" id="lvb-6E-714"/>
+                                    <action selector="logOutButton:" destination="tFo-WJ-o2v" eventType="touchDown" id="foX-jX-aK9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -60,9 +60,11 @@
                         <viewLayoutGuide key="safeArea" id="C1i-a2-Hyb"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="R58-kU-e0o"/>
+                    <connections>
+                        <outlet property="welcomeTextField" destination="iU4-ST-c0T" id="KOn-TR-fSY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oqv-Ko-YsD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="fWW-bD-EgW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="102.89855072463769" y="131.91964285714286"/>
         </scene>
