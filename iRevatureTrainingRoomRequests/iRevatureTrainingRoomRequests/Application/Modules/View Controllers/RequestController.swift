@@ -8,7 +8,6 @@
 
 import UIKit
 
-class Request
-Controller: BaseController {
+class RequestController: BaseController {
 }
 

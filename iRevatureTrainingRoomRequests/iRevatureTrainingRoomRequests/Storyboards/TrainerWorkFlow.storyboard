@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aut-aC-yUz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="ycZ-l5-yvK">
             <objects>
-                <viewController id="aut-aC-yUz" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrainerWorkFlow0" id="aut-aC-yUz" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rlc-9R-Fij">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,6 +102,9 @@
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="1aD-Ho-K7f" kind="show" id="rl9-Xw-nHN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -115,9 +118,9 @@
         <!--View Controller-->
         <scene sceneID="khN-Og-jZV">
             <objects>
-                <viewController id="1aD-Ho-K7f" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrainerWorkFlow1" id="1aD-Ho-K7f" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s9s-4O-YiH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0g-oY-KxR">
@@ -232,6 +235,9 @@
                                     <segment title="Request Room Swap"/>
                                     <segment title="Request Room"/>
                                 </segments>
+                                <connections>
+                                    <segue destination="mXB-5c-bgT" kind="show" id="805-5L-OKJ"/>
+                                </connections>
                             </segmentedControl>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vsS-Ai-Hqn">
                                 <rect key="frame" x="20" y="595" width="374" height="128"/>
@@ -245,6 +251,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="MdC-Vo-5wz"/>
                     </view>
+                    <navigationItem key="navigationItem" id="kaN-rM-s7k"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zJ4-Jm-5nu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -253,9 +260,9 @@
         <!--View Controller-->
         <scene sceneID="3fU-ye-ZSj">
             <objects>
-                <viewController id="mXB-5c-bgT" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrainerWorkFlow2" id="mXB-5c-bgT" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="StR-MA-AtG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILN-ek-huG">
@@ -408,6 +415,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Nvz-pK-x8o"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8R2-lb-0Q2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FLN-Qi-HoI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

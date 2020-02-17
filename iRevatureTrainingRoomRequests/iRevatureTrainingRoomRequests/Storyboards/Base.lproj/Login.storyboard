@@ -51,8 +51,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginButton0:" destination="BYZ-38-t0r" eventType="touchDown" id="qi0-XR-K0B"/>
-                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchDown" id="aIY-iS-j2G"/>
+                                    <action selector="loginTokenButton:" destination="BYZ-38-t0r" eventType="touchDown" id="bY7-V9-kyD"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hwU-nU-R1o">
@@ -89,11 +88,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="val-aQ-5XP"/>
                     <connections>
-                        <outlet property="loginButton" destination="XPn-uW-yAn" id="sY0-dU-yoM"/>
-                        <outlet property="loginButton0" destination="XPn-uW-yAn" id="xd9-1H-gsW"/>
-                        <outlet property="passwordTextField" destination="htw-Sc-w9J" id="WiI-Zp-Pq9"/>
-                        <outlet property="passwordTextField0" destination="htw-Sc-w9J" id="68U-xt-qEo"/>
-                        <outlet property="usernameTextField" destination="HLT-5S-Dm4" id="Cap-2q-3MB"/>
+                        <outlet property="passwordTextField" destination="htw-Sc-w9J" id="C9H-xL-mGd"/>
+                        <outlet property="usernameTextField" destination="HLT-5S-Dm4" id="Pn3-jJ-PIi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
