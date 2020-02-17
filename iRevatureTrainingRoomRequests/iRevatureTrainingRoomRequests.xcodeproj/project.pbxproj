@@ -11,6 +11,7 @@
 		845D758523F4A6760099D8FF /* LoginToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845D758423F4A6760099D8FF /* LoginToken.storyboard */; };
 		847F3D4523F72154001A4E84 /* LocationPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847F3D4423F72154001A4E84 /* LocationPicker.storyboard */; };
 		847F3D4723F727C5001A4E84 /* TrainerWorkFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847F3D4623F727C5001A4E84 /* TrainerWorkFlow.storyboard */; };
+		847F3D4923FB38CD001A4E84 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F3D4823FB38CD001A4E84 /* LaunchScreen.swift */; };
 		D5FBA1B923F71F8D00237B0A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1B823F71F8D00237B0A /* User.swift */; };
 		D5FBA1BB23F71FD300237B0A /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1BA23F71FD300237B0A /* Room.swift */; };
 		D5FBA1BD23F7203A00237B0A /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1BC23F7203A00237B0A /* Status.swift */; };
@@ -31,6 +32,8 @@
 		D5FC7D1A23F349B700E5ECE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5FC7D1823F349B700E5ECE8 /* LaunchScreen.storyboard */; };
 		D5FC7D2523F349B700E5ECE8 /* iRevatureTrainingRoomRequestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC7D2423F349B700E5ECE8 /* iRevatureTrainingRoomRequestsTests.swift */; };
 		D5FC7D3023F349B700E5ECE8 /* iRevatureTrainingRoomRequestsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC7D2F23F349B700E5ECE8 /* iRevatureTrainingRoomRequestsUITests.swift */; };
+		E2CA5F6923FB229500EE9203 /* UserInfoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CA5F6823FB229500EE9203 /* UserInfoProtocol.swift */; };
+		E2CA5F6B23FB238700EE9203 /* UserInfoBusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CA5F6A23FB238700EE9203 /* UserInfoBusinessService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,7 @@
 		845D758423F4A6760099D8FF /* LoginToken.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginToken.storyboard; sourceTree = "<group>"; };
 		847F3D4423F72154001A4E84 /* LocationPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationPicker.storyboard; sourceTree = "<group>"; };
 		847F3D4623F727C5001A4E84 /* TrainerWorkFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrainerWorkFlow.storyboard; sourceTree = "<group>"; };
+		847F3D4823FB38CD001A4E84 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		D5FBA1B823F71F8D00237B0A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D5FBA1BA23F71FD300237B0A /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		D5FBA1BC23F7203A00237B0A /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 		D5FC7D2B23F349B700E5ECE8 /* iRevatureTrainingRoomRequestsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iRevatureTrainingRoomRequestsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5FC7D2F23F349B700E5ECE8 /* iRevatureTrainingRoomRequestsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRevatureTrainingRoomRequestsUITests.swift; sourceTree = "<group>"; };
 		D5FC7D3123F349B700E5ECE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2CA5F6823FB229500EE9203 /* UserInfoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoProtocol.swift; sourceTree = "<group>"; };
+		E2CA5F6A23FB238700EE9203 /* UserInfoBusinessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoBusinessService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +273,7 @@
 		D514CAAD23F4475A009C8D6F /* Business Services */ = {
 			isa = PBXGroup;
 			children = (
+				E2CA5F6A23FB238700EE9203 /* UserInfoBusinessService.swift */,
 			);
 			path = "Business Services";
 			sourceTree = "<group>";
@@ -289,6 +296,7 @@
 		D514CAB023F448B2009C8D6F /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				E2CA5F6823FB229500EE9203 /* UserInfoProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -326,6 +334,7 @@
 				D5FBA1CA23F7295C00237B0A /* RoomPickerController.swift */,
 				D5FBA1CC23F7298C00237B0A /* RequestController.swift */,
 				D5FBA1CE23F7299A00237B0A /* SwapController.swift */,
+				847F3D4823FB38CD001A4E84 /* LaunchScreen.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -531,12 +540,15 @@
 				D5FC7D1523F349B600E5ECE8 /* iRevatureTrainingRoomRequests.xcdatamodeld in Sources */,
 				D5FBA1C523F7224D00237B0A /* SwapRequest.swift in Sources */,
 				D5FBA1BF23F720E700237B0A /* Campuses.swift in Sources */,
+				E2CA5F6B23FB238700EE9203 /* UserInfoBusinessService.swift in Sources */,
 				D5FBA1C123F721C000237B0A /* RoomRequest.swift in Sources */,
 				D5FBA1BD23F7203A00237B0A /* Status.swift in Sources */,
 				D5FBA1CF23F7299A00237B0A /* SwapController.swift in Sources */,
 				D5FBA1CD23F7298C00237B0A /* RequestController.swift in Sources */,
 				D5FBA1CB23F7295C00237B0A /* RoomPickerController.swift in Sources */,
 				D5FBA1BB23F71FD300237B0A /* Room.swift in Sources */,
+				847F3D4923FB38CD001A4E84 /* LaunchScreen.swift in Sources */,
+				E2CA5F6923FB229500EE9203 /* UserInfoProtocol.swift in Sources */,
 				D5FC7D0F23F349B600E5ECE8 /* LoginController.swift in Sources */,
 				D5FBA1B923F71F8D00237B0A /* User.swift in Sources */,
 				D5FC7D0D23F349B600E5ECE8 /* AppDelegate.swift in Sources */,
