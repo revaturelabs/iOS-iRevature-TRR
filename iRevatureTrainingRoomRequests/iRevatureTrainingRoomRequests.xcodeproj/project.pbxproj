@@ -11,7 +11,6 @@
 		845D758523F4A6760099D8FF /* LoginToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845D758423F4A6760099D8FF /* LoginToken.storyboard */; };
 		847F3D4523F72154001A4E84 /* LocationPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847F3D4423F72154001A4E84 /* LocationPicker.storyboard */; };
 		847F3D4723F727C5001A4E84 /* TrainerWorkFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847F3D4623F727C5001A4E84 /* TrainerWorkFlow.storyboard */; };
-		847F3D4923FB38CD001A4E84 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F3D4823FB38CD001A4E84 /* LaunchScreen.swift */; };
 		D5FBA1B923F71F8D00237B0A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1B823F71F8D00237B0A /* User.swift */; };
 		D5FBA1BB23F71FD300237B0A /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1BA23F71FD300237B0A /* Room.swift */; };
 		D5FBA1BD23F7203A00237B0A /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1BC23F7203A00237B0A /* Status.swift */; };
@@ -57,7 +56,6 @@
 		845D758423F4A6760099D8FF /* LoginToken.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginToken.storyboard; sourceTree = "<group>"; };
 		847F3D4423F72154001A4E84 /* LocationPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationPicker.storyboard; sourceTree = "<group>"; };
 		847F3D4623F727C5001A4E84 /* TrainerWorkFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrainerWorkFlow.storyboard; sourceTree = "<group>"; };
-		847F3D4823FB38CD001A4E84 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		D5FBA1B823F71F8D00237B0A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D5FBA1BA23F71FD300237B0A /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		D5FBA1BC23F7203A00237B0A /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
@@ -334,7 +332,6 @@
 				D5FBA1CA23F7295C00237B0A /* RoomPickerController.swift */,
 				D5FBA1CC23F7298C00237B0A /* RequestController.swift */,
 				D5FBA1CE23F7299A00237B0A /* SwapController.swift */,
-				847F3D4823FB38CD001A4E84 /* LaunchScreen.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -547,7 +544,6 @@
 				D5FBA1CD23F7298C00237B0A /* RequestController.swift in Sources */,
 				D5FBA1CB23F7295C00237B0A /* RoomPickerController.swift in Sources */,
 				D5FBA1BB23F71FD300237B0A /* Room.swift in Sources */,
-				847F3D4923FB38CD001A4E84 /* LaunchScreen.swift in Sources */,
 				E2CA5F6923FB229500EE9203 /* UserInfoProtocol.swift in Sources */,
 				D5FC7D0F23F349B600E5ECE8 /* LoginController.swift in Sources */,
 				D5FBA1B923F71F8D00237B0A /* User.swift in Sources */,
