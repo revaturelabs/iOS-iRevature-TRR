@@ -52,6 +52,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchDown" id="aJd-kB-R07"/>
+                                    <segue destination="NKh-rE-3O6" kind="show" identifier="homePageSegue" id="NJY-V7-xsi"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hwU-nU-R1o">
@@ -120,7 +121,7 @@
             <objects>
                 <viewController storyboardIdentifier="HomeScreen" id="NKh-rE-3O6" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jyk-DU-7Vi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kU1-1x-7kE">

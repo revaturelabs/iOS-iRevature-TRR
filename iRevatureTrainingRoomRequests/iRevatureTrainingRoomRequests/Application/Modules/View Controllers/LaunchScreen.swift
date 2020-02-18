@@ -16,12 +16,12 @@ class LaunchScreen: BaseController{
         if let currentUserInfo:User = userInfoBusinessService.getUserInfo(){
             let keepLoggedIn = currentUserInfo.keepmelogged
             
-            if keepLoggedIn == true{
-                performSegue(withIdentifier: "HomeScreen", sender: <#T##Any?#>)
-            }
-            else{
-                performSegue(withIdentifier: "Login", sender: <#T##Any?#>)
-            }
+//            if keepLoggedIn == true{
+//                performSegue(withIdentifier: "HomeScreen", sender: <#T##Any?#>)
+//            }
+//            else{
+//                performSegue(withIdentifier: "Login", sender: <#T##Any?#>)
+//            }
         }
     }
 }
