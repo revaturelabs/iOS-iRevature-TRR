@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class LocationPickerController: BaseController {
     
@@ -24,6 +25,7 @@ class LocationPickerController: BaseController {
         // Cast is as the custom view controller type you created in order to access it's properties and methods
         let customViewController = storyboard.instantiateViewController(withIdentifier: "HomeScreen")
         present(customViewController, animated: false, completion: nil)
+        os_log("User logged out",log: OSLog.default, type: .info)
     }
     
     @IBAction func submitButton(_ sender: Any) {

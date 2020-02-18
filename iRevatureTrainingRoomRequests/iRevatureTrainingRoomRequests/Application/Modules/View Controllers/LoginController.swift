@@ -70,6 +70,7 @@ class LoginController: BaseController {
             
             os_log("UserInfo Updated",log: OSLog.default, type: .info)
             debugPrint("UserInfo Updated")
+            os_log("User logged in",log: OSLog.default, type: .info)
             
             performSegue(withIdentifier: "homePageSegue", sender: self)
             
