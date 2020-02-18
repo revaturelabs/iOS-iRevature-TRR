@@ -17,9 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let userInfoBusinessService: UserInfoBusinessService = UserInfoBusinessService()
+        var is_authenticated: Bool
         
-        let def: User = userInfoBusinessService.getUserInfo()!
-        let is_authenticated = def.keepmelogged
+        if (userInfoBusinessService.getUserInfo() != nil){
+            let def: User = userInfoBusinessService.getUserInfo()!
+            is_authenticated = def.keepmelogged
+        } else {
+            is_authenticated = false
+        }
         
         if is_authenticated {
             // Create a reference to the the appropriate storyboard
