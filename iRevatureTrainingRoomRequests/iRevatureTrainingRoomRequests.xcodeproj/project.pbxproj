@@ -16,7 +16,7 @@
 		D5FBA1B923F71F8D00237B0A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1B823F71F8D00237B0A /* User.swift */; };
 		D5FBA1BB23F71FD300237B0A /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1BA23F71FD300237B0A /* Room.swift */; };
 		D5FBA1BD23F7203A00237B0A /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1BC23F7203A00237B0A /* Status.swift */; };
-		D5FBA1BF23F720E700237B0A /* Campuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1BE23F720E700237B0A /* Campuses.swift */; };
+		D5FBA1BF23F720E700237B0A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1BE23F720E700237B0A /* Location.swift */; };
 		D5FBA1C123F721C000237B0A /* RoomRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1C023F721C000237B0A /* RoomRequest.swift */; };
 		D5FBA1C323F7220C00237B0A /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1C223F7220C00237B0A /* RequestType.swift */; };
 		D5FBA1C523F7224D00237B0A /* SwapRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1C423F7224D00237B0A /* SwapRequest.swift */; };
@@ -63,7 +63,7 @@
 		D5FBA1B823F71F8D00237B0A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D5FBA1BA23F71FD300237B0A /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		D5FBA1BC23F7203A00237B0A /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
-		D5FBA1BE23F720E700237B0A /* Campuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campuses.swift; sourceTree = "<group>"; };
+		D5FBA1BE23F720E700237B0A /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		D5FBA1C023F721C000237B0A /* RoomRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomRequest.swift; sourceTree = "<group>"; };
 		D5FBA1C223F7220C00237B0A /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		D5FBA1C423F7224D00237B0A /* SwapRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapRequest.swift; sourceTree = "<group>"; };
@@ -258,7 +258,7 @@
 				D5FBA1B823F71F8D00237B0A /* User.swift */,
 				D5FBA1BA23F71FD300237B0A /* Room.swift */,
 				D5FBA1BC23F7203A00237B0A /* Status.swift */,
-				D5FBA1BE23F720E700237B0A /* Campuses.swift */,
+				D5FBA1BE23F720E700237B0A /* Location.swift */,
 				D5FBA1C023F721C000237B0A /* RoomRequest.swift */,
 				D5FBA1C223F7220C00237B0A /* RequestType.swift */,
 				D5FBA1C423F7224D00237B0A /* SwapRequest.swift */,
@@ -542,7 +542,7 @@
 				845D758323F49CC30099D8FF /* Info.plist in Sources */,
 				D5FC7D1523F349B600E5ECE8 /* iRevatureTrainingRoomRequests.xcdatamodeld in Sources */,
 				D5FBA1C523F7224D00237B0A /* SwapRequest.swift in Sources */,
-				D5FBA1BF23F720E700237B0A /* Campuses.swift in Sources */,
+				D5FBA1BF23F720E700237B0A /* Location.swift in Sources */,
 				E2CA5F6B23FB238700EE9203 /* UserInfoBusinessService.swift in Sources */,
 				D5FBA1C123F721C000237B0A /* RoomRequest.swift in Sources */,
 				D5FBA1BD23F7203A00237B0A /* Status.swift in Sources */,

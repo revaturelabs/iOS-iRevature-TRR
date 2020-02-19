@@ -8,6 +8,8 @@
 
 import Foundation
 
-enum Campuses{
-    case USF
+struct Location{
+    var Site: String
+    var Campus: String
+    var State: String
 }
