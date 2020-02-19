@@ -12,7 +12,7 @@
 		847F3D4523F72154001A4E84 /* LocationPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847F3D4423F72154001A4E84 /* LocationPicker.storyboard */; };
 		847F3D4723F727C5001A4E84 /* TrainerWorkFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847F3D4623F727C5001A4E84 /* TrainerWorkFlow.storyboard */; };
 		847F3D6F23FC8A22001A4E84 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F3D6E23FC8A22001A4E84 /* HomeController.swift */; };
-		847F3D7123FDA6F3001A4E84 /* RestAlamoFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F3D7023FDA6F3001A4E84 /* RestAlamoFileManager.swift */; };
+		847F3D7123FDA6F3001A4E84 /* RestAlamoFireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F3D7023FDA6F3001A4E84 /* RestAlamoFireManager.swift */; };
 		D5FBA1B923F71F8D00237B0A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1B823F71F8D00237B0A /* User.swift */; };
 		D5FBA1BB23F71FD300237B0A /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1BA23F71FD300237B0A /* Room.swift */; };
 		D5FBA1BD23F7203A00237B0A /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1BC23F7203A00237B0A /* Status.swift */; };
@@ -59,7 +59,7 @@
 		847F3D4423F72154001A4E84 /* LocationPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationPicker.storyboard; sourceTree = "<group>"; };
 		847F3D4623F727C5001A4E84 /* TrainerWorkFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrainerWorkFlow.storyboard; sourceTree = "<group>"; };
 		847F3D6E23FC8A22001A4E84 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
-		847F3D7023FDA6F3001A4E84 /* RestAlamoFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAlamoFileManager.swift; sourceTree = "<group>"; };
+		847F3D7023FDA6F3001A4E84 /* RestAlamoFireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAlamoFireManager.swift; sourceTree = "<group>"; };
 		D5FBA1B823F71F8D00237B0A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D5FBA1BA23F71FD300237B0A /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		D5FBA1BC23F7203A00237B0A /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
@@ -225,7 +225,7 @@
 		D514CAA723F44721009C8D6F /* API */ = {
 			isa = PBXGroup;
 			children = (
-				847F3D7023FDA6F3001A4E84 /* RestAlamoFileManager.swift */,
+				847F3D7023FDA6F3001A4E84 /* RestAlamoFireManager.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -555,7 +555,7 @@
 				D5FBA1B923F71F8D00237B0A /* User.swift in Sources */,
 				D5FC7D0D23F349B600E5ECE8 /* AppDelegate.swift in Sources */,
 				D5FBA1C723F7252B00237B0A /* BaseController.swift in Sources */,
-				847F3D7123FDA6F3001A4E84 /* RestAlamoFileManager.swift in Sources */,
+				847F3D7123FDA6F3001A4E84 /* RestAlamoFireManager.swift in Sources */,
 				D5FBA1C923F728FC00237B0A /* LocationPickerController.swift in Sources */,
 				847F3D6F23FC8A22001A4E84 /* HomeController.swift in Sources */,
 				D5FBA1C323F7220C00237B0A /* RequestType.swift in Sources */,
