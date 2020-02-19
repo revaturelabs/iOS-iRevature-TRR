@@ -7,3 +7,39 @@
 //
 
 import Foundation
+
+class RestAlamoFireManager {
+    
+    func getRooms() -> [Room]{
+        
+    }
+    
+    func getTrainers() -> [User]{
+        
+    }
+    
+    func getLocations() -> [Location]{
+        
+    }
+    
+    func getRoomRequests() -> [RoomRequest]{
+        
+    }
+    
+    func getSwapRoomRequests() -> [SwapRequest]{
+        
+    }
+    
+    func postRoomRequest(roomRequest: RoomRequest){
+        
+    }
+    
+    func postSwapRequest(swapRequest: SwapRequest){
+        
+    }
+    
+    func postLogin(Username: String, Password: String) -> String {
+        
+    }
+    
+}

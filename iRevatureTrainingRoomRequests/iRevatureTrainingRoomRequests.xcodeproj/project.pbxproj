@@ -13,6 +13,13 @@
 		847F3D4723F727C5001A4E84 /* TrainerWorkFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847F3D4623F727C5001A4E84 /* TrainerWorkFlow.storyboard */; };
 		847F3D6F23FC8A22001A4E84 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F3D6E23FC8A22001A4E84 /* HomeController.swift */; };
 		847F3D7123FDA6F3001A4E84 /* RestAlamoFireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F3D7023FDA6F3001A4E84 /* RestAlamoFireManager.swift */; };
+		847F3D7323FDD9D9001A4E84 /* RoomInfoBusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F3D7223FDD9D9001A4E84 /* RoomInfoBusinessService.swift */; };
+		847F3D7523FDDA38001A4E84 /* RequestsBusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F3D7423FDDA38001A4E84 /* RequestsBusinessService.swift */; };
+		847F3D7723FDDBCE001A4E84 /* LocationBusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F3D7623FDDBCE001A4E84 /* LocationBusinessService.swift */; };
+		847F3D7923FDDC09001A4E84 /* RoomInfoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F3D7823FDDC09001A4E84 /* RoomInfoProtocol.swift */; };
+		847F3D7B23FDDC58001A4E84 /* RequestInfosProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F3D7A23FDDC58001A4E84 /* RequestInfosProtocol.swift */; };
+		847F3D7D23FDDCE2001A4E84 /* LocationInfoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F3D7C23FDDCE2001A4E84 /* LocationInfoProtocol.swift */; };
+		847F3D7F23FDDDF9001A4E84 /* SwapRequestInfoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F3D7E23FDDDF9001A4E84 /* SwapRequestInfoProtocol.swift */; };
 		D5FBA1B923F71F8D00237B0A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1B823F71F8D00237B0A /* User.swift */; };
 		D5FBA1BB23F71FD300237B0A /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1BA23F71FD300237B0A /* Room.swift */; };
 		D5FBA1BD23F7203A00237B0A /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1BC23F7203A00237B0A /* Status.swift */; };
@@ -60,6 +67,13 @@
 		847F3D4623F727C5001A4E84 /* TrainerWorkFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrainerWorkFlow.storyboard; sourceTree = "<group>"; };
 		847F3D6E23FC8A22001A4E84 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		847F3D7023FDA6F3001A4E84 /* RestAlamoFireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAlamoFireManager.swift; sourceTree = "<group>"; };
+		847F3D7223FDD9D9001A4E84 /* RoomInfoBusinessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomInfoBusinessService.swift; sourceTree = "<group>"; };
+		847F3D7423FDDA38001A4E84 /* RequestsBusinessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsBusinessService.swift; sourceTree = "<group>"; };
+		847F3D7623FDDBCE001A4E84 /* LocationBusinessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationBusinessService.swift; sourceTree = "<group>"; };
+		847F3D7823FDDC09001A4E84 /* RoomInfoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomInfoProtocol.swift; sourceTree = "<group>"; };
+		847F3D7A23FDDC58001A4E84 /* RequestInfosProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestInfosProtocol.swift; sourceTree = "<group>"; };
+		847F3D7C23FDDCE2001A4E84 /* LocationInfoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfoProtocol.swift; sourceTree = "<group>"; };
+		847F3D7E23FDDDF9001A4E84 /* SwapRequestInfoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapRequestInfoProtocol.swift; sourceTree = "<group>"; };
 		D5FBA1B823F71F8D00237B0A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D5FBA1BA23F71FD300237B0A /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		D5FBA1BC23F7203A00237B0A /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
@@ -277,6 +291,9 @@
 			isa = PBXGroup;
 			children = (
 				E2CA5F6A23FB238700EE9203 /* UserInfoBusinessService.swift */,
+				847F3D7223FDD9D9001A4E84 /* RoomInfoBusinessService.swift */,
+				847F3D7423FDDA38001A4E84 /* RequestsBusinessService.swift */,
+				847F3D7623FDDBCE001A4E84 /* LocationBusinessService.swift */,
 			);
 			path = "Business Services";
 			sourceTree = "<group>";
@@ -300,6 +317,10 @@
 			isa = PBXGroup;
 			children = (
 				E2CA5F6823FB229500EE9203 /* UserInfoProtocol.swift */,
+				847F3D7823FDDC09001A4E84 /* RoomInfoProtocol.swift */,
+				847F3D7A23FDDC58001A4E84 /* RequestInfosProtocol.swift */,
+				847F3D7E23FDDDF9001A4E84 /* SwapRequestInfoProtocol.swift */,
+				847F3D7C23FDDCE2001A4E84 /* LocationInfoProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -539,26 +560,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				847F3D7D23FDDCE2001A4E84 /* LocationInfoProtocol.swift in Sources */,
 				845D758323F49CC30099D8FF /* Info.plist in Sources */,
 				D5FC7D1523F349B600E5ECE8 /* iRevatureTrainingRoomRequests.xcdatamodeld in Sources */,
+				847F3D7F23FDDDF9001A4E84 /* SwapRequestInfoProtocol.swift in Sources */,
 				D5FBA1C523F7224D00237B0A /* SwapRequest.swift in Sources */,
 				D5FBA1BF23F720E700237B0A /* Location.swift in Sources */,
+				847F3D7923FDDC09001A4E84 /* RoomInfoProtocol.swift in Sources */,
 				E2CA5F6B23FB238700EE9203 /* UserInfoBusinessService.swift in Sources */,
 				D5FBA1C123F721C000237B0A /* RoomRequest.swift in Sources */,
 				D5FBA1BD23F7203A00237B0A /* Status.swift in Sources */,
 				D5FBA1CF23F7299A00237B0A /* SwapController.swift in Sources */,
 				D5FBA1CD23F7298C00237B0A /* RequestController.swift in Sources */,
+				847F3D7B23FDDC58001A4E84 /* RequestInfosProtocol.swift in Sources */,
 				D5FBA1CB23F7295C00237B0A /* RoomPickerController.swift in Sources */,
 				D5FBA1BB23F71FD300237B0A /* Room.swift in Sources */,
+				847F3D7523FDDA38001A4E84 /* RequestsBusinessService.swift in Sources */,
 				E2CA5F6923FB229500EE9203 /* UserInfoProtocol.swift in Sources */,
 				D5FC7D0F23F349B600E5ECE8 /* LoginController.swift in Sources */,
 				D5FBA1B923F71F8D00237B0A /* User.swift in Sources */,
 				D5FC7D0D23F349B600E5ECE8 /* AppDelegate.swift in Sources */,
 				D5FBA1C723F7252B00237B0A /* BaseController.swift in Sources */,
+				847F3D7723FDDBCE001A4E84 /* LocationBusinessService.swift in Sources */,
 				847F3D7123FDA6F3001A4E84 /* RestAlamoFireManager.swift in Sources */,
 				D5FBA1C923F728FC00237B0A /* LocationPickerController.swift in Sources */,
 				847F3D6F23FC8A22001A4E84 /* HomeController.swift in Sources */,
 				D5FBA1C323F7220C00237B0A /* RequestType.swift in Sources */,
+				847F3D7323FDD9D9001A4E84 /* RoomInfoBusinessService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
