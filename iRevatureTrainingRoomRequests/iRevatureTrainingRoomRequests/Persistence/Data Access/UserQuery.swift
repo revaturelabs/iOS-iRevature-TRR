@@ -10,7 +10,7 @@ import Foundation
 import SQLite
 
 class UserQuery{
-    let db = try! Connection("Persistence/Repository/iRevatureTrainingRoomRequests.db")
+    let db = try! Connection(dbPath)
     let users = Table("User")
     let name = Expression<String?>("Name")
     let role = Expression<String?>("Role")

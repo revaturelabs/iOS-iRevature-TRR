@@ -11,5 +11,5 @@ import Foundation
 protocol SwapRequestsProtocol {
 
     func getSwapRequestsInfo() -> SwapRequest?
-    func setSwapRequestsInfo(RequestObject:SwapRequest) -> Bool
+    func setSwapRequestsInfo(RequestObject:SwapRequest) -> Bool?
 }

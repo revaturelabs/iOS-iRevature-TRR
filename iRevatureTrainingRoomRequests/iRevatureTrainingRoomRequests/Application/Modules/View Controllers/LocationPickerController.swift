@@ -12,6 +12,8 @@ import os.log
 class LocationPickerController: BaseController {
     
     override func viewDidLoad() {
+        let userQuery = UserQuery()
+        var users = userQuery.selectAllUsers()
     }
 
     @IBOutlet weak var locationPickerView: UIPickerView!

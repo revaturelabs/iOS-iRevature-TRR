@@ -12,20 +12,20 @@ class RequestsBusinessService:RequestsInfoProtocol,SwapRequestsProtocol{
     
     
     func getSwapRequestsInfo() -> SwapRequest? {
-        
+        return nil
     }
     
-    func setSwapRequestsInfo(RequestObject: SwapRequest) -> Bool {
-        
+    func setSwapRequestsInfo(RequestObject: SwapRequest) -> Bool? {
+        return nil
     }
     
     
     func getRequestsInfo() -> RoomRequest? {
-        
+        return nil
     }
     
-    func setRequestsInfo(RequestObject: RoomRequest) -> Bool {
-        
+    func setRequestsInfo(RequestObject: RoomRequest) -> Bool? {
+        return nil
     }
     
     
