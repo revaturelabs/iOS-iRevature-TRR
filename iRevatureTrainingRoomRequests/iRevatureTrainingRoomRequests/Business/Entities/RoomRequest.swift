@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct RoomRequest{
+struct RoomRequest:Codable{
     var requestId: Int
     var roomNumber: Int
     var requestorName: String

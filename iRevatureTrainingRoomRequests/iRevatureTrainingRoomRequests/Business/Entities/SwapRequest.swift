@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SwapRequest {
+struct SwapRequest:Codable {
     var requestId: Int
     var firstRoomNumber: Int
     var secondRoomNumber: Int

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Room{
+struct Room:Codable{
     var roomNumber: Int
     var batchName: String
     var instructorName: String

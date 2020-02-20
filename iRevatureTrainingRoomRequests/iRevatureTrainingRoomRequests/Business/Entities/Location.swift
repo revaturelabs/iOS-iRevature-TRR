@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Location{
+struct Location:Codable{
     var Site: String
     var Campus: String
     var State: String

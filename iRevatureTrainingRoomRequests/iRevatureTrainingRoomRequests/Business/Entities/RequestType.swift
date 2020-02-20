@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum RequestType {
+enum RequestType{
     case assign
     case unassign
 }
