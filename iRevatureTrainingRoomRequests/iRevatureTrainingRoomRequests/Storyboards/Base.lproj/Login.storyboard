@@ -124,58 +124,92 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kU1-1x-7kE">
-                                <rect key="frame" x="87" y="334" width="240" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.94901960780000005" green="0.52156862749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Make Request">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="tto-po-R3M" kind="show" id="3qP-vA-QgF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r58-U5-eQi">
-                                <rect key="frame" x="87" y="473" width="240" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.94901960780000005" green="0.52156862749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Cancel Request">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJz-T4-LiE">
-                                <rect key="frame" x="20" y="44" width="70" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJz-T4-LiE">
+                                <rect key="frame" x="20" y="44" width="70" height="151"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="1l2-p2-pb8"/>
+                                    <constraint firstAttribute="width" constant="70" id="cHh-8P-F1N"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
                                 <state key="normal" title="&lt; Log Out"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="logoutSegue" id="Ib1-RM-LX7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTY-Ru-yLG">
-                                <rect key="frame" x="87" y="403" width="240" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.94901960780000005" green="0.52156862749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="View my Requests">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rev-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ugd-Zi-blg">
-                                <rect key="frame" x="87" y="90" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome back &lt;&lt;Trainer&gt;&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLL-h7-SMs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Welcome back &lt;&lt;Trainer&gt;&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLL-h7-SMs">
                                 <rect key="frame" x="30" y="245" width="355" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="d9W-ug-Y7P"/>
+                                    <constraint firstAttribute="width" constant="355" id="nxQ-xI-lFA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rev-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ugd-Zi-blg">
+                                <rect key="frame" x="87" y="90" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="kYM-l4-1j0"/>
+                                    <constraint firstAttribute="width" constant="240" id="l89-KU-GWl"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="EJE-Q9-fSy">
+                                <rect key="frame" x="87" y="331" width="240" height="180"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kU1-1x-7kE">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
+                                        <color key="backgroundColor" red="0.94901960780000005" green="0.52156862749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="LXK-dO-MLH"/>
+                                            <constraint firstAttribute="height" constant="44" id="p8U-cm-0Eh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                        <state key="normal" title="Make Request">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="tto-po-R3M" kind="show" id="3qP-vA-QgF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTY-Ru-yLG">
+                                        <rect key="frame" x="0.0" y="68" width="240" height="44"/>
+                                        <color key="backgroundColor" red="0.94901960780000005" green="0.52156862749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="0ia-PF-Koc"/>
+                                            <constraint firstAttribute="width" constant="240" id="nxb-9c-3vC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                        <state key="normal" title="View my Requests">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r58-U5-eQi">
+                                        <rect key="frame" x="0.0" y="136" width="240" height="44"/>
+                                        <color key="backgroundColor" red="0.94901960780000005" green="0.52156862749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="a6B-pe-Uqe"/>
+                                            <constraint firstAttribute="width" constant="240" id="v9U-QT-ubx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                        <state key="normal" title="Cancel Request">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EJE-Q9-fSy" firstAttribute="centerX" secondItem="Jyk-DU-7Vi" secondAttribute="centerX" id="8Ug-cc-UCF"/>
+                            <constraint firstItem="EJE-Q9-fSy" firstAttribute="top" secondItem="gLL-h7-SMs" secondAttribute="bottom" constant="65" id="FPy-Me-zin"/>
+                            <constraint firstItem="Ugd-Zi-blg" firstAttribute="leading" secondItem="ww4-SJ-TCa" secondAttribute="leading" constant="87" id="NOS-6s-BI7"/>
+                            <constraint firstItem="EJE-Q9-fSy" firstAttribute="centerY" secondItem="Jyk-DU-7Vi" secondAttribute="centerY" id="XGj-hE-iB0"/>
+                            <constraint firstItem="Ugd-Zi-blg" firstAttribute="top" secondItem="kJz-T4-LiE" secondAttribute="bottom" constant="11" id="YKV-Gk-VYB"/>
+                            <constraint firstItem="gLL-h7-SMs" firstAttribute="top" secondItem="Ugd-Zi-blg" secondAttribute="bottom" constant="27" id="Ydj-Pw-Eat"/>
+                            <constraint firstItem="kJz-T4-LiE" firstAttribute="top" secondItem="ww4-SJ-TCa" secondAttribute="top" constant="44" id="j1J-cr-NeP"/>
+                            <constraint firstItem="kJz-T4-LiE" firstAttribute="leading" secondItem="ww4-SJ-TCa" secondAttribute="leading" constant="20" id="uvJ-63-uC0"/>
+                            <constraint firstItem="gLL-h7-SMs" firstAttribute="top" secondItem="kJz-T4-LiE" secondAttribute="bottom" constant="166" id="ywE-y6-3RT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ww4-SJ-TCa"/>
                     </view>
                     <navigationItem key="navigationItem" id="wVR-eP-XFI"/>
@@ -185,12 +219,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5YE-eL-NBA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1098.5507246376812" y="138.61607142857142"/>
         </scene>
         <!--LocationPicker-->
         <scene sceneID="hQS-Zb-vqr">
             <objects>
-                <viewControllerPlaceholder storyboardName="LocationPicker" id="tto-po-R3M" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="LocationPicker" id="tto-po-R3M" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="kn9-Uj-ZQV"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdu-To-IrL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1689" y="105"/>
