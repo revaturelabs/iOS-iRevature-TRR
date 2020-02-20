@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		845D758323F49CC30099D8FF /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = D5FC7D1B23F349B700E5ECE8 /* Info.plist */; };
 		845D758523F4A6760099D8FF /* LoginToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845D758423F4A6760099D8FF /* LoginToken.storyboard */; };
+		8477C73623FEE62300EAC4DA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8477C73523FEE62300EAC4DA /* Alamofire */; };
+		8477C73923FEE64600EAC4DA /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 8477C73823FEE64600EAC4DA /* SwiftyJSON */; };
 		847F3D4523F72154001A4E84 /* LocationPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847F3D4423F72154001A4E84 /* LocationPicker.storyboard */; };
 		847F3D4723F727C5001A4E84 /* TrainerWorkFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847F3D4623F727C5001A4E84 /* TrainerWorkFlow.storyboard */; };
 		847F3D6F23FC8A22001A4E84 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F3D6E23FC8A22001A4E84 /* HomeController.swift */; };
@@ -109,6 +111,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8477C73923FEE64600EAC4DA /* SwiftyJSON in Frameworks */,
+				8477C73623FEE62300EAC4DA /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +443,10 @@
 			dependencies = (
 			);
 			name = iRevatureTrainingRoomRequests;
+			packageProductDependencies = (
+				8477C73523FEE62300EAC4DA /* Alamofire */,
+				8477C73823FEE64600EAC4DA /* SwiftyJSON */,
+			);
 			productName = iRevatureTrainingRoomRequests;
 			productReference = D5FC7D0923F349B600E5ECE8 /* iRevatureTrainingRoomRequests.app */;
 			productType = "com.apple.product-type.application";
@@ -514,6 +522,10 @@
 				Base,
 			);
 			mainGroup = D5FC7D0023F349B600E5ECE8;
+			packageReferences = (
+				8477C73423FEE62300EAC4DA /* XCRemoteSwiftPackageReference "Alamofire" */,
+				8477C73723FEE64600EAC4DA /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = D5FC7D0A23F349B600E5ECE8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -743,7 +755,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -755,7 +768,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KX3Q6P29G3;
 				INFOPLIST_FILE = iRevatureTrainingRoomRequests/Application/Configuration/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.revature.iRevatureTrainingRoomRequests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -770,7 +786,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KX3Q6P29G3;
 				INFOPLIST_FILE = iRevatureTrainingRoomRequests/Application/Configuration/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.revature.iRevatureTrainingRoomRequests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -786,7 +805,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KX3Q6P29G3;
 				INFOPLIST_FILE = iRevatureTrainingRoomRequestsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.revature.iRevatureTrainingRoomRequestsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -803,7 +826,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KX3Q6P29G3;
 				INFOPLIST_FILE = iRevatureTrainingRoomRequestsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.revature.iRevatureTrainingRoomRequestsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -819,7 +846,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KX3Q6P29G3;
 				INFOPLIST_FILE = iRevatureTrainingRoomRequestsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.revature.iRevatureTrainingRoomRequestsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -835,7 +866,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KX3Q6P29G3;
 				INFOPLIST_FILE = iRevatureTrainingRoomRequestsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.revature.iRevatureTrainingRoomRequestsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -884,6 +919,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8477C73423FEE62300EAC4DA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		8477C73723FEE64600EAC4DA /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8477C73523FEE62300EAC4DA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8477C73423FEE62300EAC4DA /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		8477C73823FEE64600EAC4DA /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8477C73723FEE64600EAC4DA /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D5FC7D1323F349B600E5ECE8 /* iRevatureTrainingRoomRequests.xcdatamodeld */ = {
