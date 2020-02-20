@@ -31,7 +31,7 @@ class RestAlamoFireManager {
     }
     
     func postRoomRequest(roomRequest: RoomRequest){
-        
+ 
     }
     
     func postSwapRequest(swapRequest: SwapRequest){
