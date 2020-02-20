@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		84122F4523FF097100EE6BAC /* UserQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84122F4423FF097100EE6BAC /* UserQuery.swift */; };
-		84122F4723FF0DBF00EE6BAC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84122F4623FF0DBF00EE6BAC /* Constants.swift */; };
 		841F71F723FEEB9200045A29 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 841F71F623FEEB9200045A29 /* SQLite */; };
 		845D758523F4A6760099D8FF /* LoginToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845D758423F4A6760099D8FF /* LoginToken.storyboard */; };
 		8477C73623FEE62300EAC4DA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8477C73523FEE62300EAC4DA /* Alamofire */; };
@@ -24,6 +23,7 @@
 		847F3D7B23FDDC58001A4E84 /* RequestInfosProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F3D7A23FDDC58001A4E84 /* RequestInfosProtocol.swift */; };
 		847F3D7D23FDDCE2001A4E84 /* LocationInfoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F3D7C23FDDCE2001A4E84 /* LocationInfoProtocol.swift */; };
 		847F3D7F23FDDDF9001A4E84 /* SwapRequestInfoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F3D7E23FDDDF9001A4E84 /* SwapRequestInfoProtocol.swift */; };
+		847F3DC723FF154A001A4E84 /* DBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F3DC623FF154A001A4E84 /* DBOperations.swift */; };
 		D5FBA1B923F71F8D00237B0A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1B823F71F8D00237B0A /* User.swift */; };
 		D5FBA1BB23F71FD300237B0A /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1BA23F71FD300237B0A /* Room.swift */; };
 		D5FBA1BD23F7203A00237B0A /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1BC23F7203A00237B0A /* Status.swift */; };
@@ -67,7 +67,6 @@
 
 /* Begin PBXFileReference section */
 		84122F4423FF097100EE6BAC /* UserQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserQuery.swift; sourceTree = "<group>"; };
-		84122F4623FF0DBF00EE6BAC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = "iRevatureTrainingRoomRequests/Persistence/Data Access/Constants.swift"; sourceTree = SOURCE_ROOT; };
 		845D758423F4A6760099D8FF /* LoginToken.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginToken.storyboard; sourceTree = "<group>"; };
 		847F3D4423F72154001A4E84 /* LocationPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationPicker.storyboard; sourceTree = "<group>"; };
 		847F3D4623F727C5001A4E84 /* TrainerWorkFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrainerWorkFlow.storyboard; sourceTree = "<group>"; };
@@ -80,6 +79,7 @@
 		847F3D7A23FDDC58001A4E84 /* RequestInfosProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestInfosProtocol.swift; sourceTree = "<group>"; };
 		847F3D7C23FDDCE2001A4E84 /* LocationInfoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfoProtocol.swift; sourceTree = "<group>"; };
 		847F3D7E23FDDDF9001A4E84 /* SwapRequestInfoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapRequestInfoProtocol.swift; sourceTree = "<group>"; };
+		847F3DC623FF154A001A4E84 /* DBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBOperations.swift; sourceTree = "<group>"; };
 		D5FBA1B823F71F8D00237B0A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D5FBA1BA23F71FD300237B0A /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		D5FBA1BC23F7203A00237B0A /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
@@ -249,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				847F3D7023FDA6F3001A4E84 /* RestAlamoFireManager.swift */,
+				847F3DC623FF154A001A4E84 /* DBOperations.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -265,7 +266,6 @@
 		D514CAA923F44732009C8D6F /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				84122F4623FF0DBF00EE6BAC /* Constants.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -592,11 +592,11 @@
 				D5FBA1C123F721C000237B0A /* RoomRequest.swift in Sources */,
 				D5FBA1BD23F7203A00237B0A /* Status.swift in Sources */,
 				D5FBA1CF23F7299A00237B0A /* SwapController.swift in Sources */,
-				84122F4723FF0DBF00EE6BAC /* Constants.swift in Sources */,
 				D5FBA1CD23F7298C00237B0A /* RequestController.swift in Sources */,
 				847F3D7B23FDDC58001A4E84 /* RequestInfosProtocol.swift in Sources */,
 				D5FBA1CB23F7295C00237B0A /* RoomPickerController.swift in Sources */,
 				D5FBA1BB23F71FD300237B0A /* Room.swift in Sources */,
+				847F3DC723FF154A001A4E84 /* DBOperations.swift in Sources */,
 				847F3D7523FDDA38001A4E84 /* RequestsBusinessService.swift in Sources */,
 				E2CA5F6923FB229500EE9203 /* UserInfoProtocol.swift in Sources */,
 				D5FC7D0F23F349B600E5ECE8 /* LoginController.swift in Sources */,

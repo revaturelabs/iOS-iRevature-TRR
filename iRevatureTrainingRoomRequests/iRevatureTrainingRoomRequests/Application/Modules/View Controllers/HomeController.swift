@@ -18,6 +18,7 @@ class HomeController: BaseController{
     override func viewDidLoad() {
         
         super.viewDidLoad()
+
         
         //check for existing userinfo data in userdefaults if found update the email textfield
         if let currentUserInfo:User = userInfoBusinessService.getUserInfo()

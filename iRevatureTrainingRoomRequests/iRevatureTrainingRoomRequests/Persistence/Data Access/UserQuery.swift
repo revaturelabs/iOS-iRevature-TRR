@@ -10,7 +10,7 @@ import Foundation
 import SQLite
 
 class UserQuery{
-    let db = try! Connection(dbPath)
+    let db = try! Connection(getDBFilePath(dbName: "iRevatureTrainingRoomRequests"))
     let users = Table("User")
     let name = Expression<String?>("Name")
     let role = Expression<String?>("Role")
@@ -24,6 +24,7 @@ class UserQuery{
         //var recordCount = users.count
     
         var result: [User] = []
+        print(getDBFilePath(dbName:"iRevatureTrainingRoomRequests"))
         
         for user in try! db.prepare(users) {
             print("name: \(user[name]), role: \(user[role]), email: \(user[email]), token \(user[token]), keepMeLogged \(user[keepMeLogged])")
@@ -32,7 +33,6 @@ class UserQuery{
             } else{
                 temp = User.init(name: user[name]!, role: user[role]!, email: user[email]!, token: user[token]!, keepmelogged: true)
             }
-            
             result.append(temp)
         }
         return result
