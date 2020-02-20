@@ -9,10 +9,22 @@
 import UIKit
 import os.log
 
-class LocationPickerController: BaseController {
+class LocationPickerController: BaseController, UIPickerViewDelegate, UIPickerViewDataSource{
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 1
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       // self.locationPickerView.delegate = self
+    //self.locationPickerView.dataSource = self
     }
 
     @IBOutlet weak var locationPickerView: UIPickerView!

@@ -58,4 +58,10 @@ class UserInfoBusinessService : UserInfoProtocol
         
         
     }
+    
+    func getUserInfoDB() ->User? {
+        var userQuery = UserQuery()
+        let users = userQuery.selectAllUsers()
+        return users[0]
+    }
 }

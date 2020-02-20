@@ -185,47 +185,56 @@
                                     <constraint firstAttribute="width" constant="240" id="l89-KU-GWl"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTL-9z-Eo5">
-                                <rect key="frame" x="67.5" y="303.5" width="240" height="44"/>
-                                <color key="backgroundColor" red="0.94901960780000005" green="0.52156862749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="ccI-0E-J2d">
+                                <rect key="frame" x="67.5" y="303.5" width="240" height="166"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTL-9z-Eo5">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
+                                        <color key="backgroundColor" red="0.94901960780000005" green="0.52156862749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="JOq-xP-yg5"/>
+                                            <constraint firstAttribute="height" constant="44" id="XSh-CA-cNL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                        <state key="normal" title="Make Request">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="tto-po-R3M" kind="show" id="09G-Qn-ixW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQ0-7m-5Lu">
+                                        <rect key="frame" x="0.0" y="61" width="240" height="44"/>
+                                        <color key="backgroundColor" red="0.94901960780000005" green="0.52156862749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="MUq-2B-AzQ"/>
+                                            <constraint firstAttribute="width" constant="240" id="XMD-In-0Yv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                        <state key="normal" title="View my Requests">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ram-T2-egt">
+                                        <rect key="frame" x="0.0" y="122" width="240" height="44"/>
+                                        <color key="backgroundColor" red="0.94901960780000005" green="0.52156862749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="fgV-OA-uHc"/>
+                                            <constraint firstAttribute="width" constant="240" id="gvd-hX-2FL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                        <state key="normal" title="Cancel Request">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="JOq-xP-yg5"/>
-                                    <constraint firstAttribute="height" constant="44" id="XSh-CA-cNL"/>
+                                    <constraint firstAttribute="height" constant="166" id="lXS-0p-dJk"/>
+                                    <constraint firstAttribute="width" constant="240" id="w3n-6m-hHk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Make Request">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="tto-po-R3M" kind="show" id="09G-Qn-ixW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ram-T2-egt">
-                                <rect key="frame" x="67.5" y="426" width="240" height="44"/>
-                                <color key="backgroundColor" red="0.94901960780000005" green="0.52156862749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="fgV-OA-uHc"/>
-                                    <constraint firstAttribute="width" constant="240" id="gvd-hX-2FL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="Cancel Request">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQ0-7m-5Lu">
-                                <rect key="frame" x="67.5" y="365" width="240" height="44"/>
-                                <color key="backgroundColor" red="0.94901960780000005" green="0.52156862749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="XMD-In-0Yv"/>
-                                    <constraint firstAttribute="height" constant="44" id="tb2-56-wJ9"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
-                                <state key="normal" title="View my Requests">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back &lt;&lt;Trainer&gt;&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLL-h7-SMs">
-                                <rect key="frame" x="77" y="245" width="221" height="21"/>
+                                <rect key="frame" x="77" y="245" width="221.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="24" id="KmM-0n-jtg"/>
                                     <constraint firstAttribute="height" constant="21" id="d9W-ug-Y7P"/>
@@ -239,20 +248,14 @@
                         <constraints>
                             <constraint firstItem="Ugd-Zi-blg" firstAttribute="centerX" secondItem="Jyk-DU-7Vi" secondAttribute="centerX" id="61h-s2-9Dt"/>
                             <constraint firstItem="kJz-T4-LiE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Jyk-DU-7Vi" secondAttribute="leadingMargin" constant="4" id="Czd-lu-kc3"/>
-                            <constraint firstItem="RTL-9z-Eo5" firstAttribute="centerY" secondItem="Jyk-DU-7Vi" secondAttribute="centerY" id="OuF-YA-s4d"/>
-                            <constraint firstItem="aQ0-7m-5Lu" firstAttribute="centerX" secondItem="Jyk-DU-7Vi" secondAttribute="centerX" id="QV7-5L-hGn"/>
-                            <constraint firstItem="RTL-9z-Eo5" firstAttribute="centerX" secondItem="Jyk-DU-7Vi" secondAttribute="centerX" id="UpS-bH-qzw"/>
-                            <constraint firstItem="aQ0-7m-5Lu" firstAttribute="top" secondItem="RTL-9z-Eo5" secondAttribute="bottom" constant="17.5" id="YDq-Gq-gTg"/>
-                            <constraint firstItem="Ram-T2-egt" firstAttribute="top" secondItem="aQ0-7m-5Lu" secondAttribute="bottom" constant="17" id="YQv-gQ-bYS"/>
+                            <constraint firstItem="ccI-0E-J2d" firstAttribute="top" secondItem="gLL-h7-SMs" secondAttribute="bottom" constant="37.5" id="YY1-Ey-Rgr"/>
                             <constraint firstItem="gLL-h7-SMs" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ugd-Zi-blg" secondAttribute="bottom" constant="27" id="Ydj-Pw-Eat"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="kJz-T4-LiE" secondAttribute="trailing" constant="269" id="ZIq-EO-Itp"/>
                             <constraint firstItem="gLL-h7-SMs" firstAttribute="centerX" secondItem="Jyk-DU-7Vi" secondAttribute="centerX" id="ZsW-nD-GQj"/>
                             <constraint firstItem="kJz-T4-LiE" firstAttribute="top" secondItem="ww4-SJ-TCa" secondAttribute="top" constant="44" id="j1J-cr-NeP"/>
-                            <constraint firstItem="RTL-9z-Eo5" firstAttribute="top" secondItem="gLL-h7-SMs" secondAttribute="bottom" constant="37.5" id="sF0-FJ-2hO"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Ram-T2-egt" secondAttribute="bottom" constant="177" id="tp6-IH-Ka3"/>
-                            <constraint firstItem="Ram-T2-egt" firstAttribute="centerX" secondItem="Jyk-DU-7Vi" secondAttribute="centerX" id="uqf-31-YN1"/>
+                            <constraint firstItem="ww4-SJ-TCa" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ccI-0E-J2d" secondAttribute="bottom" constant="177.5" id="jKJ-PQ-Nto"/>
+                            <constraint firstItem="ccI-0E-J2d" firstAttribute="centerX" secondItem="Jyk-DU-7Vi" secondAttribute="centerX" id="kLk-Hq-9Y7"/>
                             <constraint firstItem="kJz-T4-LiE" firstAttribute="leading" secondItem="ww4-SJ-TCa" secondAttribute="leading" constant="20" id="uvJ-63-uC0"/>
-                            <constraint firstItem="aQ0-7m-5Lu" firstAttribute="top" secondItem="RTL-9z-Eo5" secondAttribute="bottom" constant="17.5" id="yPe-G4-Mvq"/>
                             <constraint firstItem="gLL-h7-SMs" firstAttribute="top" secondItem="kJz-T4-LiE" secondAttribute="bottom" constant="166" id="ywE-y6-3RT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ww4-SJ-TCa"/>
