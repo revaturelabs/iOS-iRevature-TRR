@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		841F71F723FEEB9200045A29 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 841F71F623FEEB9200045A29 /* SQLite */; };
 		845D758523F4A6760099D8FF /* LoginToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845D758423F4A6760099D8FF /* LoginToken.storyboard */; };
 		8477C73623FEE62300EAC4DA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8477C73523FEE62300EAC4DA /* Alamofire */; };
 		8477C73923FEE64600EAC4DA /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 8477C73823FEE64600EAC4DA /* SwiftyJSON */; };
@@ -110,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841F71F723FEEB9200045A29 /* SQLite in Frameworks */,
 				8477C73923FEE64600EAC4DA /* SwiftyJSON in Frameworks */,
 				8477C73623FEE62300EAC4DA /* Alamofire in Frameworks */,
 			);
@@ -445,6 +447,7 @@
 			packageProductDependencies = (
 				8477C73523FEE62300EAC4DA /* Alamofire */,
 				8477C73823FEE64600EAC4DA /* SwiftyJSON */,
+				841F71F623FEEB9200045A29 /* SQLite */,
 			);
 			productName = iRevatureTrainingRoomRequests;
 			productReference = D5FC7D0923F349B600E5ECE8 /* iRevatureTrainingRoomRequests.app */;
@@ -493,7 +496,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = revature;
 				TargetAttributes = {
 					D5FC7D0823F349B600E5ECE8 = {
@@ -524,6 +527,7 @@
 			packageReferences = (
 				8477C73423FEE62300EAC4DA /* XCRemoteSwiftPackageReference "Alamofire" */,
 				8477C73723FEE64600EAC4DA /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				841F71F523FEEB9200045A29 /* XCRemoteSwiftPackageReference "SQLite" */,
 			);
 			productRefGroup = D5FC7D0A23F349B600E5ECE8 /* Products */;
 			projectDirPath = "";
@@ -665,6 +669,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -672,6 +677,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -722,6 +728,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -729,6 +736,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -919,6 +927,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		841F71F523FEEB9200045A29 /* XCRemoteSwiftPackageReference "SQLite" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.12.2;
+			};
+		};
 		8477C73423FEE62300EAC4DA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -938,6 +954,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		841F71F623FEEB9200045A29 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 841F71F523FEEB9200045A29 /* XCRemoteSwiftPackageReference "SQLite" */;
+			productName = SQLite;
+		};
 		8477C73523FEE62300EAC4DA /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8477C73423FEE62300EAC4DA /* XCRemoteSwiftPackageReference "Alamofire" */;
