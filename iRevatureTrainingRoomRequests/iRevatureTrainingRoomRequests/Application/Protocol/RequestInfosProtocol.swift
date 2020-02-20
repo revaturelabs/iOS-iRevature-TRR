@@ -11,7 +11,7 @@ import Foundation
 protocol RequestsInfoProtocol{
     
     func getRequestsInfo() -> RoomRequest?
-    func setRequestsInfo(RequestObject:RoomRequest) -> Bool
+    func setRequestsInfo(RequestObject:RoomRequest) -> Bool?
 
 }
 

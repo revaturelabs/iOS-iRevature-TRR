@@ -10,6 +10,6 @@ import Foundation
 
 class RoomInfoBusinessService:RoomInfoProtocol{
     func getRoomInfo() -> Room? {
-        
+        return nil
     }
 }

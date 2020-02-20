@@ -9,25 +9,27 @@
 import Foundation
 
 class RestAlamoFireManager {
+    let userQuery = UserQuery()
     
-    func getRooms() -> [Room]{
-        
+    func getRooms() -> [Room]?{
+      return nil
     }
     
     func getTrainers() -> [User]{
-        
+        let users = userQuery.selectAllUsers()
+        return users
     }
     
-    func getLocations() -> [Location]{
-        
+    func getLocations() -> [Location]?{
+        return nil
     }
     
-    func getRoomRequests() -> [RoomRequest]{
-        
+    func getRoomRequests() -> [RoomRequest]?{
+        return nil
     }
     
-    func getSwapRoomRequests() -> [SwapRequest]{
-        
+    func getSwapRoomRequests() -> [SwapRequest]?{
+        return nil
     }
     
     func postRoomRequest(roomRequest: RoomRequest){
@@ -38,8 +40,8 @@ class RestAlamoFireManager {
         
     }
     
-    func postLogin(Username: String, Password: String) -> String {
-        
+    func postLogin(Username: String, Password: String) -> String? {
+        return nil
     }
     
 }

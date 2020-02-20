@@ -12,7 +12,7 @@ class LocationBusinessService: LocationInfoProtocol{
     
     
     func getLocationInfo() -> Location? {
-        
+        return nil
     }
  
 }
