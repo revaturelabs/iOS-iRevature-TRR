@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		845D758323F49CC30099D8FF /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = D5FC7D1B23F349B700E5ECE8 /* Info.plist */; };
 		845D758523F4A6760099D8FF /* LoginToken.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845D758423F4A6760099D8FF /* LoginToken.storyboard */; };
 		8477C73623FEE62300EAC4DA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8477C73523FEE62300EAC4DA /* Alamofire */; };
 		8477C73923FEE64600EAC4DA /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 8477C73823FEE64600EAC4DA /* SwiftyJSON */; };
@@ -573,7 +572,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				847F3D7D23FDDCE2001A4E84 /* LocationInfoProtocol.swift in Sources */,
-				845D758323F49CC30099D8FF /* Info.plist in Sources */,
 				D5FC7D1523F349B600E5ECE8 /* iRevatureTrainingRoomRequests.xcdatamodeld in Sources */,
 				847F3D7F23FDDDF9001A4E84 /* SwapRequestInfoProtocol.swift in Sources */,
 				D5FBA1C523F7224D00237B0A /* SwapRequest.swift in Sources */,

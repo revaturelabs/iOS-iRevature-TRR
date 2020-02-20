@@ -13,6 +13,6 @@ struct Room{
     var batchName: String
     var instructorName: String
     var status: Status
-    var campus: Campuses
-    var location: String
+    var campus: Location
+    var location: Location
 }

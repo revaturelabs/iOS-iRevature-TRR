@@ -10,21 +10,22 @@ import Foundation
 
 class RequestsBusinessService:RequestsInfoProtocol,SwapRequestsProtocol{
     
+    
     func getSwapRequestsInfo() -> SwapRequest? {
-        <#code#>
+        
     }
     
     func setSwapRequestsInfo(RequestObject: SwapRequest) -> Bool {
-        <#code#>
+        
     }
     
     
     func getRequestsInfo() -> RoomRequest? {
-        <#code#>
+        
     }
     
     func setRequestsInfo(RequestObject: RoomRequest) -> Bool {
-        <#code#>
+        
     }
     
     
