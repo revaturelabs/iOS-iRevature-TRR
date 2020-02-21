@@ -18,19 +18,26 @@ let building = Expression<String?>("Building")
 let id = Expression<String?>("ID")
 
 func locationByID(ID: Int) -> Location?{
-    return nil
+    var result: [Location] = []
+    do{
+    let temp = locations.filter(locationID == ID)
+    for location in try! db.prepare(temp) {
+        let temp2 = Location.init(Building: location[building]!, Campus: location[campus]!, State: location[state]!, LocationID: location[locationID]!, ID: location[id]!)
+        result.append(temp2)}
+    return result[0]
+    }
 }
 
 func selectAllLocations() -> [Location]?{
     var temp: Location
     //var recordCount = users.count
-
+    
     var result: [Location] = []
     print(getDBFilePath(dbName:"iRevatureTrainingRoomRequests"))
     
     for location in try! db.prepare(locations) {
         temp = Location.init(Building: location[building]!, Campus: location[campus]!, State: location[state]!, LocationID: location[locationID]!, ID: location[id]!)
-
+        
         result.append(temp)
     }
     return result
