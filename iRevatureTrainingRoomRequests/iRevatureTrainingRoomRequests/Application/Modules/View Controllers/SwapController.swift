@@ -9,31 +9,38 @@
 import UIKit
 
 var userInfo = UserInfoBusinessService()
-class SwapController: BaseController {
+class SwapController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+    
     @IBOutlet weak var roomTableView: UITableView!
+    @IBOutlet weak var commentsTextField: UITextView!
+    
     var test = userInfo.getUserInfoDB()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableView()
+       // setupTableView()
+        roomTableView.delegate = self
+        roomTableView.dataSource = self
     }
     
-    func setupTableView() {
+    func numberOfSections(in tableView: UITableView) -> Int {
+     return 1
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     return 4
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+     
+        let cell = roomTableView.dequeueReusableCell(withIdentifier: "roomCell", for: indexPath) as! RoomTableViewCell
+        cell.roomNumber?.text = test?.name
+        return cell
+      }
+/*    func setupTableView() {
 
         roomTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
       }
-    
+  */
 }
-extension SwapController: UITableViewDataSource {
-
-      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
-      }
-      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = test?.name
-        return cell
-      }
-        
-}
-
