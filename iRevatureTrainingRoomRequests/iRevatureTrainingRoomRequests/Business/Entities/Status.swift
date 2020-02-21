@@ -52,4 +52,17 @@ extension Status: Codable {
         }
     }
     
+    static func statusType(assign: String) -> Status?{
+        switch assign{
+        case "pending":
+            return .pending
+        case "assigned":
+            return .assigned
+        case "unassigned":
+            return  .unassigned
+        default:
+            print("invalid status")
+            return nil
+        }
+    }
 }
