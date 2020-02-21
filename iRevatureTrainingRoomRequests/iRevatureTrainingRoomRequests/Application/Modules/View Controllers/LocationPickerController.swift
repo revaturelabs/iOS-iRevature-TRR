@@ -16,13 +16,14 @@ class LocationPickerController: BaseController, UIPickerViewDelegate, UIPickerVi
     
     var test = userInfo.getUserInfoDB()
     var test2: [String] = []
+    var i = 0
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 4
+        return test2.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -30,8 +31,8 @@ class LocationPickerController: BaseController, UIPickerViewDelegate, UIPickerVi
     }
     
     func createItems(){
-        for i in 1...4{
-            test2[i] = test!.name
+        for i in 0...3{
+            test2.append(test!.name)
         }
     }
     

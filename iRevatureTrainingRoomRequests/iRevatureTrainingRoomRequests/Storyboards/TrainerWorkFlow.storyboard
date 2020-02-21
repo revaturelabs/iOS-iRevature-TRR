@@ -210,13 +210,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vsS-Ai-Hqn">
-                                <rect key="frame" x="20" y="556" width="374" height="83"/>
-                                <color key="backgroundColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="iPj-Zg-Ook">
                                 <rect key="frame" x="47" y="424" width="320" height="68"/>
                                 <constraints>
@@ -224,19 +217,27 @@
                                     <constraint firstAttribute="height" constant="68" id="ja9-0b-mVq"/>
                                 </constraints>
                             </datePicker>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vsS-Ai-Hqn">
+                                <rect key="frame" x="20" y="515" width="374" height="83"/>
+                                <color key="backgroundColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="VYm-9z-yWq" firstAttribute="top" relation="lessThanOrEqual" secondItem="vsS-Ai-Hqn" secondAttribute="bottom" constant="157" id="3iA-jj-xzO"/>
                             <constraint firstItem="jZP-3V-zg3" firstAttribute="centerX" secondItem="s9s-4O-YiH" secondAttribute="centerX" id="6dF-OB-os4"/>
                             <constraint firstItem="L0g-oY-KxR" firstAttribute="top" secondItem="MdC-Vo-5wz" secondAttribute="top" constant="44" id="AVs-mw-4TF"/>
                             <constraint firstItem="vsS-Ai-Hqn" firstAttribute="leading" secondItem="MdC-Vo-5wz" secondAttribute="leading" constant="20" id="CVa-Lx-pOb"/>
                             <constraint firstItem="iPj-Zg-Ook" firstAttribute="top" secondItem="lGE-ua-9Eo" secondAttribute="bottom" constant="8" symbolic="YES" id="Jl7-xp-a5m"/>
                             <constraint firstItem="jZP-3V-zg3" firstAttribute="leading" secondItem="MdC-Vo-5wz" secondAttribute="leading" id="PIf-0t-mE0"/>
-                            <constraint firstItem="vsS-Ai-Hqn" firstAttribute="top" secondItem="iPj-Zg-Ook" secondAttribute="bottom" constant="8" id="QNd-Pp-7p0"/>
                             <constraint firstItem="Mfo-cO-HTQ" firstAttribute="centerX" secondItem="s9s-4O-YiH" secondAttribute="centerX" id="Vb7-HX-7SI"/>
                             <constraint firstItem="MdC-Vo-5wz" firstAttribute="trailing" secondItem="vsS-Ai-Hqn" secondAttribute="trailing" constant="20" id="YQG-d3-5mg"/>
                             <constraint firstItem="jZP-3V-zg3" firstAttribute="top" secondItem="L0g-oY-KxR" secondAttribute="bottom" constant="5" id="ZY9-B4-kAv"/>
                             <constraint firstItem="jZP-3V-zg3" firstAttribute="trailing" secondItem="MdC-Vo-5wz" secondAttribute="trailing" id="Zaf-1E-Bqw"/>
+                            <constraint firstItem="vsS-Ai-Hqn" firstAttribute="top" secondItem="iPj-Zg-Ook" secondAttribute="bottom" constant="23" id="blp-3D-AHm"/>
                             <constraint firstItem="L0g-oY-KxR" firstAttribute="leading" secondItem="MdC-Vo-5wz" secondAttribute="leading" constant="20" id="cNp-zX-1qJ"/>
                             <constraint firstItem="VYm-9z-yWq" firstAttribute="centerX" secondItem="s9s-4O-YiH" secondAttribute="centerX" id="ci3-WR-vgB"/>
                             <constraint firstItem="vsS-Ai-Hqn" firstAttribute="centerX" secondItem="s9s-4O-YiH" secondAttribute="centerX" id="dKe-AX-JUW"/>
@@ -250,7 +251,6 @@
                             <constraint firstItem="VYm-9z-yWq" firstAttribute="trailing" secondItem="MdC-Vo-5wz" secondAttribute="trailing" id="sFD-M8-VNM"/>
                             <constraint firstItem="zyc-v7-AyW" firstAttribute="top" secondItem="jZP-3V-zg3" secondAttribute="bottom" constant="8" id="v75-4t-K5a"/>
                             <constraint firstItem="MdC-Vo-5wz" firstAttribute="bottom" secondItem="VYm-9z-yWq" secondAttribute="bottom" constant="22" id="wJv-cj-RyE"/>
-                            <constraint firstItem="VYm-9z-yWq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vsS-Ai-Hqn" secondAttribute="bottom" constant="8" id="zQb-BA-Y9r"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MdC-Vo-5wz"/>
                     </view>
@@ -369,6 +369,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="805-5L-OKJ"/>
         <segue reference="l8a-TZ-UVO"/>
     </inferredMetricsTieBreakers>
 </document>

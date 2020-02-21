@@ -8,7 +8,7 @@
 
 import UIKit
 var roomInfo2 = RoomInfoBusinessService()
-class SwapController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SwapController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate{
     
     @IBOutlet weak var roomTableView: UITableView!
     
@@ -19,12 +19,17 @@ class SwapController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     var test = userInfo.getUserInfoDB()
+        var test2: [String] = []
          
          override func viewDidLoad() {
              super.viewDidLoad()
             // setupTableView()
              roomTableView.delegate = self
              roomTableView.dataSource = self
+            
+            self.secondRoomPicker.delegate = self
+            self.secondRoomPicker.dataSource = self
+            createItems()
          }
        
        func numberOfSections(in tableView: UITableView) -> Int {
@@ -42,5 +47,23 @@ class SwapController: UIViewController, UITableViewDataSource, UITableViewDelega
               return cell
        }
        
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return test2.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return test2[row]
+    }
+    
+    func createItems(){
+        for i in 0...3{
+            test2.append(test!.name)
+        }
+    }
+    
 }
 

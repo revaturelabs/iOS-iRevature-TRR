@@ -99,6 +99,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="R58-kU-e0o"/>
                     <connections>
+                        <outlet property="locationPickerView" destination="Ybr-mI-jXc" id="J3X-ew-cKJ"/>
                         <outlet property="welcomeTextField" destination="iU4-ST-c0T" id="KOn-TR-fSY"/>
                     </connections>
                 </viewController>
