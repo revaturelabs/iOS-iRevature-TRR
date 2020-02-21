@@ -8,27 +8,41 @@
 
 import UIKit
 import os.log
-
+var roomInfo5 = RoomInfoBusinessService()
 class LocationPickerController: BaseController, UIPickerViewDelegate, UIPickerViewDataSource{
+    
+    @IBOutlet weak var locationPickerView: UIPickerView!
+    @IBOutlet weak var welcomeTextField: UILabel!
+    
+    var test = userInfo.getUserInfoDB()
+    var test2: [String] = []
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 1
+        return 4
     }
     
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return test2[row]
+    }
+    
+    func createItems(){
+        for i in 1...4{
+            test2[i] = test!.name
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       // self.locationPickerView.delegate = self
-    //self.locationPickerView.dataSource = self
+        self.locationPickerView.delegate = self
+        self.locationPickerView.dataSource = self
+        createItems()
     }
 
-    @IBOutlet weak var locationPickerView: UIPickerView!
-    @IBOutlet weak var welcomeTextField: UILabel!
     
     @IBAction func logOutButton(_ sender: Any) {
         //present(backVC, animated: false, completion: nil)

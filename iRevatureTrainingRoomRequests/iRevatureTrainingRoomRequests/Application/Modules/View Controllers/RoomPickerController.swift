@@ -7,8 +7,37 @@
 //
 
 import UIKit
-
-class RoomPickerController: BaseController {
+var roomInfo = RoomInfoBusinessService()
+class RoomPickerController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var roomTableView: UITableView!
+    @IBOutlet weak var roomPickerView: UIPickerView!
+    @IBOutlet weak var roomSegControl: UISegmentedControl!
+    
+    var test = userInfo.getUserInfoDB()
+      
+      override func viewDidLoad() {
+          super.viewDidLoad()
+         // setupTableView()
+          roomTableView.delegate = self
+          roomTableView.dataSource = self
+      }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+     return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+             
+           let cell = roomTableView.dequeueReusableCell(withIdentifier: "roomCell", for: indexPath) as! RoomTableViewCell
+           cell.roomNumber?.text = test?.name
+           return cell
+    }
+    
     
 }
 

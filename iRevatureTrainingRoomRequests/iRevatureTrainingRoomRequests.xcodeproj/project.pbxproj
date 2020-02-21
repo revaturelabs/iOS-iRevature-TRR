@@ -37,8 +37,8 @@
 		D5FBA1C723F7252B00237B0A /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1C623F7252B00237B0A /* BaseController.swift */; };
 		D5FBA1C923F728FC00237B0A /* LocationPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1C823F728FC00237B0A /* LocationPickerController.swift */; };
 		D5FBA1CB23F7295C00237B0A /* RoomPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1CA23F7295C00237B0A /* RoomPickerController.swift */; };
-		D5FBA1CD23F7298C00237B0A /* RequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1CC23F7298C00237B0A /* RequestController.swift */; };
-		D5FBA1CF23F7299A00237B0A /* SwapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1CE23F7299A00237B0A /* SwapController.swift */; };
+		D5FBA1CD23F7298C00237B0A /* SwapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1CC23F7298C00237B0A /* SwapController.swift */; };
+		D5FBA1CF23F7299A00237B0A /* RequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1CE23F7299A00237B0A /* RequestController.swift */; };
 		D5FC7D0D23F349B600E5ECE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC7D0C23F349B600E5ECE8 /* AppDelegate.swift */; };
 		D5FC7D0F23F349B600E5ECE8 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC7D0E23F349B600E5ECE8 /* LoginController.swift */; };
 		D5FC7D1223F349B600E5ECE8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5FC7D1023F349B600E5ECE8 /* Login.storyboard */; };
@@ -96,8 +96,8 @@
 		D5FBA1C623F7252B00237B0A /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		D5FBA1C823F728FC00237B0A /* LocationPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerController.swift; sourceTree = "<group>"; };
 		D5FBA1CA23F7295C00237B0A /* RoomPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomPickerController.swift; sourceTree = "<group>"; };
-		D5FBA1CC23F7298C00237B0A /* RequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestController.swift; sourceTree = "<group>"; };
-		D5FBA1CE23F7299A00237B0A /* SwapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapController.swift; sourceTree = "<group>"; };
+		D5FBA1CC23F7298C00237B0A /* SwapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapController.swift; sourceTree = "<group>"; };
+		D5FBA1CE23F7299A00237B0A /* RequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestController.swift; sourceTree = "<group>"; };
 		D5FC7D0923F349B600E5ECE8 /* iRevatureTrainingRoomRequests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRevatureTrainingRoomRequests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5FC7D0C23F349B600E5ECE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5FC7D0E23F349B600E5ECE8 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -377,8 +377,8 @@
 				847F3D6E23FC8A22001A4E84 /* HomeController.swift */,
 				D5FBA1C823F728FC00237B0A /* LocationPickerController.swift */,
 				D5FBA1CA23F7295C00237B0A /* RoomPickerController.swift */,
-				D5FBA1CC23F7298C00237B0A /* RequestController.swift */,
-				D5FBA1CE23F7299A00237B0A /* SwapController.swift */,
+				D5FBA1CC23F7298C00237B0A /* SwapController.swift */,
+				D5FBA1CE23F7299A00237B0A /* RequestController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -600,9 +600,9 @@
 				E2CA5F6B23FB238700EE9203 /* UserInfoBusinessService.swift in Sources */,
 				D5FBA1C123F721C000237B0A /* RoomRequest.swift in Sources */,
 				D5FBA1BD23F7203A00237B0A /* Status.swift in Sources */,
-				D5FBA1CF23F7299A00237B0A /* SwapController.swift in Sources */,
+				D5FBA1CF23F7299A00237B0A /* RequestController.swift in Sources */,
 				8400BE8A240049B500C6F700 /* LocationQuery.swift in Sources */,
-				D5FBA1CD23F7298C00237B0A /* RequestController.swift in Sources */,
+				D5FBA1CD23F7298C00237B0A /* SwapController.swift in Sources */,
 				847F3D7B23FDDC58001A4E84 /* RequestInfosProtocol.swift in Sources */,
 				D5FBA1CB23F7295C00237B0A /* RoomPickerController.swift in Sources */,
 				D5FBA1BB23F71FD300237B0A /* Room.swift in Sources */,
