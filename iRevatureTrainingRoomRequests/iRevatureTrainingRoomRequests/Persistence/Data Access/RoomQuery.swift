@@ -17,17 +17,29 @@ let instructorName = Expression<String?>("InstructorName")
 let status = Expression<String?>("Status")
 let location = Expression<Int?>("Location")
 
-func selectAllRooms() -> [Room]{
+func romByNumber(number: Int) -> Room?{
+    var result: [Room] = []
+    do{
+        let temp = rooms.filter(roomNumber == number)
+        for room in try! db.prepare(temp) {
+            let temp2 = Room.init(roomNumber: room[roomNumber]!, batchName: room[batchName]!, instructorName: room[instructorName]!, status: Status.statusType(assign: room[status]!)!, location: locationByID(ID: room[location]!)!)
+            result.append(temp2)
+        }
+        return result[0]
+    }
+}
 
+func selectAllRooms() -> [Room]{
+    
     var temp: Room
     //var recordCount = users.count
-
+    
     var result: [Room] = []
     print(getDBFilePath(dbName:"iRevatureTrainingRoomRequests"))
     
     for room in try! db.prepare(rooms) {
         temp = Room.init(roomNumber: room[roomNumber]!, batchName: room[batchName]!, instructorName: room[instructorName]!, status: Status.statusType(assign: room[status]!)!, location: locationByID(ID: room[location]!)!)
-
+        
         result.append(temp)
     }
     return result

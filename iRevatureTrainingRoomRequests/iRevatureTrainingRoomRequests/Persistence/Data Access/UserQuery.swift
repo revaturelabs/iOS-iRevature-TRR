@@ -21,7 +21,17 @@ class UserQuery{
     func selectAllUsers() -> [User]{
     
         var temp: User
-        //var recordCount = users.count
+        
+        func userByID(ID: Int) -> User?{
+            var result: [User] = []
+            do{
+            let temp = users.filter(locationID == ID)
+            for user in try! db.prepare(temp) {
+                let temp2 = User.init(name: user[name]!, role: user[role]!, email: user[email]!, token: user[token]!, keepmelogged: false)
+                result.append(temp2)}
+            return result[0]
+            }
+        }
     
         var result: [User] = []
         print(getDBFilePath(dbName:"iRevatureTrainingRoomRequests"))
