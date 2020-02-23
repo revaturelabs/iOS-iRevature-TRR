@@ -8,7 +8,6 @@
 
 import UIKit
 import os.log
-var roomInfo5 = RoomInfoBusinessService()
 class LocationPickerController: BaseController, UIPickerViewDelegate, UIPickerViewDataSource{
     
     @IBOutlet weak var locationPickerView: UIPickerView!
@@ -16,24 +15,28 @@ class LocationPickerController: BaseController, UIPickerViewDelegate, UIPickerVi
     
     var test = userInfo.getUserInfoDB()
     var test2: [String] = []
-    var i = 0
+    var result: [String] = []
+
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return test2.count
+        return result.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return test2[row]
+        
+        return result[row]
     }
     
     func createItems(){
-        for i in 0...3{
-            test2.append(test!.name)
+        let locations:[Location] = selectAllLocations()!
+        for location in locations{
+            result.append(location.State + "-" + location.Campus + "-" + location.Building)
         }
+        
     }
     
     override func viewDidLoad() {

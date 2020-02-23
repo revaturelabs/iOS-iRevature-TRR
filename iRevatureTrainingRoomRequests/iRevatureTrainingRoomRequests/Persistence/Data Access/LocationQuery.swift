@@ -36,8 +36,7 @@ func selectAllLocations() -> [Location]?{
     print(getDBFilePath(dbName:"iRevatureTrainingRoomRequests"))
     
     for location in try! db.prepare(locations) {
-        temp = Location.init(Building: location[building]!, Campus: location[campus]!, State: location[state]!, LocationID: location[locationID]!, ID: location[id]!)
-        
+        temp = Location.init(Building: location[building] ?? "Other", Campus: location[campus]!, State: location[state]!, LocationID: location[locationID]!, ID: location[id] ?? "0")
         result.append(temp)
     }
     return result

@@ -9,10 +9,15 @@
 import Foundation
 
 class LocationBusinessService: LocationInfoProtocol{
-    
-    
     func getLocationInfo() -> Location? {
         return nil
+        
     }
- 
+    
+    
+    
+    func getLocationInfo() -> String? {
+        return ""
+    }
+    
 }
