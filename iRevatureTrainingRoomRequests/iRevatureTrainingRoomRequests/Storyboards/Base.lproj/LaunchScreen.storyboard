@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -13,29 +13,46 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iRevatureTrainingRoomRequests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfC-2l-sbB">
-                                <rect key="frame" x="65" y="502" width="285" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iRevatureTrainingRoomRequests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfC-2l-sbB">
+                                <rect key="frame" x="64.666666666666686" y="437.66666666666669" width="285" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="285" id="nTJ-30-Mv9"/>
+                                    <constraint firstAttribute="height" constant="21" id="wzf-Fj-pXG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Version 0.2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxp-gG-LfA">
-                                <rect key="frame" x="163" y="549" width="91" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="rev-logo" translatesAutoresizingMaskIntoConstraints="NO" id="kFd-19-Dks">
+                                <rect key="frame" x="94" y="265.66666666666669" width="226" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="226" id="zjG-Ca-etd"/>
+                                    <constraint firstAttribute="height" constant="70" id="zlA-ua-uvj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 0.2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxp-gG-LfA">
+                                <rect key="frame" x="161.66666666666666" y="487.66666666666669" width="91" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="NjG-wm-asy"/>
+                                    <constraint firstAttribute="width" constant="91" id="hE3-8z-jbE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="rev-logo" translatesAutoresizingMaskIntoConstraints="NO" id="kFd-19-Dks">
-                                <rect key="frame" x="94" y="329" width="226" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NfC-2l-sbB" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="6t9-kd-7mQ"/>
+                            <constraint firstItem="NfC-2l-sbB" firstAttribute="top" secondItem="kFd-19-Dks" secondAttribute="bottom" constant="102" id="DdE-SE-ddF"/>
+                            <constraint firstItem="kFd-19-Dks" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Wa6-vi-i59"/>
+                            <constraint firstItem="NfC-2l-sbB" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="We4-8N-Wuz"/>
+                            <constraint firstItem="Nxp-gG-LfA" firstAttribute="top" secondItem="NfC-2l-sbB" secondAttribute="bottom" constant="29" id="ijq-5S-fVd"/>
+                            <constraint firstItem="Nxp-gG-LfA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="tSh-C8-MaT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
