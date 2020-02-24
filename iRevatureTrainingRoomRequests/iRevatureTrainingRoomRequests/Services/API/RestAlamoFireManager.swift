@@ -10,8 +10,6 @@ import Foundation
 import Alamofire
 
 class RestAlamoFireManager {
-    let userQuery = UserQuery()
-    
     func getRooms(completionHandler: @escaping ([roomJSON]) -> Void) {
         let currentUserDefaults = UserDefaults.standard
         AF.request(
