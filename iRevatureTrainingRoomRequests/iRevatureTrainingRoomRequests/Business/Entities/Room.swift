@@ -9,9 +9,9 @@
 import Foundation
 
 struct Room:Codable{
-    var roomNumber: Int
-    var batchName: String
-    var instructorName: String
-    var status: Status
-    var location: Location
+    var roomNumber: Int?
+    var batchName: String?
+    var instructorName: String?
+    var status: Status?
+    var location: Location?
 }

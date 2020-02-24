@@ -7,7 +7,6 @@
 //
 
 import UIKit
-var roomInfo = RoomInfoBusinessService()
 class RoomPickerController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var roomTableView: UITableView!
@@ -16,6 +15,11 @@ class RoomPickerController: UIViewController, UITableViewDataSource, UITableView
     
     var test = userInfo.getUserInfoDB()
     var test2: [String] = []
+    var result: [String] = []
+    var selectedRoom:Int = -1
+    var roomResult:Int = 1
+    var room: Room = Room()
+    var test3: [String] = []
       
       override func viewDidLoad() {
           super.viewDidLoad()
@@ -33,14 +37,18 @@ class RoomPickerController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-             
-           let cell = roomTableView.dequeueReusableCell(withIdentifier: "roomCell", for: indexPath) as! RoomTableViewCell
-           cell.roomNumber?.text = test?.name
-           return cell
+        //if roomResult != -1
+        let room = roomByNumber(number: roomResult)
+        let cell = roomTableView.dequeueReusableCell(withIdentifier: "roomCell", for: indexPath) as! RoomTableViewCell
+        test3.append("\((room?.roomNumber)!)")
+        test3.append("\((room?.batchName)!)")
+        test3.append("\((room?.instructorName)!)")
+        cell.roomNumber?.text = test3[indexPath.row]
+        return cell
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -48,16 +56,26 @@ class RoomPickerController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return test2.count
+        return result.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return test2[row]
+        return result[row]
     }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+         // use the row to get the selected row from the picker view
+         // using the row extract the value from your datasource (array[row])
+        let selectedRoom = result[row].description
+        let roomResult = Int(selectedRoom)
+     }
+    
     func createItems(){
-        for i in 0...3{
-            test2.append(test!.name)
+        let rooms:[Room] = selectAllRooms()
+        for room in rooms{
+            let tempResult = room.roomNumber
+            result.append("Room \(tempResult!)")
         }
     }
     

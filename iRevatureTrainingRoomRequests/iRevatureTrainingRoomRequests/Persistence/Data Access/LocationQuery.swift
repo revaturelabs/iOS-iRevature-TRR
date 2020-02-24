@@ -22,7 +22,7 @@ func locationByID(ID: Int) -> Location?{
     do{
     let temp = locations.filter(locationID == ID)
     for location in try! db.prepare(temp) {
-        let temp2 = Location.init(Building: location[building]!, Campus: location[campus]!, State: location[state]!, LocationID: location[locationID]!, ID: location[id]!)
+        let temp2 = Location.init(Building: location[building] ?? "Other", Campus: location[campus]!, State: location[state]!, LocationID: location[locationID]!, ID: location[id] ?? "0")
         result.append(temp2)}
     return result[0]
     }
