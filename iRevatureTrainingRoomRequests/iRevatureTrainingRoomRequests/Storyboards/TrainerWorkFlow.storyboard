@@ -230,7 +230,7 @@
                                     <action selector="submitButton:" destination="aut-aC-yUz" eventType="touchDown" id="bkA-dm-9Xt"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VYm-9z-yWq">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="VYm-9z-yWq">
                                 <rect key="frame" x="0.0" y="694" width="414" height="32"/>
                                 <segments>
                                     <segment title="Unrequest Room"/>
@@ -303,6 +303,7 @@
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
                                 <state key="normal" title="&lt; Back"/>
                                 <connections>
+                                    <action selector="backButton:" destination="mXB-5c-bgT" eventType="touchUpInside" id="g57-s8-Luk"/>
                                     <segue destination="1aD-Ho-K7f" kind="show" id="l8a-TZ-UVO"/>
                                 </connections>
                             </button>

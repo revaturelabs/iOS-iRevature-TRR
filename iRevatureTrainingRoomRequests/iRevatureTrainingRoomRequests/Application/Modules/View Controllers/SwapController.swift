@@ -14,7 +14,15 @@ class SwapController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var secondRoomPicker: UIPickerView!
     
+    @IBAction func backButton(_ sender: Any) {
+    let objSecondVC = self.storyboard!.instantiateViewController(withIdentifier: "TrainerWorkFlow1") as! RequestController
+    objSecondVC.selectedRoom2 = selectedRoom3
+    self.navigationController?.pushViewController(objSecondVC, animated: true)
+    self.present(objSecondVC, animated: true, completion: nil)
+    }
+    
     @IBAction func submitButton(_ sender: UIButton) {
+    
     }
     
     var result:[String] = []
