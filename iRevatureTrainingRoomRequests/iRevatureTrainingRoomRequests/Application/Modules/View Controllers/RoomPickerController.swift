@@ -19,7 +19,7 @@ class RoomPickerController: UIViewController, UITableViewDataSource, UITableView
     var selectedRoom:Int = -1
     var roomResult:Int = 1
     var room: Room = Room()
-    var test3: [String] = []
+    public var displayedRoom: [String] = []
       
       override func viewDidLoad() {
           super.viewDidLoad()
@@ -41,13 +41,13 @@ class RoomPickerController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //if roomResult != -1
+        displayedRoom = []
         let room = roomByNumber(number: roomResult)
         let cell = roomTableView.dequeueReusableCell(withIdentifier: "roomCell", for: indexPath) as! RoomTableViewCell
-        test3.append("\((room?.roomNumber)!)")
-        test3.append("\((room?.batchName)!)")
-        test3.append("\((room?.instructorName)!)")
-        cell.roomNumber?.text = test3[indexPath.row]
+        displayedRoom.append("\((room?.roomNumber)!)")
+        displayedRoom.append("\((room?.batchName)!)")
+        displayedRoom.append("\((room?.instructorName)!)")
+        cell.roomNumber?.text = displayedRoom[indexPath.row]
         return cell
     }
     
