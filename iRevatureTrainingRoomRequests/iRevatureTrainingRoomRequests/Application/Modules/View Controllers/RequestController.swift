@@ -21,7 +21,7 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     var test = userInfo.getUserInfoDB()
-    var selectedRoom2:Int = Int()
+    var selectedRoom2:Int = 0
     var displayedRoom2: [String] = []
     
     override func viewDidLoad() {
@@ -37,7 +37,7 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-     return 4
+     return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

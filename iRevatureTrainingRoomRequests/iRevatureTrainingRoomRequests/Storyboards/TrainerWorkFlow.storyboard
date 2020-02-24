@@ -78,7 +78,8 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="1aD-Ho-K7f" kind="show" id="rl9-Xw-nHN"/>
+                                    <action selector="submitButton:" destination="aut-aC-yUz" eventType="touchDown" id="noM-Gj-xof"/>
+                                    <segue destination="1aD-Ho-K7f" kind="show" identifier="RequestSegue" id="rl9-Xw-nHN"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eGd-dp-QEH">
@@ -197,7 +198,7 @@
                                 </segments>
                                 <connections>
                                     <action selector="RequestSegControlAction:" destination="1aD-Ho-K7f" eventType="valueChanged" id="iT1-ZF-d83"/>
-                                    <segue destination="mXB-5c-bgT" kind="show" id="805-5L-OKJ"/>
+                                    <segue destination="mXB-5c-bgT" kind="show" identifier="RequestSegue" id="805-5L-OKJ"/>
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGE-ua-9Eo">

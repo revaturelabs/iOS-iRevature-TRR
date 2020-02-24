@@ -32,6 +32,15 @@ class RoomPickerController: UIViewController, UITableViewDataSource, UITableView
         createItems()
       }
     
+   
+    @IBAction func submitButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "TrainerWorkFlow", bundle: nil)
+        let objSecondVC = self.storyboard!.instantiateViewController(withIdentifier: "TrainerWorkFlow1") as! RequestController
+        objSecondVC.selectedRoom2 = roomResult
+        self.navigationController?.pushViewController(objSecondVC, animated: true)
+        performSegue(withIdentifier: "RequestSegue", sender: Any?.self)
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
      return 1
     }
@@ -79,15 +88,6 @@ class RoomPickerController: UIViewController, UITableViewDataSource, UITableView
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if segue.destination is RequestController
-        {
-            let objSecondVC = self.storyboard?.instantiateViewController(withIdentifier: "TrainerWorkFlow1") as! RequestController
-            objSecondVC.selectedRoom2 = roomResult
-                self.navigationController?.pushViewController(objSecondVC, animated: true)
-        }
-    }
     
 }
 
