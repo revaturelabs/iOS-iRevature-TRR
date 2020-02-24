@@ -58,7 +58,7 @@
                                     <segue destination="Jlr-1J-CtJ" kind="show" id="KGs-MG-y54"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jX4-CF-zT1">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="jX4-CF-zT1">
                                 <rect key="frame" x="0.0" y="693" width="414" height="32"/>
                                 <segments>
                                     <segment title="Unassigned Rooms"/>
@@ -369,6 +369,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="l8a-TZ-UVO"/>
+        <segue reference="rl9-Xw-nHN"/>
     </inferredMetricsTieBreakers>
 </document>
