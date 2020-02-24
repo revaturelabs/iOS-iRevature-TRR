@@ -13,7 +13,7 @@ class RestAlamoFireManager {
     func getRooms(completionHandler: @escaping ([roomJSON]) -> Void) {
         let currentUserDefaults = UserDefaults.standard
         AF.request(
-               "",
+               "https://private-dbd7b7-security14.apiary-mock.com/coredata/room?type=training",
                method: .get,
                parameters: currentUserDefaults.string(forKey: userInfo.getUserInfo()!.token),
                encoder: JSONParameterEncoder.default
@@ -30,7 +30,7 @@ class RestAlamoFireManager {
     func getTrainers(completionHandler: @escaping ([trainerJSON]) -> Void) {
         let currentUserDefaults = UserDefaults.standard
         AF.request(
-               "",
+               "https://private-dbd7b7-security14.apiary-mock.com/coredata/trainers",
                method: .get,
                parameters: currentUserDefaults.string(forKey: userInfo.getUserInfo()!.token),
                encoder: JSONParameterEncoder.default
