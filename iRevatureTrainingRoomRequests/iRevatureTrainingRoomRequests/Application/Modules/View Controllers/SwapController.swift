@@ -60,7 +60,7 @@ class SwapController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func createItems(){
-        for i in 0...3{
+        for _ in 0...3{
             test2.append(test!.name)
         }
     }

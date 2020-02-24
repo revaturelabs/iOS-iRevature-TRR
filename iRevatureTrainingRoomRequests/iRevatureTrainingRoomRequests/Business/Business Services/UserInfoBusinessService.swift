@@ -45,22 +45,16 @@ class UserInfoBusinessService : UserInfoProtocol
         
         let currentUserDefaults = UserDefaults.standard
         
-        do{
-            
-            try? currentUserDefaults.set(PropertyListEncoder().encode(userObject), forKey: "UserSharedInfo")
-            
-            return true
-            
-        }catch(_)
-        {
+        if((try? currentUserDefaults.set(PropertyListEncoder().encode(userObject), forKey: "UserSharedInfo")) != nil){
+            return true}
+        else {
             return false
+            
         }
-        
-        
     }
     
     func getUserInfoDB() ->User? {
-        var userQuery = UserQuery()
+        let userQuery = UserQuery()
         let users = userQuery.selectAllUsers()
         return users[0]
     }
