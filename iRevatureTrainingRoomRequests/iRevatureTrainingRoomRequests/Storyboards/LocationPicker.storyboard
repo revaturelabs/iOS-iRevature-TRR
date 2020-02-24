@@ -55,14 +55,14 @@
                                     <segue destination="ffe-HO-fyJ" kind="show" id="T2g-aC-ne4"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="rev-logo" translatesAutoresizingMaskIntoConstraints="NO" id="dba-dE-nEM">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rev-logo" translatesAutoresizingMaskIntoConstraints="NO" id="dba-dE-nEM">
                                 <rect key="frame" x="87" y="72" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="6ua-TR-trI"/>
                                     <constraint firstAttribute="height" constant="128" id="nyf-uP-88P"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLb-8A-PzG">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLb-8A-PzG">
                                 <rect key="frame" x="20" y="44" width="70" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="I8N-pU-uTd"/>
@@ -82,11 +82,13 @@
                             <constraint firstItem="fBd-oK-49o" firstAttribute="top" secondItem="iU4-ST-c0T" secondAttribute="bottom" constant="17" id="84f-Sp-3ii"/>
                             <constraint firstItem="iU4-ST-c0T" firstAttribute="centerX" secondItem="jwQ-ML-luP" secondAttribute="centerX" id="BaX-O5-5IB"/>
                             <constraint firstItem="iU4-ST-c0T" firstAttribute="centerX" secondItem="jwQ-ML-luP" secondAttribute="centerX" id="CJl-Lc-jfL"/>
+                            <constraint firstItem="SLb-8A-PzG" firstAttribute="top" secondItem="C1i-a2-Hyb" secondAttribute="top" id="D4i-76-pPZ"/>
                             <constraint firstItem="94i-Mh-qRt" firstAttribute="centerX" secondItem="jwQ-ML-luP" secondAttribute="centerX" id="DCx-MC-NC5"/>
                             <constraint firstItem="94i-Mh-qRt" firstAttribute="top" secondItem="Ybr-mI-jXc" secondAttribute="bottom" constant="8" id="Fia-fr-afu"/>
                             <constraint firstItem="Ybr-mI-jXc" firstAttribute="top" secondItem="fBd-oK-49o" secondAttribute="bottom" constant="25" id="GR9-SB-0Go"/>
                             <constraint firstItem="iU4-ST-c0T" firstAttribute="top" secondItem="C1i-a2-Hyb" secondAttribute="top" constant="155" id="GeX-Ah-bqR"/>
                             <constraint firstItem="dba-dE-nEM" firstAttribute="centerX" secondItem="jwQ-ML-luP" secondAttribute="centerX" id="KeU-6P-WGj"/>
+                            <constraint firstItem="dba-dE-nEM" firstAttribute="top" secondItem="C1i-a2-Hyb" secondAttribute="top" constant="28" id="PZP-Ec-bwa"/>
                             <constraint firstItem="94i-Mh-qRt" firstAttribute="centerX" secondItem="jwQ-ML-luP" secondAttribute="centerX" id="TD4-1P-Fvg"/>
                             <constraint firstItem="fBd-oK-49o" firstAttribute="centerX" secondItem="jwQ-ML-luP" secondAttribute="centerX" id="mJs-Gd-YEB"/>
                             <constraint firstItem="fBd-oK-49o" firstAttribute="centerX" secondItem="jwQ-ML-luP" secondAttribute="centerX" id="oFi-kj-ALa"/>
