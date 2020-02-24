@@ -21,6 +21,8 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     var test = userInfo.getUserInfoDB()
+    var selectedRoom2:Int = Int()
+    var displayedRoom2: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,12 +41,12 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     
+        let room = roomByNumber(number: selectedRoom2)
         let cell = roomTableView.dequeueReusableCell(withIdentifier: "roomCell", for: indexPath) as! RoomTableViewCell
-        displayedRoom.append("\((room?.roomNumber)!)")
-        displayedRoom.append("\((room?.batchName)!)")
-        displayedRoom.append("\((room?.instructorName)!)")
-        cell.roomNumber?.text = displayedRoom[indexPath.row]
+        displayedRoom2.append("\((room?.roomNumber)!)")
+        displayedRoom2.append("\((room?.batchName)!)")
+        displayedRoom2.append("\((room?.instructorName)!)")
+        cell.roomNumber?.text = displayedRoom2[indexPath.row]
         return cell
       }
 
