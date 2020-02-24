@@ -76,11 +76,18 @@ class LoginController: BaseController {
                 }
             }
             )
-            performSegue(withIdentifier: "homePageSegue", sender: self)
+            navigateToLocationPicker()
         } else {
             failureMsgLabel.text = "Invalid Credentials,Please try again"
             os_log("Login failed",log: OSLog.default, type: .info)
             debugPrint("Login Failed")
         }
+    }
+    
+    func navigateToLocationPicker(){
+        let storyboard = UIStoryboard(name: "LocationPicker", bundle: nil)
+        let view = storyboard.instantiateInitialViewController()
+        view?.modalPresentationStyle = .fullScreen
+        self.present(view!, animated: true, completion: nil)
     }
 }
