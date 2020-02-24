@@ -37,7 +37,7 @@ class UserQuery{
         print(getDBFilePath(dbName:"iRevatureTrainingRoomRequests"))
         
         for user in try! db.prepare(users) {
-            print("name: \(user[name]), role: \(user[role]), email: \(user[email]), token \(user[token]), keepMeLogged \(user[keepMeLogged])")
+            print("name: \(user[name]!), role: \(user[role]!), email: \(user[email]!), token \(user[token]!), keepMeLogged \(user[keepMeLogged]!)")
             if user[keepMeLogged]! == 0 {
                 temp = User.init(name: user[name]!, role: user[role]!, email: user[email]!, token: user[token]!, keepmelogged: false)
             } else{
