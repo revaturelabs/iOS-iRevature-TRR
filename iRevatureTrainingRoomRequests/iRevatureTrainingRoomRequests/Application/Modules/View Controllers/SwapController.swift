@@ -7,7 +7,7 @@
 //
 
 import UIKit
-var roomInfo2 = RoomInfoBusinessService()
+
 class SwapController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate{
     
     @IBOutlet weak var roomTableView: UITableView!
@@ -19,8 +19,7 @@ class SwapController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var result:[String] = []
     var roomResult:Int = 1
-    
-    var test = userInfo.getUserInfoDB()
+    var selectedRoom3:Int?
     var displayedRoom3: [String] = []
     
     override func viewDidLoad() {
@@ -44,16 +43,19 @@ class SwapController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let room = roomByNumber(number: roomResult)
+        displayedRoom3 = []
+        let room = roomByNumber(number: selectedRoom3!)
+        let room2 = roomByNumber(number: roomResult)
         let cell = roomTableView.dequeueReusableCell(withIdentifier: "roomCell", for: indexPath) as! RoomTableViewCell
-        displayedRoom3.append("Date")
+        displayedRoom3.append("Start/End Date: ")
         displayedRoom3.append("1st Room #: \((room?.roomNumber)!)")
         displayedRoom3.append("1st Batch Name: \((room?.batchName)!)")
         displayedRoom3.append("1st Instructor Name: \((room?.instructorName)!)")
+    
         // add second room
-        displayedRoom3.append("2nd Room #: \((room?.roomNumber)!)")
-        displayedRoom3.append("2nd Batch Name: \((room?.batchName)!)")
-        displayedRoom3.append("2nd Instructor Name: \((room?.instructorName)!)")
+        displayedRoom3.append("2nd Room #: \((room2?.roomNumber)!)")
+        displayedRoom3.append("2nd Batch Name: \((room2?.batchName)!)")
+        displayedRoom3.append("2nd Instructor Name: \((room2?.instructorName)!)")
         cell.roomNumber?.text = displayedRoom3[indexPath.row]
         return cell
     }
@@ -77,7 +79,9 @@ class SwapController: UIViewController, UITableViewDataSource, UITableViewDelega
         // use the row to get the selected row from the picker view
         // using the row extract the value from your datasource (array[row])
         let selectedRoom = result[row].description
-        roomResult = Int(selectedRoom)!
+        let room = selectedRoom.substring(from: selectedRoom.index(after: selectedRoom.index(of: " ")!))
+        roomResult = Int(room)!
+        self.roomTableView.reloadData()
     }
     
     func createItems(){

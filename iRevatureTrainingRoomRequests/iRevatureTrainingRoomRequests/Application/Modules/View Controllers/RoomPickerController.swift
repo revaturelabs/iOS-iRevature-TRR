@@ -34,11 +34,10 @@ class RoomPickerController: UIViewController, UITableViewDataSource, UITableView
     
    
     @IBAction func submitButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "TrainerWorkFlow", bundle: nil)
         let objSecondVC = self.storyboard!.instantiateViewController(withIdentifier: "TrainerWorkFlow1") as! RequestController
         objSecondVC.selectedRoom2 = roomResult
         self.navigationController?.pushViewController(objSecondVC, animated: true)
-        performSegue(withIdentifier: "RequestSegue", sender: Any?.self)
+        self.present(objSecondVC, animated: true, completion: nil)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -77,7 +76,9 @@ class RoomPickerController: UIViewController, UITableViewDataSource, UITableView
          // use the row to get the selected row from the picker view
          // using the row extract the value from your datasource (array[row])
         let selectedRoom = result[row].description
-        roomResult = Int(selectedRoom)!
+        let room = selectedRoom.substring(from: selectedRoom.index(after: selectedRoom.index(of: " ")!))
+        roomResult = Int(room)!
+        self.roomTableView.reloadData()
      }
     
     func createItems(){

@@ -79,7 +79,6 @@
                                 </state>
                                 <connections>
                                     <action selector="submitButton:" destination="aut-aC-yUz" eventType="touchDown" id="noM-Gj-xof"/>
-                                    <segue destination="1aD-Ho-K7f" kind="show" identifier="RequestSegue" id="rl9-Xw-nHN"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eGd-dp-QEH">
@@ -189,18 +188,6 @@
                                     <constraint firstAttribute="width" constant="320" id="nl3-eY-2eW"/>
                                 </constraints>
                             </datePicker>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VYm-9z-yWq">
-                                <rect key="frame" x="0.0" y="755" width="414" height="32"/>
-                                <segments>
-                                    <segment title="Unrequest Room"/>
-                                    <segment title="Request Room Swap"/>
-                                    <segment title="Request Room"/>
-                                </segments>
-                                <connections>
-                                    <action selector="RequestSegControlAction:" destination="1aD-Ho-K7f" eventType="valueChanged" id="iT1-ZF-d83"/>
-                                    <segue destination="mXB-5c-bgT" kind="show" identifier="RequestSegue" id="805-5L-OKJ"/>
-                                </connections>
-                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGE-ua-9Eo">
                                 <rect key="frame" x="153.66666666666666" y="391" width="106.99999999999997" height="25"/>
                                 <constraints>
@@ -225,15 +212,45 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpl-sM-Rxc">
+                                <rect key="frame" x="93" y="745" width="228" height="44"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.52156862749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="228" id="2hh-pe-j54"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="228" id="6O4-Nm-qTR"/>
+                                    <constraint firstAttribute="height" constant="44" id="cCn-VU-CQV"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="yze-63-vPm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButton:" destination="1aD-Ho-K7f" eventType="touchUpInside" id="b3o-Cs-KMD"/>
+                                    <action selector="submitButton:" destination="aut-aC-yUz" eventType="touchDown" id="bkA-dm-9Xt"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VYm-9z-yWq">
+                                <rect key="frame" x="0.0" y="694" width="414" height="32"/>
+                                <segments>
+                                    <segment title="Unrequest Room"/>
+                                    <segment title="Request Room Swap"/>
+                                    <segment title="Request Room"/>
+                                </segments>
+                                <connections>
+                                    <action selector="RequestSegControlChange:" destination="1aD-Ho-K7f" eventType="valueChanged" id="swt-ae-7al"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="VYm-9z-yWq" firstAttribute="top" relation="lessThanOrEqual" secondItem="vsS-Ai-Hqn" secondAttribute="bottom" constant="157" id="3iA-jj-xzO"/>
                             <constraint firstItem="jZP-3V-zg3" firstAttribute="centerX" secondItem="s9s-4O-YiH" secondAttribute="centerX" id="6dF-OB-os4"/>
                             <constraint firstItem="L0g-oY-KxR" firstAttribute="top" secondItem="MdC-Vo-5wz" secondAttribute="top" constant="44" id="AVs-mw-4TF"/>
+                            <constraint firstItem="Xpl-sM-Rxc" firstAttribute="centerX" secondItem="s9s-4O-YiH" secondAttribute="centerX" id="C42-ba-d00"/>
                             <constraint firstItem="vsS-Ai-Hqn" firstAttribute="leading" secondItem="MdC-Vo-5wz" secondAttribute="leading" constant="20" id="CVa-Lx-pOb"/>
                             <constraint firstItem="iPj-Zg-Ook" firstAttribute="top" secondItem="lGE-ua-9Eo" secondAttribute="bottom" constant="8" symbolic="YES" id="Jl7-xp-a5m"/>
                             <constraint firstItem="jZP-3V-zg3" firstAttribute="leading" secondItem="MdC-Vo-5wz" secondAttribute="leading" id="PIf-0t-mE0"/>
+                            <constraint firstItem="Xpl-sM-Rxc" firstAttribute="top" secondItem="VYm-9z-yWq" secondAttribute="bottom" constant="20" id="QI8-2s-TzF"/>
                             <constraint firstItem="Mfo-cO-HTQ" firstAttribute="centerX" secondItem="s9s-4O-YiH" secondAttribute="centerX" id="Vb7-HX-7SI"/>
                             <constraint firstItem="MdC-Vo-5wz" firstAttribute="trailing" secondItem="vsS-Ai-Hqn" secondAttribute="trailing" constant="20" id="YQG-d3-5mg"/>
                             <constraint firstItem="jZP-3V-zg3" firstAttribute="top" secondItem="L0g-oY-KxR" secondAttribute="bottom" constant="5" id="ZY9-B4-kAv"/>
@@ -249,17 +266,18 @@
                             <constraint firstItem="iPj-Zg-Ook" firstAttribute="top" secondItem="Mfo-cO-HTQ" secondAttribute="bottom" constant="24" id="mPv-MT-3Hs"/>
                             <constraint firstItem="jZP-3V-zg3" firstAttribute="top" relation="lessThanOrEqual" secondItem="MdC-Vo-5wz" secondAttribute="top" constant="76" id="ocl-Vk-Prg"/>
                             <constraint firstItem="zyc-v7-AyW" firstAttribute="centerX" secondItem="s9s-4O-YiH" secondAttribute="centerX" id="p6S-9L-rmi"/>
+                            <constraint firstItem="MdC-Vo-5wz" firstAttribute="bottom" secondItem="Xpl-sM-Rxc" secondAttribute="bottom" constant="19" id="s7g-xz-MLU"/>
                             <constraint firstItem="VYm-9z-yWq" firstAttribute="trailing" secondItem="MdC-Vo-5wz" secondAttribute="trailing" id="sFD-M8-VNM"/>
                             <constraint firstItem="zyc-v7-AyW" firstAttribute="top" secondItem="jZP-3V-zg3" secondAttribute="bottom" constant="8" id="v75-4t-K5a"/>
-                            <constraint firstItem="MdC-Vo-5wz" firstAttribute="bottom" secondItem="VYm-9z-yWq" secondAttribute="bottom" constant="22" id="wJv-cj-RyE"/>
+                            <constraint firstItem="VYm-9z-yWq" firstAttribute="top" relation="lessThanOrEqual" secondItem="vsS-Ai-Hqn" secondAttribute="bottom" constant="96" id="vmP-qa-FPS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MdC-Vo-5wz"/>
                     </view>
                     <navigationItem key="navigationItem" id="kaN-rM-s7k"/>
                     <connections>
+                        <outlet property="RequestSegControl" destination="VYm-9z-yWq" id="jia-T6-IJ8"/>
                         <outlet property="commentsTextField" destination="vsS-Ai-Hqn" id="gJA-Rk-VkH"/>
                         <outlet property="endDatePicker" destination="iPj-Zg-Ook" id="xt2-VR-xw5"/>
-                        <outlet property="requestSegControl" destination="VYm-9z-yWq" id="qEV-Eb-e4p"/>
                         <outlet property="roomTableView" destination="jZP-3V-zg3" id="lxm-CE-llC"/>
                         <outlet property="startDatePicker" destination="Mfo-cO-HTQ" id="WC8-ZC-G0T"/>
                     </connections>
@@ -273,11 +291,11 @@
             <objects>
                 <viewController storyboardIdentifier="TrainerWorkFlow2" id="mXB-5c-bgT" customClass="SwapController" customModule="iRevatureTrainingRoomRequests" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="StR-MA-AtG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILN-ek-huG">
-                                <rect key="frame" x="20" y="44" width="60" height="35"/>
+                                <rect key="frame" x="20" y="88" width="60" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="8UM-7g-E1e"/>
                                     <constraint firstAttribute="width" constant="60" id="eh9-Ge-25L"/>
@@ -289,7 +307,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HeM-Cj-P4f">
-                                <rect key="frame" x="0.0" y="87" width="414" height="370"/>
+                                <rect key="frame" x="0.0" y="131" width="414" height="370"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="370" id="kFF-w3-haL"/>
@@ -319,7 +337,7 @@
                                 <sections/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77e-5R-gTE">
-                                <rect key="frame" x="93" y="737" width="228" height="44"/>
+                                <rect key="frame" x="93" y="791" width="228" height="44"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.52156862749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="R7k-Qb-ACs"/>
@@ -334,7 +352,7 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ux-Ga-n1w">
-                                <rect key="frame" x="0.0" y="465" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="509" width="414" height="216"/>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -369,7 +387,4 @@
             <point key="canvasLocation" x="1665.217391304348" y="130.58035714285714"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="l8a-TZ-UVO"/>
-    </inferredMetricsTieBreakers>
 </document>
