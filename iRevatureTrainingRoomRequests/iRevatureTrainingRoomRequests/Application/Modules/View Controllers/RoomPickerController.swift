@@ -79,15 +79,6 @@ class RoomPickerController: UIViewController, UITableViewDataSource, UITableView
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if segue.destination is RequestController
-        {
-            let objSecondVC = self.storyboard?.instantiateViewController(withIdentifier: "TrainerWorkFlow1") as! RequestController
-            objSecondVC.roomResult2 = roomResult
-                self.navigationController?.pushViewController(objSecondVC, animated: true)
-        }
-    }
     
 }
 
