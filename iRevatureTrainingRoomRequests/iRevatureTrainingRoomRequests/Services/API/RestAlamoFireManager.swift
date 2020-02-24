@@ -12,17 +12,55 @@ import Alamofire
 class RestAlamoFireManager {
     let userQuery = UserQuery()
     
-    func getRooms() -> [Room]?{
-        return nil
+    func getRooms(completionHandler: @escaping ([roomJSON]) -> Void) {
+        let currentUserDefaults = UserDefaults.standard
+        AF.request(
+               "",
+               method: .get,
+               parameters: currentUserDefaults.string(forKey: userInfo.getUserInfo()!.token),
+               encoder: JSONParameterEncoder.default
+        ).validate().responseDecodable(of: roomStatus.self){(response) in
+            guard let room = response.value else{
+                print("Error appeared")
+                print(response.error?.errorDescription! ?? "Unknown error found")
+                return
+            }
+            completionHandler(room.roomsArray)
+        }
     }
     
-    func getTrainers() -> [User]{
-        let users = userQuery.selectAllUsers()
-        return users
+    func getTrainers(completionHandler: @escaping ([trainerJSON]) -> Void) {
+        let currentUserDefaults = UserDefaults.standard
+        AF.request(
+               "",
+               method: .get,
+               parameters: currentUserDefaults.string(forKey: userInfo.getUserInfo()!.token),
+               encoder: JSONParameterEncoder.default
+        ).validate().responseDecodable(of: trainerStatus.self){(response) in
+            guard let trainer = response.value else{
+                print("Error appeared")
+                print(response.error?.errorDescription! ?? "Unknown error found")
+                return
+            }
+            completionHandler(trainer.trainerArray)
+        }
     }
     
-    func getLocations() -> [Location]?{
-        return nil
+    func getLocations(completionHandler: @escaping ([locationJSON]) -> Void) {
+        let currentUserDefaults = UserDefaults.standard
+        AF.request(
+               "https://private-dbd7b7-security14.apiary-mock.com/coredata/location?type=training",
+               method: .get,
+               parameters: currentUserDefaults.string(forKey: userInfo.getUserInfo()!.token),
+               encoder: JSONParameterEncoder.default
+        ).validate().responseDecodable(of: locationStatus.self){(response) in
+            guard let location = response.value else{
+                print("Error appeared")
+                print(response.error?.errorDescription! ?? "Unknown error found")
+                return
+            }
+            completionHandler(location.locationsArray)
+        }
     }
     
     func getRoomRequests() -> [RoomRequest]?{

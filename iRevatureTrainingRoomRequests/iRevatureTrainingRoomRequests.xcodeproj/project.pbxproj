@@ -28,6 +28,7 @@
 		847F3DC723FF154A001A4E84 /* DBOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F3DC623FF154A001A4E84 /* DBOperations.swift */; };
 		847F3DCB23FF3819001A4E84 /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F3DCA23FF3819001A4E84 /* RoomTableViewCell.swift */; };
 		D56FA5AE240426BC00041BBF /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56FA5AD240426BC00041BBF /* Login.swift */; };
+		D56FA5B024045F6300041BBF /* Trainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56FA5AF24045F6300041BBF /* Trainer.swift */; };
 		D5FBA1B923F71F8D00237B0A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1B823F71F8D00237B0A /* User.swift */; };
 		D5FBA1BB23F71FD300237B0A /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1BA23F71FD300237B0A /* Room.swift */; };
 		D5FBA1BD23F7203A00237B0A /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FBA1BC23F7203A00237B0A /* Status.swift */; };
@@ -88,6 +89,7 @@
 		847F3DC623FF154A001A4E84 /* DBOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBOperations.swift; sourceTree = "<group>"; };
 		847F3DCA23FF3819001A4E84 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
 		D56FA5AD240426BC00041BBF /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		D56FA5AF24045F6300041BBF /* Trainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trainer.swift; sourceTree = "<group>"; };
 		D5FBA1B823F71F8D00237B0A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D5FBA1BA23F71FD300237B0A /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		D5FBA1BC23F7203A00237B0A /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				D5FBA1C223F7220C00237B0A /* RequestType.swift */,
 				D5FBA1C423F7224D00237B0A /* SwapRequest.swift */,
 				D56FA5AD240426BC00041BBF /* Login.swift */,
+				D56FA5AF24045F6300041BBF /* Trainer.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D56FA5B024045F6300041BBF /* Trainer.swift in Sources */,
 				847F3D7D23FDDCE2001A4E84 /* LocationInfoProtocol.swift in Sources */,
 				D5FC7D1523F349B600E5ECE8 /* iRevatureTrainingRoomRequests.xcdatamodeld in Sources */,
 				847F3D7F23FDDDF9001A4E84 /* SwapRequestInfoProtocol.swift in Sources */,

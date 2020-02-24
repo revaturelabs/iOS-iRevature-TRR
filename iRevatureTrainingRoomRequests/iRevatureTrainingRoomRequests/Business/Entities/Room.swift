@@ -15,3 +15,21 @@ struct Room:Codable{
     var status: Status?
     var location: Location?
 }
+
+struct roomStatus: Codable{
+    var statusCode: Int
+    var descriptions: String
+    var campusArray: [campusJSON]
+    var roomsArray: [roomJSON]
+}
+
+struct campusJSON: Codable{
+    var id: String
+    var campus: String
+}
+
+struct roomJSON: Codable{
+    var id: String
+    var room: String
+    var capacity: Int
+}

@@ -42,14 +42,11 @@ class UserInfoBusinessService : UserInfoProtocol
     
     //write the user object to the userdefault data store
     func setUserInfo(userObject: User) -> Bool {
-        
         let currentUserDefaults = UserDefaults.standard
-        
         if((try? currentUserDefaults.set(PropertyListEncoder().encode(userObject), forKey: "UserSharedInfo")) != nil){
             return true}
         else {
             return false
-            
         }
     }
     

@@ -13,5 +13,18 @@ struct Location:Codable{
     var Campus: String
     var State: String
     var LocationID: Int
-    var ID: String
+    var ID: String?
+}
+
+struct locationStatus: Codable{
+    var statusCode: Int
+    var descriptions: String
+    var locationsArray: [locationJSON]
+}
+
+struct locationJSON: Codable{
+    var id: String
+    var state: String
+    var campus: String
+    var building: String
 }
