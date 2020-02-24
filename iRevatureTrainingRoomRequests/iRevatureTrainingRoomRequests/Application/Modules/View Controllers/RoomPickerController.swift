@@ -53,9 +53,9 @@ class RoomPickerController: UIViewController, UITableViewDataSource, UITableView
         displayedRoom = []
         let room = roomByNumber(number: roomResult)
         let cell = roomTableView.dequeueReusableCell(withIdentifier: "roomCell", for: indexPath) as! RoomTableViewCell
-        displayedRoom.append("\((room?.roomNumber)!)")
-        displayedRoom.append("\((room?.batchName)!)")
-        displayedRoom.append("\((room?.instructorName)!)")
+        displayedRoom.append("Room #: \((room?.roomNumber)!)")
+        displayedRoom.append("Batch Name: \((room?.batchName)!)")
+        displayedRoom.append("Instructor Name: \((room?.instructorName)!)")
         cell.roomNumber?.text = displayedRoom[indexPath.row]
         return cell
     }
