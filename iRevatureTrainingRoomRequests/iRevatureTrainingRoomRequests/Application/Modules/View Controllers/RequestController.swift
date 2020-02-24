@@ -17,6 +17,9 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
     @IBOutlet weak var endDatePicker: UIDatePicker!
     @IBOutlet weak var requestSegControl: UISegmentedControl!
     
+    var displayedRoom2:[String] = []
+    var roomResult2:Int = Int()
+    
     @IBAction func RequestSegControlAction(_ sender: Any) {
     }
     
@@ -39,12 +42,12 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     
+        let room = roomByNumber(number: roomResult2)
         let cell = roomTableView.dequeueReusableCell(withIdentifier: "roomCell", for: indexPath) as! RoomTableViewCell
-        displayedRoom.append("\((room?.roomNumber)!)")
-        displayedRoom.append("\((room?.batchName)!)")
-        displayedRoom.append("\((room?.instructorName)!)")
-        cell.roomNumber?.text = displayedRoom[indexPath.row]
+        displayedRoom2.append("\((room?.roomNumber)!)")
+        displayedRoom2.append("\((room?.batchName)!)")
+        displayedRoom2.append("\((room?.instructorName)!)")
+        cell.roomNumber?.text = displayedRoom2[indexPath.row]
         return cell
       }
 
