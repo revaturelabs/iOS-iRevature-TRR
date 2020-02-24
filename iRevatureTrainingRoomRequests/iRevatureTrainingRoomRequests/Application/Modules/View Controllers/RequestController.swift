@@ -41,7 +41,10 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
      
         let cell = roomTableView.dequeueReusableCell(withIdentifier: "roomCell", for: indexPath) as! RoomTableViewCell
-        cell.roomNumber?.text = test?.name
+        displayedRoom.append("\((room?.roomNumber)!)")
+        displayedRoom.append("\((room?.batchName)!)")
+        displayedRoom.append("\((room?.instructorName)!)")
+        cell.roomNumber?.text = displayedRoom[indexPath.row]
         return cell
       }
 
