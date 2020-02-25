@@ -16,6 +16,8 @@ class LocationPickerController: BaseController, UIPickerViewDelegate, UIPickerVi
     var test = userInfo.getUserInfoDB()
     var test2: [String] = []
     var result: [String] = []
+    var roomResult0:Int = Int()
+    var rooms:[Room] = selectAllRooms()
 
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -60,11 +62,12 @@ class LocationPickerController: BaseController, UIPickerViewDelegate, UIPickerVi
     }
     
     @IBAction func submitButton(_ sender: Any) {
+        let TrainerVC:UIViewController = UIStoryboard(name: "TrainerWorkFlow", bundle:nil).instantiateViewController(withIdentifier: "TrainerWorkFlow0") as UIViewController
+        //TrainerVC.roomResult = roomResult0
         present(TrainerVC, animated: false, completion: nil)
+        let roomResult0 = rooms[0].roomNumber
     }
 
-    /*let backVC:UIViewController = UIStoryboard(name: "Login", bundle:nil).instantiateViewController(withIdentifier: "Login") as UIViewController as! LoginController
-    */
     let TrainerVC:UIViewController = UIStoryboard(name: "TrainerWorkFlow", bundle:nil).instantiateViewController(withIdentifier: "TrainerWorkFlow0") as UIViewController
     
 }
