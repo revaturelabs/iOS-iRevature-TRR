@@ -10,5 +10,7 @@ import Foundation
 
 protocol LocationInfoProtocol{
     
-    func getLocationInfo() -> Location?
+    func setLocationInfoDB()
+    
+    func getLocationAPI() -> [Location]
 }

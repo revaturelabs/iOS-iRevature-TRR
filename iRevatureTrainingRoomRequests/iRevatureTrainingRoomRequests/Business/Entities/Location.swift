@@ -9,10 +9,10 @@
 import Foundation
 
 struct Location:Codable{
-    var Building: String
-    var Campus: String
-    var State: String
-    var LocationID: Int
+    var Building: String?
+    var Campus: String?
+    var State: String?
+    var LocationID: Int?
     var ID: String?
 }
 
