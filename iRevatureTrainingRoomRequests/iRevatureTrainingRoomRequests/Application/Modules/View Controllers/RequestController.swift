@@ -20,6 +20,10 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
     var segControlValue:Int = Int()
     var selectedDate:String = String()
     var selectedDate2:String = String()
+    var test = userInfo.getUserInfoDB()
+    var selectedRoom2:Int?
+    var displayedRoom2: [String] = []
+    
     
     @IBAction func RequestSegControlChange(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
@@ -63,12 +67,7 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
             self.present(objSecondVC, animated: true, completion: nil)
         }
     }
-    
-    
-    var test = userInfo.getUserInfoDB()
-    var selectedRoom2:Int?
-    var displayedRoom2: [String] = []
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
        // setupTableView()
@@ -94,5 +93,4 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
         cell.roomNumber?.text = displayedRoom2[indexPath.row]
         return cell
       }
-
 }

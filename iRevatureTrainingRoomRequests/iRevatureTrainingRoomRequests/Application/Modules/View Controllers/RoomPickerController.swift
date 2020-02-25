@@ -13,13 +13,11 @@ class RoomPickerController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var roomPickerView: UIPickerView!
     @IBOutlet weak var roomSegControl: UISegmentedControl!
     
-    var test = userInfo.getUserInfoDB()
     var test2: [String] = []
     var result: [String] = []
     var selectedRoom:Int = -1
     var roomResult:Int = Int()
     var room: Room = Room()
-    var rooms:[Room] = selectAllRooms()
     public var displayedRoom: [String] = []
     
     override func viewDidLoad() {

@@ -14,6 +14,14 @@ class SwapController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var secondRoomPicker: UIPickerView!
     
+    var result:[String] = []
+    var roomResult:Int = 1
+    var selectedRoom3:Int?
+    var displayedRoom3: [String] = []
+    var dateRange2:String = String()
+    var startDate:String = String()
+    var endDate:String = String()
+    
     @IBAction func backButton(_ sender: Any) {
         let objSecondVC = self.storyboard!.instantiateViewController(withIdentifier: "TrainerWorkFlow1") as! RequestController
         objSecondVC.selectedRoom2 = selectedRoom3
@@ -24,15 +32,7 @@ class SwapController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func submitButton(_ sender: UIButton) {
         
     }
-    
-    var result:[String] = []
-    var roomResult:Int = 1
-    var selectedRoom3:Int?
-    var displayedRoom3: [String] = []
-    var dateRange2:String = String()
-    var startDate:String = String()
-    var endDate:String = String()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // setupTableView()
@@ -70,8 +70,6 @@ class SwapController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.roomNumber?.text = displayedRoom3[indexPath.row]
         return cell
     }
-    
-    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
