@@ -10,7 +10,7 @@ import Foundation
 
 struct User: Codable {
     var name: String
-    var role: String
+    var role: String?
     var email: String
     var token: String
     var keepmelogged: Bool

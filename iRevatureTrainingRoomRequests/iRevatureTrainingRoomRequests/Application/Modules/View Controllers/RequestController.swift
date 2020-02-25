@@ -18,6 +18,9 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
     @IBOutlet weak var RequestSegControl: UISegmentedControl!
     
     var segControlValue:Int = Int()
+    var dayString:String = String()
+    var monthString:String = String()
+    var yearString:String = String()
     
     @IBAction func RequestSegControlChange(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
@@ -33,6 +36,25 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
     
     @IBAction func submitButton(_ sender: Any) {
         if segControlValue == 0{
+            let calendar = Calendar.current
+            let components = calendar.dateComponents([.day,.month,.year], from: self.startDatePicker.date);
+            if let day = components.day, let month = components.month, let year = components.year {
+                let dayString = String(day)
+                let monthString = String(month)
+                let yearString = String(year)
+            }
+            let startDate = "\(dayString)/\(monthString)/\(yearString)"
+            let componenets2 = calendar.dateComponents([.day,.month,.year], from: self.endDatePicker.date);
+            if let day = components.day, let month = components.month, let year = components.year {
+                let dayString = String(day)
+                let monthString = String(month)
+                let yearString = String(year)
+            }
+            
+            
+            
+            
+            
             let objSecondVC = self.storyboard!.instantiateViewController(withIdentifier: "TrainerWorkFlow2") as! SwapController
             objSecondVC.selectedRoom3 = selectedRoom2
             self.navigationController?.pushViewController(objSecondVC, animated: true)
