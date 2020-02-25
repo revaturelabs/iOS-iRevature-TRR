@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class RoomPickerController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -37,6 +38,7 @@ class RoomPickerController: UIViewController, UITableViewDataSource, UITableView
         let objSecondVC = self.storyboard!.instantiateViewController(withIdentifier: "TrainerWorkFlow1") as! RequestController
         objSecondVC.selectedRoom2 = roomResult
         self.navigationController?.pushViewController(objSecondVC, animated: true)
+        os_log("Room picked",log: OSLog.default, type: .info)
         self.present(objSecondVC, animated: true, completion: nil)
     }
     

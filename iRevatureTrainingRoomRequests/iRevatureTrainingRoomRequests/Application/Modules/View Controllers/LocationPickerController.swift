@@ -13,12 +13,12 @@ class LocationPickerController: BaseController, UIPickerViewDelegate, UIPickerVi
     
     @IBOutlet weak var locationPickerView: UIPickerView!
     @IBOutlet weak var welcomeTextField: UILabel!
-    
-    var test = userInfo.getUserInfoDB()
+
     var test2: [String] = []
     var result: [String] = []
     var roomResult0:Int = Int()
     var rooms:[Room] = selectAllRooms()
+    var selectedLocation:String = String()
 
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -33,6 +33,13 @@ class LocationPickerController: BaseController, UIPickerViewDelegate, UIPickerVi
         
         return result[row]
     }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+     {
+         // use the row to get the selected row from the picker view
+         // using the row extract the value from your datasource (array[row])
+         let selectedLocation = result[row].description
+     }
     
     func createItems(){
         let locations:[Location] = selectAllLocations()!
@@ -49,7 +56,6 @@ class LocationPickerController: BaseController, UIPickerViewDelegate, UIPickerVi
         self.locationPickerView.dataSource = self
         createItems()
     }
-
     
     @IBAction func logOutButton(_ sender: Any) {
         //present(backVC, animated: false, completion: nil)
@@ -66,6 +72,7 @@ class LocationPickerController: BaseController, UIPickerViewDelegate, UIPickerVi
         let roomResult0 = rooms[0].roomNumber
         let TrainerVC:RoomPickerController = UIStoryboard(name: "TrainerWorkFlow", bundle:nil).instantiateViewController(withIdentifier: "TrainerWorkFlow0") as! RoomPickerController
         TrainerVC.roomResult = roomResult0!
+        os_log("Location picked",log: OSLog.default, type: .info)
         present(TrainerVC, animated: false, completion: nil)
     }
 
