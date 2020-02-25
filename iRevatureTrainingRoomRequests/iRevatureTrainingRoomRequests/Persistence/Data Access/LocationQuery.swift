@@ -8,6 +8,7 @@
 
 import Foundation
 import SQLite
+import os.log
 
 let database = try! Connection(getDBFilePath(dbName: "iRevatureTrainingRoomRequests"))
 let locations = Table("Location")
@@ -23,7 +24,10 @@ func locationByID(ID: Int) -> Location?{
     let temp = locations.filter(locationID == ID)
     for location in try! db.prepare(temp) {
         let temp2 = Location.init(Building: location[building] ?? "Other", Campus: location[campus]!, State: location[state]!, LocationID: location[locationID]!, ID: location[id] ?? "0")
-        result.append(temp2)}
+        result.append(temp2)
+        
+        }
+    os_log("location is queried")
     return result[0]
     }
 }
@@ -39,5 +43,6 @@ func selectAllLocations() -> [Location]?{
         temp = Location.init(Building: location[building] ?? "Other", Campus: location[campus]!, State: location[state]!, LocationID: location[locationID]!, ID: location[id] ?? "0")
         result.append(temp)
     }
+    os_log("All locations queried")
     return result
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 import SQLite
+import os.log
 
 let db = try! Connection(getDBFilePath(dbName: "iRevatureTrainingRoomRequests"))
 let rooms = Table("Room")
@@ -28,6 +29,7 @@ func roomByNumber(number: Int) -> Room?{
             result.append(temp2)
         }
     }
+    os_log("Room is queried")
         return result[0]
 }
 
@@ -44,5 +46,6 @@ func selectAllRooms() -> [Room]{
         
         result.append(temp)
     }
+    os_log("All rooms queried")
     return result
 }
