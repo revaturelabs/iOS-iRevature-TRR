@@ -19,6 +19,7 @@ class RoomPickerController: UIViewController, UITableViewDataSource, UITableView
     var selectedRoom:Int = -1
     var roomResult:Int = 1
     var room: Room = Room()
+    var rooms:[Room] = selectAllRooms()
     public var displayedRoom: [String] = []
       
       override func viewDidLoad() {
