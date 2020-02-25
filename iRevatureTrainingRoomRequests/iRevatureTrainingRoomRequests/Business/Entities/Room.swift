@@ -14,6 +14,7 @@ struct Room:Codable{
     var instructorName: String?
     var status: Status?
     var location: Location?
+    var id: String?
 }
 
 struct roomStatus: Codable{
