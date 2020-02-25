@@ -19,9 +19,9 @@ struct Room:Codable{
 
 struct roomStatus: Codable{
     var statusCode: Int
-    var descriptions: String
-    var campusArray: [campusJSON]
-    var roomsArray: [roomJSON]
+    var description: String
+    var allcampus: [campusJSON]
+    var allrooms: [roomJSON]
 }
 
 struct campusJSON: Codable{

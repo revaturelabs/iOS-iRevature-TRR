@@ -23,22 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "79C5E57F-FFEB-45B4-BD03-8530CDE5DB99"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iRevatureTrainingRoomRequests/Business/Business Services/UserInfoBusinessService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "getTrainerAPI()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "BC210FC8-92A5-4E21-A7BC-3978E4F33B2E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -46,8 +30,8 @@
             filePath = "iRevatureTrainingRoomRequests/Services/API/RestAlamoFireManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "getLocations(completionHandler:)"
             landmarkType = "7">
             <Locations>
@@ -94,8 +78,8 @@
             filePath = "iRevatureTrainingRoomRequests/Business/Business Services/UserInfoBusinessService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "setUserInfo(userObject:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -104,20 +88,20 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "ACFDE9B3-E855-4621-9F7A-9E980D9EA40D"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iRevatureTrainingRoomRequests/Services/API/RestAlamoFireManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "getRooms(completionHandler:)"
             landmarkType = "7">
             <Locations>
                <Location
                   uuid = "ACFDE9B3-E855-4621-9F7A-9E980D9EA40D - 417f5e17aaa73e7e"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "iRevatureTrainingRoomRequests.RestAlamoFireManager.getRooms(completionHandler: (Swift.Array&lt;iRevatureTrainingRoomRequests.roomJSON&gt;) -&gt; ()) -&gt; ()"
@@ -126,13 +110,13 @@
                   urlString = "file:///Users/ncoggins/Documents/GitHub/iOS-iRevature-TRR/iRevatureTrainingRoomRequests/iRevatureTrainingRoomRequests/Services/API/RestAlamoFireManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "717">
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "669">
                </Location>
                <Location
                   uuid = "ACFDE9B3-E855-4621-9F7A-9E980D9EA40D - b37f28a7e4469d71"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Alamofire.DataResponse&lt;iRevatureTrainingRoomRequests.roomStatus, Alamofire.AFError&gt;) -&gt; () in iRevatureTrainingRoomRequests.RestAlamoFireManager.getRooms(completionHandler: (Swift.Array&lt;iRevatureTrainingRoomRequests.roomJSON&gt;) -&gt; ()) -&gt; ()"
@@ -141,8 +125,8 @@
                   urlString = "file:///Users/ncoggins/Documents/GitHub/iOS-iRevature-TRR/iRevatureTrainingRoomRequests/iRevatureTrainingRoomRequests/Services/API/RestAlamoFireManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
                   offsetFromSymbolStart = "298">
                </Location>
             </Locations>
@@ -158,8 +142,8 @@
             filePath = "iRevatureTrainingRoomRequests/Services/API/RestAlamoFireManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "getTrainers(completionHandler:)"
             landmarkType = "7">
             <Locations>
@@ -194,6 +178,54 @@
                   offsetFromSymbolStart = "278">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A326721F-EC19-484A-B78F-4696A97D9F31"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iRevatureTrainingRoomRequests/Services/API/RestAlamoFireManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "getRooms(completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "10F4C42B-E917-458A-9889-45B5E10B5891"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iRevatureTrainingRoomRequests/Services/API/RestAlamoFireManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "getRooms(completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C7275A0C-CE30-4A93-B2A6-72995FEC59E3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iRevatureTrainingRoomRequests/Services/API/RestAlamoFireManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "getRooms(completionHandler:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

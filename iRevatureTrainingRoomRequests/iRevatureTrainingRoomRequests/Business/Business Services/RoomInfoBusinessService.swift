@@ -8,8 +8,10 @@
 
 import Foundation
 import SQLite
+import SQLite3
 
 class RoomInfoBusinessService:RoomInfoProtocol{
+    
     let db = try! Connection(getDBFilePath(dbName: "iRevatureTrainingRoomRequests"))
     let rooms = Table("Room")
     var roomNumber = Expression<Int?>("RoomNumber")
@@ -20,23 +22,34 @@ class RoomInfoBusinessService:RoomInfoProtocol{
     var id = Expression<String?>("ID")
     
     func setRoomInfoDB(){
-        let roomsArray = getRoomAPI()
-        for room in roomsArray {
-            do {try db.run(rooms.insert(or: .replace, roomNumber <- room.roomNumber, id <- room.id))
-            } catch {
-            }
-        }
-    }
-    
-    func getRoomAPI() -> [Room] {
-        let roomAPI = RestAlamoFireManager()
-        var roomsArray:[Room] = []
-        _ = roomAPI.getRooms(completionHandler: {rooms in
-            for room in rooms {
-                let room = Room(roomNumber: Int(room.room), id: room.id)
-                roomsArray.append(room)
+        _ = getRoomAPI(completionHandler: {
+            allRooms in
+            for room in allRooms {
+                do {
+                    try self.db.run(self.rooms.insert(or: .replace, self.roomNumber <- room.roomNumber, self.id <- room.id))
+                } catch let Result.error(message, code, statement) where code == SQLITE_CONSTRAINT {
+                    print("constraint failed: \(message), in \(String(describing: statement))")
+                } catch let error {
+                    print("insertion failed: \(error)")
+                }
             }
         })
-        return roomsArray
+    }
+    
+    func getRoomAPI(completionHandler: @escaping ([Room]) -> Void) {
+        let roomAPI = RestAlamoFireManager()
+        _ = roomAPI.getRooms(completionHandler: {
+            roomsReturned in
+            var roomsArray:[Room] = []
+            for room in roomsReturned {
+                print("room \(room.id) \(room.room)")
+                let tempRoom = Room(roomNumber: Int(room.room), id: room.id)
+                roomsArray.append(tempRoom)
+                //  print(self.roomsArray.count)
+            }
+            completionHandler(roomsArray)
+        })
+        
     }
 }
+

@@ -10,15 +10,22 @@ import Foundation
 import Alamofire
 
 class RestAlamoFireManager {
-    let headers: HTTPHeaders = [
-        "Authorization": "Bearer" + userInfo.getUserInfo()!.token,
-        "Accept": "application/json"
-    ]
+    
+    
+    var userInfo:UserInfoBusinessService = UserInfoBusinessService()
+    
     let parameters = [
     "type": "training"
     ]
     
     func getRooms(completionHandler: @escaping ([roomJSON]) -> Void) {
+    
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer" + userInfo.getUserInfo()!.token!,
+        "Accept": "application/json"
+    ]
+    
+        
         AF.request(
                "https://private-dbd7b7-security14.apiary-mock.com/coredata/room",
                method: .get,
@@ -26,17 +33,24 @@ class RestAlamoFireManager {
                encoder: URLEncodedFormParameterEncoder.default,
                headers: headers
         ).validate().responseDecodable(of: roomStatus.self){(response) in
-            print("Made it rooms")
+            print("Made it rooms with additional")
             guard let room = response.value else{
-                print("Error appeared")
-                print(response.error?.errorDescription! ?? "Unknown error found")
+                print("Error appeared \(String(describing: response.error))")
+             //   print(response.error?.errorDescription! ?? "Unknown error found")
                 return
             }
-            completionHandler(room.roomsArray)
+            completionHandler(room.allrooms)
         }
     }
     
     func getTrainers(completionHandler: @escaping ([trainerJSON]) -> Void) {
+     
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer" + userInfo.getUserInfo()!.token!,
+             "Accept": "application/json"
+         ]
+        
+        
         AF.request(
                "https://private-dbd7b7-security14.apiary-mock.com/coredata/trainers",
                method: .get,
@@ -44,10 +58,10 @@ class RestAlamoFireManager {
                encoder: URLEncodedFormParameterEncoder.default,
                headers: headers
         ).validate().responseDecodable(of: trainerStatus.self){(response) in
-               print("Made it trainers")
+            //   print("Made it trainers")
             guard let trainer = response.value else{
-                print("Error appeared")
-                print(response.error?.errorDescription! ?? "Unknown error found")
+              //  print("Error appeared")
+                //print(response.error?.errorDescription! ?? "Unknown error found")
                 return
             }
             completionHandler(trainer.trainerArray)
@@ -55,6 +69,12 @@ class RestAlamoFireManager {
     }
     
     func getLocations(completionHandler: @escaping ([locationJSON]) -> Void) {
+        
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer" + userInfo.getUserInfo()!.token!,
+             "Accept": "application/json"
+         ]
+        
         AF.request(
             URL(string: "https://private-dbd7b7-security14.apiary-mock.com/coredata/location?type=training")!,
                method: .get,
@@ -62,10 +82,10 @@ class RestAlamoFireManager {
                encoder: URLEncodedFormParameterEncoder.default,
                headers: headers
         ).validate().responseDecodable(of: locationStatus.self){(response) in
-            print("Made it locations")
+            //print("Made it locations")
             guard let location = response.value else{
-                print("Error appeared")
-                print(response.error?.errorDescription! ?? "Unknown error found")
+              //  print("Error appeared")
+                //print(response.error?.errorDescription! ?? "Unknown error found")
                 return
             }
             completionHandler(location.locationsArray)

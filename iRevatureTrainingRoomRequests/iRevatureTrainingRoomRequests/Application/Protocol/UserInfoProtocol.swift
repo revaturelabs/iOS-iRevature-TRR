@@ -11,7 +11,10 @@ import Foundation
 
 protocol UserInfoProtocol {
     
-    func getUserInfo() ->User?
-    func setUserInfo(userObject:User) -> Bool
+    func getUserInfo() -> User?
+    func setUserInfo(userObject: User) -> Bool
+    func getUserInfoDB() ->User?
+    func setUserInfoDB()
+    func getTrainerAPI(completionHandler: @escaping ([User]) -> Void)
 }
 

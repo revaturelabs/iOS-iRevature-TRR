@@ -8,9 +8,10 @@
 
 import Foundation
 import SQLite
+import SQLite3
 
 class LocationBusinessService: LocationInfoProtocol{
-    let db = try! Connection(getDBFilePath(dbName: "iRevatureTrainingRoomRequests"))
+     let db = try! Connection(getDBFilePath(dbName: "iRevatureTrainingRoomRequests"))
      let locations = Table("Location")
      var building = Expression<String>("Building")
      var campus = Expression<String>("Campus")

@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if (userInfoBusinessService.getUserInfo() != nil){
             let def: User = userInfoBusinessService.getUserInfo()!
-            is_authenticated = def.keepmelogged
+            is_authenticated = def.keepmelogged!
         } else {
             is_authenticated = false
         }

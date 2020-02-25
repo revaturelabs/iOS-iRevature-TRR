@@ -12,5 +12,5 @@ protocol RoomInfoProtocol{
     
     func setRoomInfoDB()
     
-    func getRoomAPI() -> [Room] 
+    func getRoomAPI(completionHandler: @escaping ([Room]) -> Void)
 }

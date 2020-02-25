@@ -12,8 +12,8 @@ struct User: Codable {
     var name: String
     var role: String?
     var email: String
-    var token: String
-    var keepmelogged: Bool
+    var token: String?
+    var keepmelogged: Bool?
 }
 
 //Structure for holding the Login JSON Response

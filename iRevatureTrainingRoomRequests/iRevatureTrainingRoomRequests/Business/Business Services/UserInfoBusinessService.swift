@@ -10,6 +10,7 @@
 
 import Foundation
 import SQLite
+import SQLite3
 
 //MARK: Business service to handle user info which is available in UserDefaults
 
@@ -56,23 +57,32 @@ class UserInfoBusinessService : UserInfoProtocol
     let keepMeLogged = Expression<Int?>("KeepMeLogged")
     
     func setUserInfoDB(){
-        let trainers = getTrainerAPI()
-        for trainer in trainers {
-            do {try db.run(users.insert(or: .replace, name <- trainer.name, role <- "Trainer", email <- trainer.email, token <- trainer.token, keepMeLogged <- 0))
-            } catch {
-            }
-        }
-    }
-    
-    func getTrainerAPI() -> [User] {
-        let trainerAPI = RestAlamoFireManager()
-        var users:[User] = []
-        _ = trainerAPI.getTrainers(completionHandler: {trainers in
-            for trainer in trainers {
-                let trainer = User(name: trainer.name, role: "Trainer", email: trainer.emailaddress, token: "", keepmelogged: false)
-                users.append(trainer)
+        _ = getTrainerAPI(completionHandler: {
+            allTrainers in
+            for trainer in allTrainers {
+                do {
+                    try self.db.run(self.users.insert(or: .replace, self.name <- trainer.name, self.role <- trainer.role, self.email <- trainer.email))
+                } catch let Result.error(message, code, statement) where code == SQLITE_CONSTRAINT {
+                    print("constraint failed: \(message), in \(String(describing: statement))")
+                } catch let error {
+                    print("insertion failed: \(error)")
+                }
             }
         })
-        return users
     }
+        func getTrainerAPI(completionHandler: @escaping ([User]) -> Void) {
+            let trainerAPI = RestAlamoFireManager()
+            _ = trainerAPI.getTrainers(completionHandler: {
+                trainersReturned in
+                var trainerArray:[User] = []
+                for trainer in trainersReturned {
+                    print("trainer \(trainer.id) \(trainer.emailaddress)")
+                    let tempTrainer = User(name: trainer.name, role: "Trainer", email: trainer.emailaddress)
+                    trainerArray.append(tempTrainer)
+                    //  print(self.roomsArray.count)
+                }
+                completionHandler(trainerArray)
+            })
+            
+        }
 }

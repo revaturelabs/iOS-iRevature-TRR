@@ -14,7 +14,7 @@ class LocationPickerController: BaseController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var locationPickerView: UIPickerView!
     @IBOutlet weak var welcomeTextField: UILabel!
     
-    var test = userInfo.getUserInfoDB()
+    var test = UserInfoBusinessService().getUserInfoDB()
     var test2: [String] = []
     var result: [String] = []
     var roomResult0:Int = Int()
