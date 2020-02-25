@@ -32,7 +32,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
             endingLineNumber = "54"
-            landmarkName = "viewDidLoad()"
+            landmarkName = "submitButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
