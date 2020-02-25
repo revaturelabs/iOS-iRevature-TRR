@@ -138,6 +138,7 @@
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
                                 <state key="normal" title="&lt; View All Rooms"/>
                                 <connections>
+                                    <action selector="viewAllRoomsButton:" destination="1aD-Ho-K7f" eventType="touchDown" id="nbB-Cb-w1E"/>
                                     <segue destination="aut-aC-yUz" kind="show" id="a4y-oY-a3d"/>
                                 </connections>
                             </button>

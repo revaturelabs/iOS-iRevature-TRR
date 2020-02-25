@@ -63,8 +63,8 @@ class LocationPickerController: BaseController, UIPickerViewDelegate, UIPickerVi
     
     @IBAction func submitButton(_ sender: Any) {
         let roomResult0 = rooms[0].roomNumber
-        let TrainerVC:UIViewController = UIStoryboard(name: "TrainerWorkFlow", bundle:nil).instantiateViewController(withIdentifier: "TrainerWorkFlow0") as UIViewController
-        TrainerVC.roomResult = roomResult0
+        let TrainerVC:RoomPickerController = UIStoryboard(name: "TrainerWorkFlow", bundle:nil).instantiateViewController(withIdentifier: "TrainerWorkFlow0") as! RoomPickerController
+        TrainerVC.roomResult = roomResult0!
         present(TrainerVC, animated: false, completion: nil)
     }
 

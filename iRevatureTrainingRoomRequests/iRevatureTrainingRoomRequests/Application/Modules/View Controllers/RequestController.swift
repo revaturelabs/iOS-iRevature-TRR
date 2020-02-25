@@ -33,6 +33,13 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
         }
     }
     
+    @IBAction func viewAllRoomsButton(_ sender: Any) {
+            let objSecondVC = self.storyboard!.instantiateViewController(withIdentifier: "TrainerWorkFlow0") as! RoomPickerController
+            objSecondVC.roomResult = selectedRoom2!
+            self.navigationController?.pushViewController(objSecondVC, animated: true)
+            self.present(objSecondVC, animated: true, completion: nil)
+    }
+    
     @IBAction func submitButton(_ sender: Any) {
         if segControlValue == 0{
             startDatePicker.datePickerMode = UIDatePicker.Mode.date
