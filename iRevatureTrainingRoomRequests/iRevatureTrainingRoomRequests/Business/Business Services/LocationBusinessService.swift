@@ -32,7 +32,7 @@ class LocationBusinessService: LocationInfoProtocol{
          var locationsArray:[Location] = []
          _ = locationAPI.getLocations(completionHandler: {locationsResults in
              for location in locationsResults {
-                let newLocation = Location(id: location.id, state: location.state, campus: location.campus, building: location.building)
+                let newLocation = Location(Building: location.building, Campus: location.campus, State: location.state, ID: location.id)
                  locationsArray.append(newLocation)
              }
          })
