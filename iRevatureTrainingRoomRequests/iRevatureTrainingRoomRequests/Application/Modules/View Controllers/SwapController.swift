@@ -17,7 +17,6 @@ class SwapController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func backButton(_ sender: Any) {
         let objSecondVC = self.storyboard!.instantiateViewController(withIdentifier: "TrainerWorkFlow1") as! RequestController
         objSecondVC.selectedRoom2 = selectedRoom3
-        objSecondVC.dateRange = dateRange2!
         self.navigationController?.pushViewController(objSecondVC, animated: true)
         self.present(objSecondVC, animated: true, completion: nil)
     }
@@ -30,7 +29,9 @@ class SwapController: UIViewController, UITableViewDataSource, UITableViewDelega
     var roomResult:Int = 1
     var selectedRoom3:Int?
     var displayedRoom3: [String] = []
-    var dateRange2:String?
+    var dateRange2:String = String()
+    var startDate:String = String()
+    var endDate:String = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +58,7 @@ class SwapController: UIViewController, UITableViewDataSource, UITableViewDelega
         let room = roomByNumber(number: selectedRoom3!)
         let room2 = roomByNumber(number: roomResult)
         let cell = roomTableView.dequeueReusableCell(withIdentifier: "roomCell", for: indexPath) as! RoomTableViewCell
-        displayedRoom3.append("Start/End Date: " + dateRange2!)
+        displayedRoom3.append("Start/End Date: " + dateRange2)
         displayedRoom3.append("1st Room #: \((room?.roomNumber)!)")
         displayedRoom3.append("1st Batch Name: \((room?.batchName)!)")
         displayedRoom3.append("1st Instructor Name: \((room?.instructorName)!)")
