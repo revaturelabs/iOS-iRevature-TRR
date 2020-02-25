@@ -18,49 +18,40 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
     @IBOutlet weak var RequestSegControl: UISegmentedControl!
     
     var segControlValue:Int = Int()
-    var dayString:String = String()
-    var monthString:String = String()
-    var yearString:String = String()
-    var dayString2:String = String()
-    var monthString2:String = String()
-    var yearString2:String = String()
-    var dateRange:String = String()
+    var selectedDate:String = String()
+    var selectedDate2:String = String()
     
     @IBAction func RequestSegControlChange(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
-            let segControlValue = 0
+            //let segControlValue = 0
         }
         else if sender.selectedSegmentIndex == 1 {
-            let segControlValue = 1
+            //let segControlValue = 1
         }
         else if sender.selectedSegmentIndex == 2 {
-            let segControlValue = 2
+            //let segControlValue = 2
         }
     }
     
     @IBAction func submitButton(_ sender: Any) {
         if segControlValue == 0{
-            let calendar = Calendar.current
-            let components = calendar.dateComponents([.day,.month,.year], from: self.startDatePicker.date);
-            if let day = components.day, let month = components.month, let year = components.year {
-                let dayString = String(day)
-                let monthString = String(month)
-                let yearString = String(year)
-            }
-            let componenets2 = calendar.dateComponents([.day,.month,.year], from: self.endDatePicker.date);
-            if let day = components.day, let month = components.month, let year = components.year {
-                let dayString2 = String(day)
-                let monthString2 = String(month)
-                let yearString2 = String(year)
-            }
-            let dateRange = dayString + "/" + monthString + "/" + yearString + " - " + dayString2 + "/" + monthString2 + "/" + yearString2
+            startDatePicker.datePickerMode = UIDatePicker.Mode.date
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM/dd/yyyy"
+            let selectedDate = dateFormatter.string(from: startDatePicker.date)
             
+            endDatePicker.datePickerMode = UIDatePicker.Mode.date
+            let dateFormatter2 = DateFormatter()
+            dateFormatter2.dateFormat = "MM/dd/yyyy"
+            let selectedDate2 = dateFormatter.string(from: endDatePicker.date)
             
-            
-            
+            let dateRange = selectedDate + " - " + selectedDate2
+        
             let objSecondVC = self.storyboard!.instantiateViewController(withIdentifier: "TrainerWorkFlow2") as! SwapController
             objSecondVC.selectedRoom3 = selectedRoom2
             objSecondVC.dateRange2 = dateRange
+            objSecondVC.startDate = selectedDate
+            objSecondVC.endDate = selectedDate2
             self.navigationController?.pushViewController(objSecondVC, animated: true)
             self.present(objSecondVC, animated: true, completion: nil)
         }
@@ -76,8 +67,6 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
        // setupTableView()
         roomTableView.delegate = self
         roomTableView.dataSource = self
-        
-        RequestSegControl.addTarget(self, action: "RequestSegControlChange:", for:.valueChanged)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
