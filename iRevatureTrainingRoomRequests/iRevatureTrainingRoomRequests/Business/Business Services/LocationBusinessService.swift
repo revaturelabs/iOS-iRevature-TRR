@@ -20,24 +20,32 @@ class LocationBusinessService: LocationInfoProtocol{
      var id = Expression<String?>("ID")
      
      func setLocationInfoDB(){
-         let locationsArray = getLocationAPI()
-         for location in locationsArray {
-            do {try db.run(locations.insert(or: .replace, id <- location.ID, state <- location.State!, campus <- location.Campus!, building <- location.Building!))
-             } catch {
-             }
+             _ = getLocationAPI(completionHandler: {
+                 allLocations in
+                 for location in allLocations {
+                     do {
+                        try self.db.run(self.locations.insert(or: .replace, self.building <- location.Building!, self.campus <- location.Campus!, self.state <- location.State!, self.id <- location.ID))
+                     } catch let Result.error(message, code, statement) where code == SQLITE_CONSTRAINT {
+                         print("constraint failed: \(message), in \(String(describing: statement))")
+                     } catch let error {
+                         print("insertion failed: \(error)")
+                     }
+                 }
+             })
+         }
+    
+         func getLocationAPI(completionHandler: @escaping ([Location]) -> Void) {
+             let locationAPI = RestAlamoFireManager()
+             _ = locationAPI.getLocations(completionHandler: {
+                 locationsReturned in
+                 var locationArray:[Location] = []
+                 for location in locationsReturned {
+                    print("location \(location.building) \(location.campus)")
+                    let tempLocation = Location(Building: location.building, Campus: location.campus, State: location.state, ID: location.id)
+                     locationArray.append(tempLocation)
+                     //  print(self.roomsArray.count)
+                 }
+                 completionHandler(locationArray)
+             })
          }
      }
-     
-     func getLocationAPI() -> [Location] {
-         let locationAPI = RestAlamoFireManager()
-         var locationsArray:[Location] = []
-         _ = locationAPI.getLocations(completionHandler: {locationsResults in
-             for location in locationsResults {
-                let newLocation = Location(Building: location.building, Campus: location.campus, State: location.state, ID: location.id)
-                 locationsArray.append(newLocation)
-             }
-         })
-         return []
-     }
-    
-}

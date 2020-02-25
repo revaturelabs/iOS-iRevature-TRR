@@ -76,19 +76,19 @@ class RestAlamoFireManager {
          ]
         
         AF.request(
-            URL(string: "https://private-dbd7b7-security14.apiary-mock.com/coredata/location?type=training")!,
+               "https://private-dbd7b7-security14.apiary-mock.com/coredata/location",
                method: .get,
                parameters: parameters,
                encoder: URLEncodedFormParameterEncoder.default,
                headers: headers
         ).validate().responseDecodable(of: locationStatus.self){(response) in
-            //print("Made it locations")
+            print("Made it locations")
             guard let location = response.value else{
-              //  print("Error appeared")
-                //print(response.error?.errorDescription! ?? "Unknown error found")
+                print("Error appeared \(String(describing: response.error))")
+                print(response.error?.errorDescription! ?? "Unknown error found")
                 return
             }
-            completionHandler(location.locationsArray)
+            completionHandler(location.alllocation)
         }
     }
     

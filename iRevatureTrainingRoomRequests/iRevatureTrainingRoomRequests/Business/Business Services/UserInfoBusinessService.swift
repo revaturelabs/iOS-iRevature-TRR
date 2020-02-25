@@ -70,19 +70,18 @@ class UserInfoBusinessService : UserInfoProtocol
             }
         })
     }
-        func getTrainerAPI(completionHandler: @escaping ([User]) -> Void) {
-            let trainerAPI = RestAlamoFireManager()
-            _ = trainerAPI.getTrainers(completionHandler: {
-                trainersReturned in
-                var trainerArray:[User] = []
-                for trainer in trainersReturned {
-                    print("trainer \(trainer.id) \(trainer.emailaddress)")
-                    let tempTrainer = User(name: trainer.name, role: "Trainer", email: trainer.emailaddress)
-                    trainerArray.append(tempTrainer)
-                    //  print(self.roomsArray.count)
-                }
-                completionHandler(trainerArray)
-            })
-            
-        }
+    func getTrainerAPI(completionHandler: @escaping ([User]) -> Void) {
+        let trainerAPI = RestAlamoFireManager()
+        _ = trainerAPI.getTrainers(completionHandler: {
+            trainersReturned in
+            var trainerArray:[User] = []
+            for trainer in trainersReturned {
+                print("trainer \(trainer.id) \(trainer.emailaddress)")
+                let tempTrainer = User(name: trainer.name, role: "Trainer", email: trainer.emailaddress)
+                trainerArray.append(tempTrainer)
+                //  print(self.roomsArray.count)
+            }
+            completionHandler(trainerArray)
+        })
+    }
 }
