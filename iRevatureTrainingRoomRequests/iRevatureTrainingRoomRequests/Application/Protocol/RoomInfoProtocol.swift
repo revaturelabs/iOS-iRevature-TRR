@@ -10,6 +10,7 @@ import Foundation
 
 protocol RoomInfoProtocol{
     
-    func getRoomInfo() -> Room?
+    func setRoomInfoDB()
     
+    func getRoomAPI() -> [Room] 
 }

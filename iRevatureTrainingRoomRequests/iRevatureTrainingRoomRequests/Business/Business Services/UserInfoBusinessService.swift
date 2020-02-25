@@ -18,25 +18,15 @@ class UserInfoBusinessService : UserInfoProtocol
     
     //read the user object from the userdefault data store
     func getUserInfo() -> User? {
-        
-        
         let currentUserDefaults = UserDefaults.standard
-        
-        
-        
         //  let decoded  = currentUserDefaults.object(forKey: "UserSharedInfo") as! Data
-        
-        
         if let decodeduserInfo = (currentUserDefaults.value(forKey: "UserSharedInfo"))
         {
-            
             let decodedUser = try? PropertyListDecoder().decode(User.self, from: decodeduserInfo as! Data)
-            
             return decodedUser
         }
         else
         {
-            
             return nil
         }
     }
