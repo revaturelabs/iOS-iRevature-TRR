@@ -21,6 +21,10 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
     var dayString:String = String()
     var monthString:String = String()
     var yearString:String = String()
+    var dayString2:String = String()
+    var monthString2:String = String()
+    var yearString2:String = String()
+    var dateRange:String = String()
     
     @IBAction func RequestSegControlChange(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
@@ -43,20 +47,20 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
                 let monthString = String(month)
                 let yearString = String(year)
             }
-            let startDate = "\(dayString)/\(monthString)/\(yearString)"
             let componenets2 = calendar.dateComponents([.day,.month,.year], from: self.endDatePicker.date);
             if let day = components.day, let month = components.month, let year = components.year {
-                let dayString = String(day)
-                let monthString = String(month)
-                let yearString = String(year)
+                let dayString2 = String(day)
+                let monthString2 = String(month)
+                let yearString2 = String(year)
             }
-            
+            let dateRange = dayString + "/" + monthString + "/" + yearString + " - " + dayString2 + "/" + monthString2 + "/" + yearString2
             
             
             
             
             let objSecondVC = self.storyboard!.instantiateViewController(withIdentifier: "TrainerWorkFlow2") as! SwapController
             objSecondVC.selectedRoom3 = selectedRoom2
+            objSecondVC.dateRange2 = dateRange
             self.navigationController?.pushViewController(objSecondVC, animated: true)
             self.present(objSecondVC, animated: true, completion: nil)
         }
