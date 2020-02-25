@@ -21,19 +21,19 @@ class RoomPickerController: UIViewController, UITableViewDataSource, UITableView
     var room: Room = Room()
     var rooms:[Room] = selectAllRooms()
     public var displayedRoom: [String] = []
-      
-      override func viewDidLoad() {
-          super.viewDidLoad()
-         // setupTableView()
-          roomTableView.delegate = self
-          roomTableView.dataSource = self
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // setupTableView()
+        roomTableView.delegate = self
+        roomTableView.dataSource = self
         
         self.roomPickerView.delegate = self
         self.roomPickerView.dataSource = self
         createItems()
-      }
+    }
     
-   
+    
     @IBAction func submitButton(_ sender: Any) {
         let objSecondVC = self.storyboard!.instantiateViewController(withIdentifier: "TrainerWorkFlow1") as! RequestController
         objSecondVC.selectedRoom2 = roomResult
@@ -42,7 +42,7 @@ class RoomPickerController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-     return 1
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,13 +74,13 @@ class RoomPickerController: UIViewController, UITableViewDataSource, UITableView
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
-         // use the row to get the selected row from the picker view
-         // using the row extract the value from your datasource (array[row])
+        // use the row to get the selected row from the picker view
+        // using the row extract the value from your datasource (array[row])
         let selectedRoom = result[row].description
         let room = selectedRoom.substring(from: selectedRoom.index(after: selectedRoom.index(of: " ")!))
         roomResult = Int(room)!
         self.roomTableView.reloadData()
-     }
+    }
     
     func createItems(){
         let rooms:[Room] = selectAllRooms()
