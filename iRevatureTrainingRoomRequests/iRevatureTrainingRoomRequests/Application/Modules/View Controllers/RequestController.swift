@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class RequestController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
@@ -62,6 +63,7 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
             objSecondVC.startDate = selectedDate
             objSecondVC.endDate = selectedDate2
             self.navigationController?.pushViewController(objSecondVC, animated: true)
+            os_log("Move to swap request",log: OSLog.default, type: .info)
             self.present(objSecondVC, animated: true, completion: nil)
         }
     }

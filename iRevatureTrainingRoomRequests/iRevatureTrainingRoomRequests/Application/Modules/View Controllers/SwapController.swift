@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class SwapController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate{
     
@@ -30,7 +31,7 @@ class SwapController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     @IBAction func submitButton(_ sender: UIButton) {
-        
+        os_log("Swap Request sent",log: OSLog.default, type: .info)
     }
 
     override func viewDidLoad() {
