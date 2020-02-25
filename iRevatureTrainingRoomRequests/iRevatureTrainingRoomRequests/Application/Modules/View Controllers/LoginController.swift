@@ -11,7 +11,6 @@ import os.log
 import Alamofire
 import SwiftyJSON
 
-
 class LoginController: BaseController {
     @IBOutlet weak var keepMeLoggedSwitch: UISwitch!
     @IBOutlet weak var failureMsgLabel: UILabel!

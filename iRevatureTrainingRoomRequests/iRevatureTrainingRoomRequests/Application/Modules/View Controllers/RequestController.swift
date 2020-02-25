@@ -8,7 +8,6 @@
 
 import UIKit
 
-var userInfo = UserInfoBusinessService()
 class RequestController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet weak var roomTableView: UITableView!
@@ -20,7 +19,6 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
     var segControlValue:Int = Int()
     var selectedDate:String = String()
     var selectedDate2:String = String()
-    var test = userInfo.getUserInfoDB()
     var selectedRoom2:Int?
     var displayedRoom2: [String] = []
     
