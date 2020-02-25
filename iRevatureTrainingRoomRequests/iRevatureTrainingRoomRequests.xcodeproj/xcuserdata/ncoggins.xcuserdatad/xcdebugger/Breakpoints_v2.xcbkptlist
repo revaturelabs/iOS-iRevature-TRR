@@ -80,7 +80,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
             endingLineNumber = "36"
-            landmarkName = "setUserInfo(userObject:)"
+            landmarkName = "getUserInfo()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -225,22 +225,6 @@
             startingLineNumber = "42"
             endingLineNumber = "42"
             landmarkName = "getRooms(completionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7C444F64-3D9F-4FE9-B16C-AE2D4BCB4FBF"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iRevatureTrainingRoomRequests/Business/Business Services/LocationBusinessService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "setLocationInfoDB()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -11,6 +11,7 @@
 import Foundation
 import SQLite
 import SQLite3
+import os.log
 
 //MARK: Business service to handle user info which is available in UserDefaults
 
@@ -24,10 +25,12 @@ class UserInfoBusinessService : UserInfoProtocol
         if let decodeduserInfo = (currentUserDefaults.value(forKey: "UserSharedInfo"))
         {
             let decodedUser = try? PropertyListDecoder().decode(User.self, from: decodeduserInfo as! Data)
+            os_log("Userdefaults obtained")
             return decodedUser
         }
         else
         {
+            os_log("failed to get Userdefaults")
             return nil
         }
     }
@@ -36,8 +39,11 @@ class UserInfoBusinessService : UserInfoProtocol
     func setUserInfo(userObject: User) -> Bool {
         let currentUserDefaults = UserDefaults.standard
         if((try? currentUserDefaults.set(PropertyListEncoder().encode(userObject), forKey: "UserSharedInfo")) != nil){
-            return true}
+            os_log("Set userdefaults")
+            return true
+        }
         else {
+            os_log("Failed to set userdefaults")
             return false
         }
     }
@@ -64,7 +70,9 @@ class UserInfoBusinessService : UserInfoProtocol
                     try self.db.run(self.users.insert(or: .replace, self.name <- trainer.name, self.role <- trainer.role, self.email <- trainer.email))
                 } catch let Result.error(message, code, statement) where code == SQLITE_CONSTRAINT {
                     print("constraint failed: \(message), in \(String(describing: statement))")
+                    os_log("Constraint failed")
                 } catch let error {
+                    os_log("Insertion failed")
                     print("insertion failed: \(error)")
                 }
             }
