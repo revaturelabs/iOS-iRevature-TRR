@@ -172,13 +172,13 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyc-v7-AyW">
-                                <rect key="frame" x="149.66666666666666" y="310" width="114.99999999999997" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pick Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyc-v7-AyW">
+                                <rect key="frame" x="143" y="310" width="129" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="dao-k3-b2f"/>
                                     <constraint firstAttribute="width" constant="114.99999999999997" id="vRH-Uo-hij"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -189,16 +189,6 @@
                                     <constraint firstAttribute="width" constant="320" id="nl3-eY-2eW"/>
                                 </constraints>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGE-ua-9Eo">
-                                <rect key="frame" x="153.66666666666666" y="391" width="106.99999999999997" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="HSy-Ke-iRS"/>
-                                    <constraint firstAttribute="width" constant="106.99999999999997" id="OiQ-fD-jen"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="iPj-Zg-Ook">
                                 <rect key="frame" x="47" y="424" width="320" height="68"/>
                                 <constraints>
@@ -245,6 +235,16 @@
                                     <action selector="RequestSegControlChange:" destination="1aD-Ho-K7f" eventType="valueChanged" id="swt-ae-7al"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pick End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGE-ua-9Eo">
+                                <rect key="frame" x="154" y="391" width="118" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="HSy-Ke-iRS"/>
+                                    <constraint firstAttribute="width" constant="106.99999999999997" id="OiQ-fD-jen"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
