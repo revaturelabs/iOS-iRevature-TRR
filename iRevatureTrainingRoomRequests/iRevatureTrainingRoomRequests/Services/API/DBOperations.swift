@@ -11,13 +11,23 @@ import Foundation
 //get the database file path
 public func getDBFilePath(dbName:String) -> String
 {
- 
-  var filePath:URL?
-  if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first{
-    filePath = dir.appendingPathComponent(dbName + ".db")
-     
-    return filePath!.absoluteString
-  }
-   
-  return ""
+    
+    // var filePath:URL?
+    // if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first{
+    //  filePath = dir.appendingPathComponent(dbName + ".db")
+    //
+    //  return filePath!.absoluteString
+    // }
+    
+    if let dir = Bundle.main.path(forResource: dbName, ofType: "db")
+    {
+        
+        return dir
+        
+    }
+    
+    
+    
+    
+    return ""
 }

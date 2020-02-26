@@ -27,7 +27,7 @@ class RoomInfoBusinessService:RoomInfoProtocol{
             allRooms in
             for room in allRooms {
                 do {
-                    try self.db.run(self.rooms.insert(or: .replace, self.roomNumber <- room.roomNumber, self.id <- room.id))
+                    try self.db.run(self.rooms.insert(or: .replace, self.roomNumber <- room.roomNumber, self.id <- room.id, self.batchName <- room.batchName, self.instructorName <- room.instructorName, self.status <- Status.stringFromStatus(assign: room.status!)))
                 } catch let Result.error(message, code, statement) where code == SQLITE_CONSTRAINT {
                     print("constraint failed: \(message), in \(String(describing: statement))")
                     os_log("Constraint failed",log: OSLog.default, type: .info)
@@ -46,7 +46,7 @@ class RoomInfoBusinessService:RoomInfoProtocol{
             var roomsArray:[Room] = []
             for room in roomsReturned {
                 print("room \(room.id) \(room.room)")
-                let tempRoom = Room(roomNumber: Int(room.room), id: room.id)
+                let tempRoom = Room(roomNumber: Int(room.room), batchName: room.batch_name, instructorName: room.trainer_name, status: Status.statusTypeFromInt(assign: room.status), id: room.id)
                 roomsArray.append(tempRoom)
                 //  print(self.roomsArray.count)
             }

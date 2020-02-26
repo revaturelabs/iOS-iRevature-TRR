@@ -52,7 +52,7 @@ extension Status: Codable {
             try container.encode(2, forKey: .rawValue)
         }
     }
-  
+    
     //Returns a Status from the provided string
     static func statusType(assign: String) -> Status?{
         switch assign{
@@ -62,6 +62,36 @@ extension Status: Codable {
             return .assigned
         case "unassigned":
             return  .unassigned
+        default:
+            print("invalid status")
+            return nil
+        }
+    }
+    
+    //Returns a Status from the provided string
+    static func statusTypeFromInt(assign: Int) -> Status?{
+        switch assign{
+        case 2:
+            return .pending
+        case 1:
+            return .assigned
+        case 0:
+            return  .unassigned
+        default:
+            print("invalid status")
+            return nil
+        }
+    }
+    
+    //Returns a String from the provided Status
+    static func stringFromStatus(assign: Status) -> String?{
+        switch assign{
+        case .pending:
+            return "pending"
+        case .assigned:
+            return "assigned"
+        case .unassigned:
+            return  "unassigned"
         default:
             print("invalid status")
             return nil
