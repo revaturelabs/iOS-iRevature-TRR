@@ -19,17 +19,15 @@ let building = Expression<String?>("Building")
 let id = Expression<String?>("ID")
 
 func locationByID(ID: Int) -> Location?{
-    var result: [Location] = []
+    var result: Location =  Location()
     do{
     let temp = locations.filter(locationID == ID)
     for location in try! db.prepare(temp) {
-        let temp2 = Location.init(Building: location[building] ?? "Other", Campus: location[campus]!, State: location[state]!, LocationID: location[locationID]!, ID: location[id] ?? "0")
-        result.append(temp2)
-        
+        result = Location.init(Building: location[building] ?? "Other", Campus: location[campus]!, State: location[state]!, LocationID: location[locationID], ID: location[id] ?? "0")
         }
     os_log("location is queried")
-    return result[0]
     }
+    return result
 }
 
 func selectAllLocations() -> [Location]?{

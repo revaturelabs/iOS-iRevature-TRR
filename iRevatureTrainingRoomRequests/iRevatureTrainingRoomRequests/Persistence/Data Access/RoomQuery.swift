@@ -25,7 +25,7 @@ func roomByNumber(number: Int) -> Room?{
         print(number)
         let temp = rooms.filter(roomNumber == number)
         for room in try! db.prepare(temp) {
-            let temp2 = Room.init(roomNumber: room[roomNumber]!, batchName: room[batchName] ?? "", instructorName: room[instructorName] ?? "", status: Status.statusType(assign: room[status]!)!, location: locationByID(ID: room[location]!))
+            let temp2 = Room.init(roomNumber: room[roomNumber]!, batchName: room[batchName] ?? "", instructorName: room[instructorName] ?? "", status: Status.statusType(assign: room[status]!) ?? Status.unassigned, location: locationByID(ID: room[location] ?? -1))
             result.append(temp2)
         }
     }
@@ -42,7 +42,7 @@ func selectAllRooms() -> [Room]{
     print(getDBFilePath(dbName:"iRevatureTrainingRoomRequests"))
     
     for room in try! db.prepare(rooms) {
-        temp = Room.init(roomNumber: room[roomNumber]!, batchName: room[batchName] ?? "", instructorName: room[instructorName] ?? "", status: Status.statusType(assign: room[status]!)!, location: locationByID(ID: room[location]!))
+        temp = Room.init(roomNumber: room[roomNumber]!, batchName: room[batchName] ?? "", instructorName: room[instructorName] ?? "", status: Status.statusType(assign: room[status]!) ?? Status.unassigned, location: locationByID(ID: room[location] ?? -1))
         
         result.append(temp)
     }
