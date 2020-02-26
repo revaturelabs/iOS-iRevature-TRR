@@ -78,7 +78,7 @@ class RoomPickerController: UIViewController, UITableViewDataSource, UITableView
         // use the row to get the selected row from the picker view
         // using the row extract the value from your datasource (array[row])
         let selectedRoom = result[row].description
-        let room = selectedRoom.substring(from: selectedRoom.index(after: selectedRoom.index(of: " ")!))
+        let room = String(selectedRoom[selectedRoom.index(after: selectedRoom.index(of: " ")!)...])
         roomResult = Int(room)!
         self.roomTableView.reloadData()
     }

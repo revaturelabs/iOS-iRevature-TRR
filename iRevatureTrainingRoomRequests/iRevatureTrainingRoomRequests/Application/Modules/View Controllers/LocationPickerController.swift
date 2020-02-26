@@ -38,7 +38,8 @@ class LocationPickerController: BaseController, UIPickerViewDelegate, UIPickerVi
      {
          // use the row to get the selected row from the picker view
          // using the row extract the value from your datasource (array[row])
-         let selectedLocation = result[row].description
+        
+         //let selectedLocation = result[row].description
      }
     
     func createItems(){
