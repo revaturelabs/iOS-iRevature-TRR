@@ -9,6 +9,7 @@
 import Foundation
 import SQLite
 import SQLite3
+import os.log
 
 class RoomInfoBusinessService:RoomInfoProtocol{
     
@@ -29,8 +30,10 @@ class RoomInfoBusinessService:RoomInfoProtocol{
                     try self.db.run(self.rooms.insert(or: .replace, self.roomNumber <- room.roomNumber, self.id <- room.id))
                 } catch let Result.error(message, code, statement) where code == SQLITE_CONSTRAINT {
                     print("constraint failed: \(message), in \(String(describing: statement))")
+                    os_log("Constraint failed")
                 } catch let error {
                     print("insertion failed: \(error)")
+                    os_log("Insertion failed")
                 }
             }
         })

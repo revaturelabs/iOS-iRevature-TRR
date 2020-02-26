@@ -18,8 +18,8 @@ struct Location:Codable{
 
 struct locationStatus: Codable{
     var statusCode: Int
-    var descriptions: String
-    var locationsArray: [locationJSON]
+    var description: String
+    var alllocation: [locationJSON]
 }
 
 struct locationJSON: Codable{

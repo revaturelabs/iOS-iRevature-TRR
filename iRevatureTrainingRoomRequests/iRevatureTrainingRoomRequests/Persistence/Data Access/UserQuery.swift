@@ -8,6 +8,7 @@
 
 import Foundation
 import SQLite
+import os.log
 
 class UserQuery{
     let db = try! Connection(getDBFilePath(dbName: "iRevatureTrainingRoomRequests"))
@@ -28,7 +29,10 @@ class UserQuery{
             let temp = users.filter(locationID == ID)
             for user in try! db.prepare(temp) {
                 let temp2 = User.init(name: user[name]!, role: user[role]!, email: user[email]!, token: user[token]!, keepmelogged: false)
-                result.append(temp2)}
+                result.append(temp2)
+                
+                }
+            os_log("User is queried")
             return result[0]
             }
         }
@@ -45,6 +49,7 @@ class UserQuery{
             }
             result.append(temp)
         }
+        os_log("All users queried")
         return result
     }
 }

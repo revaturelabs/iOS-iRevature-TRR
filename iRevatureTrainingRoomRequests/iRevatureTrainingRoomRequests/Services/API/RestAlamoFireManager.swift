@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import os.log
 
 class RestAlamoFireManager {
     
@@ -33,9 +34,10 @@ class RestAlamoFireManager {
                encoder: URLEncodedFormParameterEncoder.default,
                headers: headers
         ).validate().responseDecodable(of: roomStatus.self){(response) in
-            print("Made it rooms with additional")
+            os_log("Made it rooms with additional")
             guard let room = response.value else{
                 print("Error appeared \(String(describing: response.error))")
+                os_log("Error")
              //   print(response.error?.errorDescription! ?? "Unknown error found")
                 return
             }
@@ -76,19 +78,20 @@ class RestAlamoFireManager {
          ]
         
         AF.request(
-            URL(string: "https://private-dbd7b7-security14.apiary-mock.com/coredata/location?type=training")!,
+               "https://private-dbd7b7-security14.apiary-mock.com/coredata/location",
                method: .get,
                parameters: parameters,
                encoder: URLEncodedFormParameterEncoder.default,
                headers: headers
         ).validate().responseDecodable(of: locationStatus.self){(response) in
-            //print("Made it locations")
+            os_log("Made it locations")
             guard let location = response.value else{
-              //  print("Error appeared")
-                //print(response.error?.errorDescription! ?? "Unknown error found")
+                print("Error appeared \(String(describing: response.error))")
+                print(response.error?.errorDescription! ?? "Unknown error found")
+                os_log("Error")
                 return
             }
-            completionHandler(location.locationsArray)
+            completionHandler(location.alllocation)
         }
     }
     
@@ -118,7 +121,7 @@ class RestAlamoFireManager {
         ).validate().responseDecodable(of: UserJSON.self){
             (response) in
             guard let user = response.value else {
-                print("Error appeared")
+                os_log("Error appeared")
                 print(response.error?.errorDescription! ?? "Unknown error found")
                 return
             }

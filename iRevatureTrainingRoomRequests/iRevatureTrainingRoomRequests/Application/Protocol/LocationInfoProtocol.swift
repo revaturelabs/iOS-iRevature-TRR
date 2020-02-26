@@ -11,6 +11,5 @@ import Foundation
 protocol LocationInfoProtocol{
     
     func setLocationInfoDB()
-    
-    func getLocationAPI() -> [Location]
+    func getLocationAPI(completionHandler: @escaping ([Location]) -> Void)
 }
