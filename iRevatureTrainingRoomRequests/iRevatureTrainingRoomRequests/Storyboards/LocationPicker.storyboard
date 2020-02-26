@@ -16,16 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Select Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBd-oK-49o">
-                                <rect key="frame" x="87" y="273" width="240" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="EiS-FT-SEa"/>
-                                    <constraint firstAttribute="height" constant="36" id="zRP-B3-E7E"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ybr-mI-jXc">
                                 <rect key="frame" x="47" y="340" width="320" height="216"/>
                             </pickerView>
@@ -45,40 +35,45 @@
                                     <segue destination="ffe-HO-fyJ" kind="show" id="T2g-aC-ne4"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rev-logo" translatesAutoresizingMaskIntoConstraints="NO" id="dba-dE-nEM">
-                                <rect key="frame" x="87" y="86" width="240" height="128"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLb-8A-PzG">
+                                <rect key="frame" x="20" y="67.666666666666657" width="50" height="34.333333333333343"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="6ua-TR-trI"/>
-                                    <constraint firstAttribute="height" constant="128" id="nyf-uP-88P"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLb-8A-PzG">
-                                <rect key="frame" x="20" y="68" width="70" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="I8N-pU-uTd"/>
+                                    <constraint firstAttribute="width" constant="50" id="I8N-pU-uTd"/>
                                     <constraint firstAttribute="height" constant="35" id="tBH-ln-gBr"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
-                                <state key="normal" title="&lt; Home"/>
+                                <color key="tintColor" red="0.94901960780000005" green="0.52156862749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" backgroundImage="house.fill" catalog="system"/>
                                 <connections>
                                     <action selector="logOutButton:" destination="tFo-WJ-o2v" eventType="touchDown" id="foX-jX-aK9"/>
                                     <segue destination="A4r-kd-xR9" kind="show" id="KQa-Ns-nNG"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBd-oK-49o">
+                                <rect key="frame" x="169.66666666666666" y="311" width="75" height="21"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rev-logo" translatesAutoresizingMaskIntoConstraints="NO" id="wxS-nA-y7Q">
+                                <rect key="frame" x="87" y="103" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="BvY-H2-qXt"/>
+                                    <constraint firstAttribute="height" constant="128" id="gef-Tc-x5U"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dba-dE-nEM" firstAttribute="centerX" secondItem="jwQ-ML-luP" secondAttribute="centerX" id="0VN-yY-veQ"/>
                             <constraint firstItem="94i-Mh-qRt" firstAttribute="centerX" secondItem="jwQ-ML-luP" secondAttribute="centerX" id="DCx-MC-NC5"/>
-                            <constraint firstItem="dba-dE-nEM" firstAttribute="centerX" secondItem="jwQ-ML-luP" secondAttribute="centerX" id="KeU-6P-WGj"/>
+                            <constraint firstItem="fBd-oK-49o" firstAttribute="top" secondItem="wxS-nA-y7Q" secondAttribute="bottom" constant="80" id="GoA-cu-T6f"/>
+                            <constraint firstItem="wxS-nA-y7Q" firstAttribute="centerX" secondItem="jwQ-ML-luP" secondAttribute="centerX" id="KSF-Jo-K1l"/>
                             <constraint firstItem="94i-Mh-qRt" firstAttribute="top" secondItem="Ybr-mI-jXc" secondAttribute="bottom" constant="32" id="M3P-m1-Bqh"/>
-                            <constraint firstItem="fBd-oK-49o" firstAttribute="top" secondItem="dba-dE-nEM" secondAttribute="bottom" constant="59" id="R3V-kb-VW7"/>
-                            <constraint firstItem="dba-dE-nEM" firstAttribute="top" secondItem="C1i-a2-Hyb" secondAttribute="top" constant="42" id="aIN-kb-uX7"/>
+                            <constraint firstItem="wxS-nA-y7Q" firstAttribute="centerX" secondItem="jwQ-ML-luP" secondAttribute="centerX" id="RwZ-IS-FSK"/>
+                            <constraint firstItem="wxS-nA-y7Q" firstAttribute="top" secondItem="C1i-a2-Hyb" secondAttribute="top" constant="59" id="VGm-l1-XrC"/>
                             <constraint firstItem="Ybr-mI-jXc" firstAttribute="centerY" secondItem="jwQ-ML-luP" secondAttribute="centerY" id="cps-Dv-fsS"/>
-                            <constraint firstItem="Ybr-mI-jXc" firstAttribute="top" secondItem="fBd-oK-49o" secondAttribute="bottom" constant="31" id="fdg-EY-ke5"/>
-                            <constraint firstItem="fBd-oK-49o" firstAttribute="centerX" secondItem="jwQ-ML-luP" secondAttribute="centerX" id="mJs-Gd-YEB"/>
+                            <constraint firstItem="Ybr-mI-jXc" firstAttribute="top" secondItem="fBd-oK-49o" secondAttribute="bottom" constant="8" id="kys-K5-toh"/>
                             <constraint firstItem="SLb-8A-PzG" firstAttribute="top" secondItem="C1i-a2-Hyb" secondAttribute="top" constant="24" id="o43-c1-G9t"/>
-                            <constraint firstItem="fBd-oK-49o" firstAttribute="centerX" secondItem="jwQ-ML-luP" secondAttribute="centerX" id="oFi-kj-ALa"/>
+                            <constraint firstItem="fBd-oK-49o" firstAttribute="centerX" secondItem="jwQ-ML-luP" secondAttribute="centerX" id="s1g-75-jTg"/>
                             <constraint firstItem="SLb-8A-PzG" firstAttribute="leading" secondItem="C1i-a2-Hyb" secondAttribute="leading" constant="20" id="sbR-fy-Mp0"/>
                             <constraint firstItem="Ybr-mI-jXc" firstAttribute="centerX" secondItem="jwQ-ML-luP" secondAttribute="centerX" id="xLH-mb-IyX"/>
                         </constraints>
@@ -111,6 +106,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="house.fill" catalog="system" width="64" height="52"/>
         <image name="rev-logo" width="180" height="56"/>
     </resources>
 </document>

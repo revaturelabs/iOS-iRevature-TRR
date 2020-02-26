@@ -49,11 +49,11 @@ class UserInfoBusinessService : UserInfoProtocol
     }
     
 //potentially need but unused at the moment
-//    func getUserInfoDB() ->User? {
-//        let userQuery = UserQuery()
-//        let users = userQuery.selectAllUsers()
-//        return users[0]
-//    }
+   func getUserInfoDB() ->User? {
+        let userQuery = UserQuery()
+        let users = userQuery.selectAllUsers()
+        return users[0]
+    }
     
     let db = try! Connection(getDBFilePath(dbName: "iRevatureTrainingRoomRequests"))
     let users = Table("User")

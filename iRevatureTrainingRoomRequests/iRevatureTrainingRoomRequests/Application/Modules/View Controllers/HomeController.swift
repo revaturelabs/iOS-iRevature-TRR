@@ -25,6 +25,24 @@ class HomeController: BaseController{
         present(locationVC, animated: false, completion: nil)
     }
     
+    //feature coming soon to view requests
+    @IBAction func viewRequests(_ sender: Any) {
+        let alert = UIAlertController(title: "View Requests", message: "Feature coming soon", preferredStyle: .alert)
+
+    alert.addAction(UIAlertAction(title: "Acknowledge", style: .default, handler: nil))
+
+    self.present(alert, animated: true)
+    }
+    
+    //feature coming soon to cancel a request
+    @IBAction func cancelRequests(_ sender: Any) {
+    let alert = UIAlertController(title: "Cancel Requests", message: "Feature coming soon", preferredStyle: .alert)
+
+    alert.addAction(UIAlertAction(title: "Acknowledge", style: .default, handler: nil))
+
+    self.present(alert, animated: true)
+    }
+    
     //overriding view did load to refresh local database
     override func viewDidLoad() {
         
@@ -36,7 +54,7 @@ class HomeController: BaseController{
         if let currentUserInfo:User = userInfoBusinessService.getUserInfo()
         {
             let name = currentUserInfo.name
-            welcomeLabel.text = "Welcome back \(name)"
+            welcomeLabel.text = "\(name)"
         }
 
     }
