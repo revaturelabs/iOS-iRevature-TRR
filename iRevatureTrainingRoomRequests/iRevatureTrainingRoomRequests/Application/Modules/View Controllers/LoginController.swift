@@ -63,24 +63,22 @@ class LoginController: BaseController {
     //    }
     func performAuthentication(login: Login){
         let userKeepMeLogged = keepMeLoggedSwitch.isOn
-        
-        if(login.username == "testuser1@revature.com" && login.password == "test123"){
-            let loginapi = RestAlamoFireManager()
-            loginapi.postLogin(login: login, completionHandler: { user in
+        let loginapi = RestAlamoFireManager()
+        loginapi.postLogin(login: login, completionHandler: { user in
+            print(user)
+            if(user.statusCode == 201){
                 let userData = User(name: login.username, role: user.currentSystemRole.name, email: login.username, token: user.loginToken, keepmelogged: userKeepMeLogged)
                 if self.userInfoBusinessService.setUserInfo(userObject: userData) {
                     print("User preferences stored")
+                    self.navigateToLocationPicker()
                 } else {
                     print("Something went wrong")
                 }
-            }
-            )
-            navigateToLocationPicker()
-        } else {
-            failureMsgLabel.text = "Invalid Credentials,Please try again"
-            os_log("Login failed",log: OSLog.default, type: .info)
-            debugPrint("Login Failed")
-        }
+            } else {
+                self.failureMsgLabel.text = "Invalid Credentials,Please try again"
+                os_log("Login failed",log: OSLog.default, type: .info)
+                debugPrint("Login Failed")
+            }})
     }
     
     func navigateToLocationPicker(){
