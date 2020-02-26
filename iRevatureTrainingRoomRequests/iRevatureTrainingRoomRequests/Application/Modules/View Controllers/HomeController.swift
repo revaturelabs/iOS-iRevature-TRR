@@ -17,6 +17,12 @@ class HomeController: BaseController{
     
     @IBOutlet weak var welcomeLabel: UILabel!
     
+    @IBAction func makeRequest(_ sender: Any) {
+        let locationVC:LocationPickerController = UIStoryboard(name: "LocationPicker", bundle:nil).instantiateViewController(withIdentifier: "LocationPicker") as! LocationPickerController
+        os_log("Make Request",log: OSLog.default, type: .info)
+        present(locationVC, animated: false, completion: nil)
+    }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -36,4 +42,6 @@ class HomeController: BaseController{
         locationInfoBusinessService.setLocationInfoDB()
         roomInfoBusinessService.setRoomInfoDB()
     }
+    
+    
 }

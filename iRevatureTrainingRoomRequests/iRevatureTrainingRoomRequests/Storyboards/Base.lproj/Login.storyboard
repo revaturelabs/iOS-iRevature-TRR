@@ -195,7 +195,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="tto-po-R3M" kind="show" id="09G-Qn-ixW"/>
+                                            <action selector="makeRequest:" destination="NKh-rE-3O6" eventType="touchDown" id="zdx-oJ-gSn"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQ0-7m-5Lu">

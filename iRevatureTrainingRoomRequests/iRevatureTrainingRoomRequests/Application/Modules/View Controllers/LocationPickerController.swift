@@ -43,7 +43,7 @@ class LocationPickerController: BaseController, UIPickerViewDelegate, UIPickerVi
     
     func createItems(){
         let locations:[Location] = selectAllLocations()!
-        result = []
+        result.removeAll(keepingCapacity: false)
         for location in locations{
             result.append((location.State!) + "-" + location.Campus! as String + "-" + location.Building! as String)
         }
@@ -52,7 +52,6 @@ class LocationPickerController: BaseController, UIPickerViewDelegate, UIPickerVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.locationPickerView.delegate = self
         self.locationPickerView.dataSource = self
         createItems()
