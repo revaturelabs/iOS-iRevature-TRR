@@ -43,6 +43,7 @@ class LocationPickerController: BaseController, UIPickerViewDelegate, UIPickerVi
     
     func createItems(){
         let locations:[Location] = selectAllLocations()!
+        result = []
         for location in locations{
             result.append((location.State!) + "-" + location.Campus! as String + "-" + location.Building! as String)
         }

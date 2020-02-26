@@ -16,18 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back user" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iU4-ST-c0T">
-                                <rect key="frame" x="87" y="222" width="240" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="ChB-qd-NPh"/>
-                                    <constraint firstAttribute="width" constant="240" id="VyQ-1r-qUv"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Select Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBd-oK-49o">
-                                <rect key="frame" x="87" y="275" width="240" height="36"/>
+                                <rect key="frame" x="87" y="273" width="240" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="EiS-FT-SEa"/>
                                     <constraint firstAttribute="height" constant="36" id="zRP-B3-E7E"/>
@@ -37,10 +27,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ybr-mI-jXc">
-                                <rect key="frame" x="47" y="342" width="320" height="212"/>
+                                <rect key="frame" x="47" y="340" width="320" height="216"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94i-Mh-qRt">
-                                <rect key="frame" x="93" y="586" width="228" height="44"/>
+                                <rect key="frame" x="93" y="588" width="228" height="44"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.52156862749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="228" id="Xs7-ex-2Qd"/>
@@ -79,13 +69,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dba-dE-nEM" firstAttribute="centerX" secondItem="jwQ-ML-luP" secondAttribute="centerX" id="0VN-yY-veQ"/>
-                            <constraint firstItem="fBd-oK-49o" firstAttribute="top" secondItem="iU4-ST-c0T" secondAttribute="bottom" constant="17" id="84f-Sp-3ii"/>
-                            <constraint firstItem="iU4-ST-c0T" firstAttribute="centerX" secondItem="jwQ-ML-luP" secondAttribute="centerX" id="BaX-O5-5IB"/>
-                            <constraint firstItem="iU4-ST-c0T" firstAttribute="centerX" secondItem="jwQ-ML-luP" secondAttribute="centerX" id="CJl-Lc-jfL"/>
                             <constraint firstItem="94i-Mh-qRt" firstAttribute="centerX" secondItem="jwQ-ML-luP" secondAttribute="centerX" id="DCx-MC-NC5"/>
                             <constraint firstItem="dba-dE-nEM" firstAttribute="centerX" secondItem="jwQ-ML-luP" secondAttribute="centerX" id="KeU-6P-WGj"/>
                             <constraint firstItem="94i-Mh-qRt" firstAttribute="top" secondItem="Ybr-mI-jXc" secondAttribute="bottom" constant="32" id="M3P-m1-Bqh"/>
-                            <constraint firstItem="iU4-ST-c0T" firstAttribute="top" secondItem="dba-dE-nEM" secondAttribute="bottom" constant="8" id="VA7-Cf-emO"/>
+                            <constraint firstItem="fBd-oK-49o" firstAttribute="top" secondItem="dba-dE-nEM" secondAttribute="bottom" constant="59" id="R3V-kb-VW7"/>
                             <constraint firstItem="dba-dE-nEM" firstAttribute="top" secondItem="C1i-a2-Hyb" secondAttribute="top" constant="42" id="aIN-kb-uX7"/>
                             <constraint firstItem="Ybr-mI-jXc" firstAttribute="centerY" secondItem="jwQ-ML-luP" secondAttribute="centerY" id="cps-Dv-fsS"/>
                             <constraint firstItem="Ybr-mI-jXc" firstAttribute="top" secondItem="fBd-oK-49o" secondAttribute="bottom" constant="31" id="fdg-EY-ke5"/>
@@ -100,7 +87,6 @@
                     <navigationItem key="navigationItem" title="Title" id="R58-kU-e0o"/>
                     <connections>
                         <outlet property="locationPickerView" destination="Ybr-mI-jXc" id="J3X-ew-cKJ"/>
-                        <outlet property="welcomeTextField" destination="iU4-ST-c0T" id="KOn-TR-fSY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oqv-Ko-YsD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
