@@ -9,6 +9,7 @@
 import UIKit
 import os.log
 
+//Class that handles the swap requests
 class SwapController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate{
     
     @IBOutlet weak var roomTableView: UITableView!
@@ -23,6 +24,7 @@ class SwapController: UIViewController, UITableViewDataSource, UITableViewDelega
     var startDate:String = String()
     var endDate:String = String()
     
+    //initializes previous screen and sends back info passed here
     @IBAction func backButton(_ sender: Any) {
         let objSecondVC = self.storyboard!.instantiateViewController(withIdentifier: "TrainerWorkFlow1") as! RequestController
         objSecondVC.selectedRoom2 = selectedRoom3
@@ -30,10 +32,12 @@ class SwapController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.present(objSecondVC, animated: true, completion: nil)
     }
     
+    //will send the request to the database
     @IBAction func submitButton(_ sender: UIButton) {
         os_log("Swap Request sent",log: OSLog.default, type: .info)
     }
-
+    
+    //initializes the table view and picker view
     override func viewDidLoad() {
         super.viewDidLoad()
         // setupTableView()
@@ -45,15 +49,17 @@ class SwapController: UIViewController, UITableViewDataSource, UITableViewDelega
         createItems()
     }
     
+    //sets the number of sections in table view
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
+    //sets the number of rows in table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 7
     }
     
-    
+    //populates the table view with data from previously chosen room and a new chosen room
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         displayedRoom3 = []
         let room = roomByNumber(number: selectedRoom3!)
@@ -72,18 +78,22 @@ class SwapController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
+    //sets the number of components in pickerview
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
+    //sets the picker view rows
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return result.count
     }
     
+    //populates the picker view
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return result[row]
     }
     
+    //grabs the chosen info and passes it to the table view and updates the table view
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         // use the row to get the selected row from the picker view
@@ -94,6 +104,7 @@ class SwapController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.roomTableView.reloadData()
     }
     
+    //creates the array of items for the picker view
     func createItems(){
         let rooms:[Room] = selectAllRooms()
         result.removeAll()

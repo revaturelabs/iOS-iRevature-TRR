@@ -9,6 +9,7 @@
 import UIKit
 import os.log
 
+//Class to manage Requests
 class RequestController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet weak var roomTableView: UITableView!
@@ -23,7 +24,8 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
     var selectedRoom2:Int?
     var displayedRoom2: [String] = []
     
-    
+    //not fully implemented, need for future
+    //segmented control change handler
     @IBAction func RequestSegControlChange(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             //let segControlValue = 0
@@ -36,6 +38,7 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
         }
     }
     
+    //returns to the previous screen
     @IBAction func viewAllRoomsButton(_ sender: Any) {
             let objSecondVC = self.storyboard!.instantiateViewController(withIdentifier: "TrainerWorkFlow0") as! RoomPickerController
             objSecondVC.roomResult = selectedRoom2!
@@ -43,6 +46,7 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
             self.present(objSecondVC, animated: true, completion: nil)
     }
     
+    //Moves to the Swap request screen and sends the proper data to the next controller
     @IBAction func submitButton(_ sender: Any) {
         if segControlValue == 0{
             startDatePicker.datePickerMode = UIDatePicker.Mode.date
@@ -68,6 +72,7 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
         }
     }
 
+    //initializes the table view
     override func viewDidLoad() {
         super.viewDidLoad()
        // setupTableView()
@@ -75,15 +80,17 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
         roomTableView.dataSource = self
     }
     
+    //sets the number of components in table view
     func numberOfSections(in tableView: UITableView) -> Int {
      return 1
     }
     
-    
+    //sets the number of rows in table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
      return 3
     }
     
+    //populates the table view with the room info, gathered from previous screen
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let room = roomByNumber(number: selectedRoom2!)
         let cell = roomTableView.dequeueReusableCell(withIdentifier: "roomCell", for: indexPath) as! RoomTableViewCell

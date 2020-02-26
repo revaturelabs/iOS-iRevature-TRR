@@ -11,6 +11,7 @@ import os.log
 import Alamofire
 import SwiftyJSON
 
+//View controller class that handles the login screen
 class LoginController: BaseController {
     @IBOutlet weak var keepMeLoggedSwitch: UISwitch!
     @IBOutlet weak var failureMsgLabel: UILabel!
@@ -20,6 +21,7 @@ class LoginController: BaseController {
     
     var userInfoBusinessService: UserInfoBusinessService = UserInfoBusinessService()
     
+    //override the viewdid load to set userdefaults as the email
     override func viewDidLoad() {
         super.viewDidLoad()
         //check for existing userinfo data in userdefaults if found update the email textfield
@@ -61,6 +63,8 @@ class LoginController: BaseController {
     //            debugPrint("Login Failed")
     //        }
     //    }
+    
+    //Preforms the authentication based on the information on the API call
     func performAuthentication(login: Login){
         let userKeepMeLogged = keepMeLoggedSwitch.isOn
         let loginapi = RestAlamoFireManager()
@@ -81,6 +85,7 @@ class LoginController: BaseController {
             }})
     }
     
+    //navigates to the LocationPicker view controller
     func navigateToLocationPicker(){
         let storyboard = UIStoryboard(name: "LocationPicker", bundle: nil)
         let view = storyboard.instantiateInitialViewController()
