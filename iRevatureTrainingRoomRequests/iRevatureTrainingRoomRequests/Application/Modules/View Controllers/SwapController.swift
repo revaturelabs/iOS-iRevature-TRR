@@ -96,6 +96,7 @@ class SwapController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func createItems(){
         let rooms:[Room] = selectAllRooms()
+        result.removeAll()
         for room in rooms{
             let tempResult = room.roomNumber
             result.append("Room \(tempResult!)")
