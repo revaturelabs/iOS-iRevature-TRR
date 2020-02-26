@@ -25,12 +25,12 @@ class UserInfoBusinessService : UserInfoProtocol
         if let decodeduserInfo = (currentUserDefaults.value(forKey: "UserSharedInfo"))
         {
             let decodedUser = try? PropertyListDecoder().decode(User.self, from: decodeduserInfo as! Data)
-            os_log("Userdefaults obtained")
+            os_log("Userdefaults obtained",log: OSLog.default, type: .info)
             return decodedUser
         }
         else
         {
-            os_log("failed to get Userdefaults")
+            os_log("failed to get Userdefaults",log: OSLog.default, type: .info)
             return nil
         }
     }
@@ -39,11 +39,11 @@ class UserInfoBusinessService : UserInfoProtocol
     func setUserInfo(userObject: User) -> Bool {
         let currentUserDefaults = UserDefaults.standard
         if((try? currentUserDefaults.set(PropertyListEncoder().encode(userObject), forKey: "UserSharedInfo")) != nil){
-            os_log("Set userdefaults")
+            os_log("Set userdefaults",log: OSLog.default, type: .info)
             return true
         }
         else {
-            os_log("Failed to set userdefaults")
+            os_log("Failed to set userdefaults",log: OSLog.default, type: .info)
             return false
         }
     }
@@ -70,9 +70,9 @@ class UserInfoBusinessService : UserInfoProtocol
                     try self.db.run(self.users.insert(or: .replace, self.name <- trainer.name, self.role <- trainer.role, self.email <- trainer.email))
                 } catch let Result.error(message, code, statement) where code == SQLITE_CONSTRAINT {
                     print("constraint failed: \(message), in \(String(describing: statement))")
-                    os_log("Constraint failed")
+                    os_log("Constraint failed",log: OSLog.default, type: .info)
                 } catch let error {
-                    os_log("Insertion failed")
+                    os_log("Insertion failed",log: OSLog.default, type: .info)
                     print("insertion failed: \(error)")
                 }
             }

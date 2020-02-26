@@ -32,7 +32,7 @@ class UserQuery{
                 result.append(temp2)
                 
                 }
-            os_log("User is queried")
+            os_log("User is queried",log: OSLog.default, type: .info)
             return result[0]
             }
         }
@@ -49,7 +49,7 @@ class UserQuery{
             }
             result.append(temp)
         }
-        os_log("All users queried")
+        os_log("All users queried",log: OSLog.default, type: .info)
         return result
     }
 }

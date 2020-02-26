@@ -16,8 +16,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
             endingLineNumber = "63"
-            landmarkName = "setUserInfoDB()"
-            landmarkType = "7">
+            landmarkName = "UserInfoBusinessService"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

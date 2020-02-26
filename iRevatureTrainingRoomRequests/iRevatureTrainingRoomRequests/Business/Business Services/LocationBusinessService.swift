@@ -28,10 +28,10 @@ class LocationBusinessService: LocationInfoProtocol{
                     try self.db.run(self.locations.insert(or: .replace, self.building <- location.Building!, self.campus <- location.Campus!, self.state <- location.State!, self.id <- location.ID))
                 } catch let Result.error(message, code, statement) where code == SQLITE_CONSTRAINT {
                     print("constraint failed: \(message), in \(String(describing: statement))")
-                    os_log("Constraint failed")
+                    os_log("Constraint failed",log: OSLog.default, type: .info)
                 } catch let error {
                     print("insertion failed: \(error)")
-                    os_log("Insertion failed")
+                    os_log("Insertion failed",log: OSLog.default, type: .info)
                 }
             }
         })

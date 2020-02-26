@@ -34,10 +34,10 @@ class RestAlamoFireManager {
                encoder: URLEncodedFormParameterEncoder.default,
                headers: headers
         ).validate().responseDecodable(of: roomStatus.self){(response) in
-            os_log("Made it rooms with additional")
+            os_log("Made it rooms with additional",log: OSLog.default, type: .info)
             guard let room = response.value else{
                 print("Error appeared \(String(describing: response.error))")
-                os_log("Error")
+                os_log("Error",log: OSLog.default, type: .info)
              //   print(response.error?.errorDescription! ?? "Unknown error found")
                 return
             }
@@ -84,11 +84,11 @@ class RestAlamoFireManager {
                encoder: URLEncodedFormParameterEncoder.default,
                headers: headers
         ).validate().responseDecodable(of: locationStatus.self){(response) in
-            os_log("Made it locations")
+            os_log("Made it locations",log: OSLog.default, type: .info)
             guard let location = response.value else{
                 print("Error appeared \(String(describing: response.error))")
                 print(response.error?.errorDescription! ?? "Unknown error found")
-                os_log("Error")
+                os_log("Error",log: OSLog.default, type: .info)
                 return
             }
             completionHandler(location.alllocation)
@@ -121,7 +121,7 @@ class RestAlamoFireManager {
         ).validate().responseDecodable(of: UserJSON.self){
             (response) in
             guard let user = response.value else {
-                os_log("Error appeared")
+                os_log("Error appeared",log: OSLog.default, type: .info)
                 print(response.error?.errorDescription! ?? "Unknown error found")
                 return
             }

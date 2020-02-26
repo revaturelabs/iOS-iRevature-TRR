@@ -25,7 +25,7 @@ func locationByID(ID: Int) -> Location?{
     for location in try! db.prepare(temp) {
         result = Location.init(Building: location[building] ?? "Other", Campus: location[campus]!, State: location[state]!, LocationID: location[locationID], ID: location[id] ?? "0")
         }
-    os_log("location is queried")
+    os_log("location is queried",log: OSLog.default, type: .info)
     }
     return result
 }
@@ -41,6 +41,6 @@ func selectAllLocations() -> [Location]?{
         temp = Location.init(Building: location[building] ?? "Other", Campus: location[campus]!, State: location[state]!, LocationID: location[locationID]!, ID: location[id] ?? "0")
         result.append(temp)
     }
-    os_log("All locations queried")
+    os_log("All locations queried",log: OSLog.default, type: .info)
     return result
 }

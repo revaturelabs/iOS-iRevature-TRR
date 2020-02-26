@@ -29,7 +29,7 @@ func roomByNumber(number: Int) -> Room?{
             result.append(temp2)
         }
     }
-    os_log("Room is queried")
+    os_log("Room is queried",log: OSLog.default, type: .info)
         return result[0]
 }
 
@@ -46,6 +46,6 @@ func selectAllRooms() -> [Room]{
         
         result.append(temp)
     }
-    os_log("All rooms queried")
+    os_log("All rooms queried",log: OSLog.default, type: .info)
     return result
 }
