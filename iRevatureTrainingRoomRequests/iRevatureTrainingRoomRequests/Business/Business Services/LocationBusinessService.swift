@@ -11,6 +11,7 @@ import SQLite
 import SQLite3
 import os.log
 
+//class that handles locations
 class LocationBusinessService: LocationInfoProtocol{
     let db = try! Connection(getDBFilePath(dbName: "iRevatureTrainingRoomRequests"))
     let locations = Table("Location")
@@ -20,6 +21,7 @@ class LocationBusinessService: LocationInfoProtocol{
     var locationID = Expression<Int>("LocationID")
     var id = Expression<String?>("ID")
     
+    //Creates/Updates the info in the database base of the API
     func setLocationInfoDB(){
         _ = getLocationAPI(completionHandler: {
             allLocations in
@@ -37,6 +39,7 @@ class LocationBusinessService: LocationInfoProtocol{
         })
     }
     
+    //grabs the info from the API and passes it to the setLocationInfoDB method
     func getLocationAPI(completionHandler: @escaping ([Location]) -> Void) {
         let locationAPI = RestAlamoFireManager()
         _ = locationAPI.getLocations(completionHandler: {

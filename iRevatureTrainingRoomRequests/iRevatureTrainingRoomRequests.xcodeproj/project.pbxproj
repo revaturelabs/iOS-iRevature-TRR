@@ -385,8 +385,8 @@
 				847F3D6E23FC8A22001A4E84 /* HomeController.swift */,
 				D5FBA1C823F728FC00237B0A /* LocationPickerController.swift */,
 				D5FBA1CA23F7295C00237B0A /* RoomPickerController.swift */,
-				D5FBA1CC23F7298C00237B0A /* SwapController.swift */,
 				D5FBA1CE23F7299A00237B0A /* RequestController.swift */,
+				D5FBA1CC23F7298C00237B0A /* SwapController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";

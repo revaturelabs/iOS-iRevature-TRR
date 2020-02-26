@@ -9,6 +9,7 @@
 import UIKit
 import os.log
 
+//Class for the picking the room
 class RoomPickerController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var roomTableView: UITableView!
@@ -22,6 +23,7 @@ class RoomPickerController: UIViewController, UITableViewDataSource, UITableView
     var room: Room = Room()
     public var displayedRoom: [String] = []
     
+    //Initializes the table view and picker view
     override func viewDidLoad() {
         super.viewDidLoad()
         // setupTableView()
@@ -33,7 +35,7 @@ class RoomPickerController: UIViewController, UITableViewDataSource, UITableView
         createItems()
     }
     
-    
+    //Moves to the Request Screen and sends the information required over
     @IBAction func submitButton(_ sender: Any) {
         let objSecondVC = self.storyboard!.instantiateViewController(withIdentifier: "TrainerWorkFlow1") as! RequestController
         objSecondVC.selectedRoom2 = roomResult
@@ -41,15 +43,18 @@ class RoomPickerController: UIViewController, UITableViewDataSource, UITableView
         os_log("Room picked",log: OSLog.default, type: .info)
         self.present(objSecondVC, animated: true, completion: nil)
     }
-    
+   
+    //sets the number of table view columns
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
+    //sets the number of table view rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
     
+    //Populates the table view with room information chosen
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         displayedRoom = []
         let room = roomByNumber(number: roomResult)
@@ -61,18 +66,22 @@ class RoomPickerController: UIViewController, UITableViewDataSource, UITableView
         return cell
     }
     
+    //sets te number of components in picker view
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
+    //sets the number of rows in picker view
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return result.count
     }
     
+    //Populates the picker view
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return result[row]
     }
     
+    //Grabs the chosen value of picker view and updates the table view with the chosen room
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         // use the row to get the selected row from the picker view
@@ -83,6 +92,7 @@ class RoomPickerController: UIViewController, UITableViewDataSource, UITableView
         self.roomTableView.reloadData()
     }
     
+    //Creates the array to be shown in the picker view
     func createItems(){
         let rooms:[Room] = selectAllRooms()
         for room in rooms{

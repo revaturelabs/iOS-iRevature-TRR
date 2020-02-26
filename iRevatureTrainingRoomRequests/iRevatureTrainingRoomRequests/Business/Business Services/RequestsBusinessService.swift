@@ -8,22 +8,26 @@
 
 import Foundation
 
+//unused at the moment, needed for future functions
+//class that manages requests
 class RequestsBusinessService:RequestsInfoProtocol,SwapRequestsProtocol{
     
-    
+    //TODO
     func getSwapRequestsInfo() -> SwapRequest? {
         return nil
     }
     
+    //TODO
     func setSwapRequestsInfo(RequestObject: SwapRequest) -> Bool? {
         return nil
     }
     
-    
+    //TODO
     func getRequestsInfo() -> RoomRequest? {
         return nil
     }
     
+    //TODO
     func setRequestsInfo(RequestObject: RoomRequest) -> Bool? {
         return nil
     }

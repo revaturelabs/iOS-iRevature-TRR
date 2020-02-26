@@ -11,6 +11,7 @@ import SQLite
 import SQLite3
 import os.log
 
+//Class for room info data management
 class RoomInfoBusinessService:RoomInfoProtocol{
     
     let db = try! Connection(getDBFilePath(dbName: "iRevatureTrainingRoomRequests"))
@@ -22,6 +23,7 @@ class RoomInfoBusinessService:RoomInfoProtocol{
     var location = Expression<String?>("Location")
     var id = Expression<String?>("ID")
     
+    //Creates/Updates the database with info from the API
     func setRoomInfoDB(){
         _ = getRoomAPI(completionHandler: {
             allRooms in
@@ -39,6 +41,7 @@ class RoomInfoBusinessService:RoomInfoProtocol{
         })
     }
     
+    //grabs the data from the API and passes it to the setRoomInfoDB method
     func getRoomAPI(completionHandler: @escaping ([Room]) -> Void) {
         let roomAPI = RestAlamoFireManager()
         _ = roomAPI.getRooms(completionHandler: {

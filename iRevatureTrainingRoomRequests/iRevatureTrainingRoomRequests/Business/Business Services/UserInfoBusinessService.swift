@@ -48,7 +48,8 @@ class UserInfoBusinessService : UserInfoProtocol
         }
     }
     
-    func getUserInfoDB() ->User? {
+//potentially need but unused at the moment
+   func getUserInfoDB() ->User? {
         let userQuery = UserQuery()
         let users = userQuery.selectAllUsers()
         return users[0]
@@ -62,6 +63,7 @@ class UserInfoBusinessService : UserInfoProtocol
     let token = Expression<String?>("Token")
     let keepMeLogged = Expression<Int?>("KeepMeLogged")
     
+    //Creates/Updates the info in the user table in database
     func setUserInfoDB(){
         _ = getTrainerAPI(completionHandler: {
             allTrainers in
@@ -78,6 +80,8 @@ class UserInfoBusinessService : UserInfoProtocol
             }
         })
     }
+    
+    //gets the API and passes the info to the setUserInfoDB 
     func getTrainerAPI(completionHandler: @escaping ([User]) -> Void) {
         let trainerAPI = RestAlamoFireManager()
         _ = trainerAPI.getTrainers(completionHandler: {
