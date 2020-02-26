@@ -10,6 +10,8 @@ import Foundation
 import SQLite
 import os.log
 
+
+//Responsible for all queries to the local database relating to the user
 class UserQuery{
     let db = try! Connection(getDBFilePath(dbName: "iRevatureTrainingRoomRequests"))
     let users = Table("User")
@@ -19,10 +21,11 @@ class UserQuery{
     let token = Expression<String?>("Token")
     let keepMeLogged = Expression<Int?>("KeepMeLogged")
     
+    //Finds all users stored in the local database
     func selectAllUsers() -> [User]{
     
         var temp: User
-        
+        //Finds user specified by their specific UserID
         func userByID(ID: Int) -> User?{
             var result: [User] = []
             do{

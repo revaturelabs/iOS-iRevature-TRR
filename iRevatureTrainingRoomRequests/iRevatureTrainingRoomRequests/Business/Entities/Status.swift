@@ -8,6 +8,7 @@
 
 import Foundation
 
+//This class enumerates all possible statuses for a room in the database
 enum Status{
     case pending
     case assigned
@@ -51,7 +52,8 @@ extension Status: Codable {
             try container.encode(2, forKey: .rawValue)
         }
     }
-    
+  
+    //Returns a Status from the provided string
     static func statusType(assign: String) -> Status?{
         switch assign{
         case "pending":

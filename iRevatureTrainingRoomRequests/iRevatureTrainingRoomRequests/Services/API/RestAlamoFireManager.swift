@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import os.log
 
+//This class is responsible for all API interaction throughout the project
 class RestAlamoFireManager {
     
     
@@ -19,8 +20,8 @@ class RestAlamoFireManager {
     "type": "training"
     ]
     
+    //Returns all rooms to the calling function from the API
     func getRooms(completionHandler: @escaping ([roomJSON]) -> Void) {
-    
         let headers: HTTPHeaders = [
             "Authorization": "Bearer" + userInfo.getUserInfo()!.token!,
         "Accept": "application/json"
@@ -45,8 +46,8 @@ class RestAlamoFireManager {
         }
     }
     
+    //Returns all trainers to the calling function from the API
     func getTrainers(completionHandler: @escaping ([trainerJSON]) -> Void) {
-     
         let headers: HTTPHeaders = [
             "Authorization": "Bearer" + userInfo.getUserInfo()!.token!,
              "Accept": "application/json"
@@ -70,6 +71,7 @@ class RestAlamoFireManager {
         }
     }
     
+    //Returns all locations to the calling function from the API
     func getLocations(completionHandler: @escaping ([locationJSON]) -> Void) {
         
         let headers: HTTPHeaders = [
@@ -95,22 +97,27 @@ class RestAlamoFireManager {
         }
     }
     
+    //TODO
     func getRoomRequests() -> [RoomRequest]?{
         return nil
     }
     
+    //TODO
     func getSwapRoomRequests() -> [SwapRequest]?{
         return nil
     }
     
+    //TODO
     func postRoomRequest(roomRequest: RoomRequest){
         
     }
     
+    //TODO
     func postSwapRequest(swapRequest: SwapRequest){
         
     }
     
+    //Sends a login request to the API and returns a valid token if valid
     func postLogin(login: Login, completionHandler: @escaping (UserJSON) -> Void) {
         let login = Login(username: login.username, password: login.password)
         AF.request(

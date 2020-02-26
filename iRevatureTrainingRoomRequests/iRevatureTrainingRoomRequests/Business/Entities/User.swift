@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Base Struct for Users as stored on the Database
 struct User: Codable {
     var name: String
     var role: String?

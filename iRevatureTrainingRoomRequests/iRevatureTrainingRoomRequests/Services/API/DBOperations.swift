@@ -13,7 +13,6 @@ public func getDBFilePath(dbName:String) -> String
 {
  
   var filePath:URL?
-   
   if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first{
     filePath = dir.appendingPathComponent(dbName + ".db")
      

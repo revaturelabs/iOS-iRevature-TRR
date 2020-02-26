@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Base Struct for Rooms as stored on the Database
 struct Room:Codable{
     var roomNumber: Int?
     var batchName: String?

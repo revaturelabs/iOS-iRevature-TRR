@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Structs for interacting with the Trainer API
 struct trainerStatus: Codable{
     var statusCode: Int
     var descriptions: String
