@@ -18,6 +18,8 @@ let campus = Expression<String?>("Campus")
 let building = Expression<String?>("Building")
 let id = Expression<String?>("ID")
 
+
+//Returns a specific location from the local database based on the location ID
 func locationByID(ID: Int) -> Location?{
     var result: Location =  Location()
     do{
@@ -30,6 +32,7 @@ func locationByID(ID: Int) -> Location?{
     return result
 }
 
+//Returns a array of all Locations stored on the local database
 func selectAllLocations() -> [Location]?{
     var temp: Location
     //var recordCount = users.count

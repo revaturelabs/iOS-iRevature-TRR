@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Login struct to be sent to the API
 struct Login: Codable {
     var username: String
     var password: String

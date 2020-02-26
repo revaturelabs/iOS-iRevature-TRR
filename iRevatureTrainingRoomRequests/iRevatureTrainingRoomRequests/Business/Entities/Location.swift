@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Base Struct for Locations as stored on the Database
 struct Location:Codable{
     var Building: String?
     var Campus: String?

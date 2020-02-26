@@ -18,6 +18,8 @@ let instructorName = Expression<String?>("InstructorName")
 let status = Expression<String?>("Status")
 let location = Expression<Int?>("LocationID")
 
+
+//Finds a room from the local Database using its room ID
 func roomByNumber(number: Int) -> Room?{
     var result: [Room] = []
     do{
@@ -33,6 +35,7 @@ func roomByNumber(number: Int) -> Room?{
         return result[0]
 }
 
+//Returns an array of all the rooms stored on the local database
 func selectAllRooms() -> [Room]{
     
     var temp: Room

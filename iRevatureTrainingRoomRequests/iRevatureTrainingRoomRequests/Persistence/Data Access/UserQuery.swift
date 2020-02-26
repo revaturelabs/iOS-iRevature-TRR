@@ -21,10 +21,11 @@ class UserQuery{
     let token = Expression<String?>("Token")
     let keepMeLogged = Expression<Int?>("KeepMeLogged")
     
+    //Finds all users stored in the local database
     func selectAllUsers() -> [User]{
     
         var temp: User
-        
+        //Finds user specified by their specific UserID
         func userByID(ID: Int) -> User?{
             var result: [User] = []
             do{
