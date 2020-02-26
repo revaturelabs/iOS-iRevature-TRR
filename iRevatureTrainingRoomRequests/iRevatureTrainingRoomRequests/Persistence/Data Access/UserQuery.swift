@@ -10,6 +10,8 @@ import Foundation
 import SQLite
 import os.log
 
+
+//Responsible for all queries to the local database relating to the user
 class UserQuery{
     let db = try! Connection(getDBFilePath(dbName: "iRevatureTrainingRoomRequests"))
     let users = Table("User")

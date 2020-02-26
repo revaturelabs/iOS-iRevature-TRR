@@ -49,6 +49,7 @@
 		D5FC7D1A23F349B700E5ECE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5FC7D1823F349B700E5ECE8 /* LaunchScreen.storyboard */; };
 		D5FC7D2523F349B700E5ECE8 /* iRevatureTrainingRoomRequestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC7D2423F349B700E5ECE8 /* iRevatureTrainingRoomRequestsTests.swift */; };
 		D5FC7D3023F349B700E5ECE8 /* iRevatureTrainingRoomRequestsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FC7D2F23F349B700E5ECE8 /* iRevatureTrainingRoomRequestsUITests.swift */; };
+		D5FE60402406FCD00006D99E /* iRevatureTrainingRoomRequests.db in Resources */ = {isa = PBXBuildFile; fileRef = D5FE603F2406FCD00006D99E /* iRevatureTrainingRoomRequests.db */; };
 		E2CA5F6923FB229500EE9203 /* UserInfoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CA5F6823FB229500EE9203 /* UserInfoProtocol.swift */; };
 		E2CA5F6B23FB238700EE9203 /* UserInfoBusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CA5F6A23FB238700EE9203 /* UserInfoBusinessService.swift */; };
 /* End PBXBuildFile section */
@@ -116,6 +117,7 @@
 		D5FC7D2B23F349B700E5ECE8 /* iRevatureTrainingRoomRequestsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iRevatureTrainingRoomRequestsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5FC7D2F23F349B700E5ECE8 /* iRevatureTrainingRoomRequestsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRevatureTrainingRoomRequestsUITests.swift; sourceTree = "<group>"; };
 		D5FC7D3123F349B700E5ECE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5FE603F2406FCD00006D99E /* iRevatureTrainingRoomRequests.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = iRevatureTrainingRoomRequests.db; path = iRevatureTrainingRoomRequests/Persistence/Repository/iRevatureTrainingRoomRequests.db; sourceTree = "<group>"; };
 		E2CA5F6823FB229500EE9203 /* UserInfoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoProtocol.swift; sourceTree = "<group>"; };
 		E2CA5F6A23FB238700EE9203 /* UserInfoBusinessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoBusinessService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -392,6 +394,7 @@
 		D5FC7D0023F349B600E5ECE8 = {
 			isa = PBXGroup;
 			children = (
+				D5FE603F2406FCD00006D99E /* iRevatureTrainingRoomRequests.db */,
 				D5FC7D0B23F349B600E5ECE8 /* iRevatureTrainingRoomRequests */,
 				D5FC7D2323F349B700E5ECE8 /* iRevatureTrainingRoomRequestsTests */,
 				D5FC7D2E23F349B700E5ECE8 /* iRevatureTrainingRoomRequestsUITests */,
@@ -566,6 +569,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5FE60402406FCD00006D99E /* iRevatureTrainingRoomRequests.db in Resources */,
 				D5FC7D1A23F349B700E5ECE8 /* LaunchScreen.storyboard in Resources */,
 				D5FC7D1723F349B700E5ECE8 /* Assets.xcassets in Resources */,
 				847F3D4523F72154001A4E84 /* LocationPicker.storyboard in Resources */,
