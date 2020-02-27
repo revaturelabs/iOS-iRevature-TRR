@@ -36,6 +36,11 @@ class SwapController: UIViewController, UITableViewDataSource, UITableViewDelega
     //will send the request to the database
     @IBAction func submitButton(_ sender: UIButton) {
         os_log("Swap Request sent",log: OSLog.default, type: .info)
+            let alert = UIAlertController(title: "Swap Request", message: "Email will be sent and database updated", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Acknowledge", style: .default, handler: nil))
+
+        self.present(alert, animated: true)
     }
     
     //initializes the table view and picker view
