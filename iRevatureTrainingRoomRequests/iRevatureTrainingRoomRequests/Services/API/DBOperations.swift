@@ -70,25 +70,3 @@ public func getDBFilePath(dbName:String) -> String
    
   return ""
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Message #project2-ios-feb2020-usf-nec
-
-
-Downloads
-
-
