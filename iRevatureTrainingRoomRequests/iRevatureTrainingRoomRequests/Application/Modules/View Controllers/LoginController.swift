@@ -93,3 +93,9 @@ class LoginController: BaseController {
         self.present(view!, animated: true, completion: nil)
     }
 }
+
+//close keyboard if user touches outside of text fields
+override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    view.endEditing(true)
+    super.touchesBegan(touches , with: event)
+}
