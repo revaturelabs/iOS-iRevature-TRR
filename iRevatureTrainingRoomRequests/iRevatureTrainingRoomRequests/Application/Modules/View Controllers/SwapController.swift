@@ -17,8 +17,8 @@ class SwapController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var secondRoomPicker: UIPickerView!
     
     var result:[String] = []
-    var roomResult:Int = 1
-    var selectedRoom3:Int?
+    var roomResult:Int = Int()
+    var selectedRoom3:Int? = 14
     var displayedRoom3: [String] = []
     var dateRange2:String = String()
     var startDate:String = String()

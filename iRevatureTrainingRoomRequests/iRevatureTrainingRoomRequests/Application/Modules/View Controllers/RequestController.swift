@@ -22,6 +22,7 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
     var selectedDate:String = String()
     var selectedDate2:String = String()
     var selectedRoom2:Int?
+    var rooms:[Room] = selectAllRooms()
     var displayedRoom2: [String] = []
     
     //not fully implemented, need for future
@@ -61,12 +62,14 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
             let selectedDate2 = dateFormatter.string(from: endDatePicker.date)
             
             let dateRange = selectedDate + " - " + selectedDate2
-        
+            let roomResult0 = rooms[0].roomNumber
+            
             let objSecondVC = self.storyboard!.instantiateViewController(withIdentifier: "TrainerWorkFlow2") as! SwapController
             objSecondVC.selectedRoom3 = selectedRoom2
             objSecondVC.dateRange2 = dateRange
             objSecondVC.startDate = selectedDate
             objSecondVC.endDate = selectedDate2
+            objSecondVC.roomResult = roomResult0!
             objSecondVC.modalPresentationStyle = .fullScreen
             self.navigationController?.pushViewController(objSecondVC, animated: true)
             os_log("Move to swap request",log: OSLog.default, type: .info)
