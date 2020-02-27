@@ -28,6 +28,7 @@ class SwapController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func backButton(_ sender: Any) {
         let objSecondVC = self.storyboard!.instantiateViewController(withIdentifier: "TrainerWorkFlow1") as! RequestController
         objSecondVC.selectedRoom2 = selectedRoom3
+        objSecondVC.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(objSecondVC, animated: true)
         self.present(objSecondVC, animated: true, completion: nil)
     }

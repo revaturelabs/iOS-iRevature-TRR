@@ -73,6 +73,7 @@ class LocationPickerController: BaseController, UIPickerViewDelegate, UIPickerVi
         // Instantiate the desired view controller from the storyboard using the view controllers identifier
         // Cast is as the custom view controller type you created in order to access it's properties and methods
         let customViewController = storyboard.instantiateViewController(withIdentifier: "HomeScreen")
+        customViewController.modalPresentationStyle = .fullScreen
         present(customViewController, animated: false, completion: nil)
         os_log("User logged out",log: OSLog.default, type: .info)
     }
@@ -82,6 +83,7 @@ class LocationPickerController: BaseController, UIPickerViewDelegate, UIPickerVi
         let roomResult0 = rooms[0].roomNumber
         let TrainerVC:RoomPickerController = UIStoryboard(name: "TrainerWorkFlow", bundle:nil).instantiateViewController(withIdentifier: "TrainerWorkFlow0") as! RoomPickerController
         TrainerVC.roomResult = roomResult0!
+        TrainerVC.modalPresentationStyle = .fullScreen
         os_log("Location picked",log: OSLog.default, type: .info)
         present(TrainerVC, animated: false, completion: nil)
     }

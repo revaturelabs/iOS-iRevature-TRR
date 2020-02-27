@@ -26,6 +26,7 @@ class RoomPickerController: UIViewController, UITableViewDataSource, UITableView
     //back to location picker
     @IBAction func backToLocations(_ sender: Any) {
         let locationVC:LocationPickerController = UIStoryboard(name: "LocationPicker", bundle:nil).instantiateViewController(withIdentifier: "LocationPicker") as! LocationPickerController
+        locationVC.modalPresentationStyle = .fullScreen
         os_log("Make Request",log: OSLog.default, type: .info)
         present(locationVC, animated: false, completion: nil)
     }
@@ -47,6 +48,7 @@ class RoomPickerController: UIViewController, UITableViewDataSource, UITableView
         let objSecondVC = self.storyboard!.instantiateViewController(withIdentifier: "TrainerWorkFlow1") as! RequestController
         objSecondVC.selectedRoom2 = roomResult
         self.navigationController?.pushViewController(objSecondVC, animated: true)
+        objSecondVC.modalPresentationStyle = .fullScreen
         os_log("Room picked",log: OSLog.default, type: .info)
         self.present(objSecondVC, animated: true, completion: nil)
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aut-aC-yUz">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -11,23 +11,23 @@
         <!--Room Picker Controller-->
         <scene sceneID="ycZ-l5-yvK">
             <objects>
-                <viewController storyboardIdentifier="TrainerWorkFlow0" id="aut-aC-yUz" customClass="RoomPickerController" customModule="iRevatureTrainingRoomRequests" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrainerWorkFlow0" wantsFullScreenLayout="YES" id="aut-aC-yUz" customClass="RoomPickerController" customModule="iRevatureTrainingRoomRequests" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rlc-9R-Fij">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N1Q-oa-LUy">
-                                <rect key="frame" x="0.0" y="94" width="375" height="342"/>
+                                <rect key="frame" x="0.0" y="138" width="414" height="342"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="342" id="5Cd-Vm-z4b"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="roomCell" id="AJU-C8-ZGc" customClass="RoomTableViewCell" customModule="iRevatureTrainingRoomRequests" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AJU-C8-ZGc" id="car-dD-oz8">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Batch Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7z-B4-L5S">
@@ -47,7 +47,7 @@
                                 <sections/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZV9-dQ-MmK">
-                                <rect key="frame" x="20" y="44" width="73" height="35"/>
+                                <rect key="frame" x="20" y="88" width="73" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="73" id="DrV-sx-oWh"/>
                                     <constraint firstAttribute="height" constant="35" id="UJz-VN-NyC"/>
@@ -59,7 +59,7 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="jX4-CF-zT1">
-                                <rect key="frame" x="0.0" y="552" width="375" height="32"/>
+                                <rect key="frame" x="0.0" y="747" width="414" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="5Y9-Qc-f2Z"/>
                                 </constraints>
@@ -70,7 +70,7 @@
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEa-go-kTQ">
-                                <rect key="frame" x="73.5" y="606" width="228" height="44"/>
+                                <rect key="frame" x="93" y="801" width="228" height="44"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.52156862749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="J6A-dk-d8z"/>
@@ -85,7 +85,7 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGd-dp-QEH">
-                                <rect key="frame" x="0.0" y="456" width="375" height="75"/>
+                                <rect key="frame" x="0.0" y="500" width="414" height="226"/>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -131,13 +131,13 @@
         <!--Request Controller-->
         <scene sceneID="khN-Og-jZV">
             <objects>
-                <viewController storyboardIdentifier="TrainerWorkFlow1" id="1aD-Ho-K7f" customClass="RequestController" customModule="iRevatureTrainingRoomRequests" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrainerWorkFlow1" wantsFullScreenLayout="YES" id="1aD-Ho-K7f" customClass="RequestController" customModule="iRevatureTrainingRoomRequests" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s9s-4O-YiH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0g-oY-KxR">
-                                <rect key="frame" x="20" y="44" width="109" height="5"/>
+                                <rect key="frame" x="20" y="88" width="109" height="27"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
                                 <state key="normal" title="&lt; View All Rooms"/>
                                 <connections>
@@ -145,17 +145,17 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jZP-3V-zg3">
-                                <rect key="frame" x="0.0" y="54" width="375" height="226"/>
+                                <rect key="frame" x="0.0" y="120" width="414" height="226"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="226" id="cb7-Fu-qdg"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="roomCell" id="ee5-2r-hmt" customClass="RoomTableViewCell" customModule="iRevatureTrainingRoomRequests" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ee5-2r-hmt" id="N3b-VB-ph9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Room #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNb-PS-Amc">
@@ -175,7 +175,7 @@
                                 <sections/>
                             </tableView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Mfo-cO-HTQ">
-                                <rect key="frame" x="27.5" y="310" width="320" height="68"/>
+                                <rect key="frame" x="47" y="376" width="320" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68" id="Mmc-Sc-I4R"/>
                                     <constraint firstAttribute="width" constant="320" id="nl3-eY-2eW"/>
@@ -202,7 +202,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpl-sM-Rxc">
-                                <rect key="frame" x="73.5" y="604" width="228" height="44"/>
+                                <rect key="frame" x="93" y="799" width="228" height="44"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.52156862749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="228" id="2hh-pe-j54"/>
@@ -220,7 +220,7 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="VYm-9z-yWq">
-                                <rect key="frame" x="0.0" y="553" width="375" height="32"/>
+                                <rect key="frame" x="0.0" y="748" width="414" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="Xa2-08-fDM"/>
                                 </constraints>
@@ -298,13 +298,13 @@
         <!--Swap Controller-->
         <scene sceneID="3fU-ye-ZSj">
             <objects>
-                <viewController storyboardIdentifier="TrainerWorkFlow2" id="mXB-5c-bgT" customClass="SwapController" customModule="iRevatureTrainingRoomRequests" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrainerWorkFlow2" wantsFullScreenLayout="YES" id="mXB-5c-bgT" customClass="SwapController" customModule="iRevatureTrainingRoomRequests" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="StR-MA-AtG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILN-ek-huG">
-                                <rect key="frame" x="20" y="44" width="60" height="35"/>
+                                <rect key="frame" x="20" y="88" width="60" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="8UM-7g-E1e"/>
                                     <constraint firstAttribute="width" constant="60" id="eh9-Ge-25L"/>
@@ -316,17 +316,17 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HeM-Cj-P4f">
-                                <rect key="frame" x="0.0" y="87" width="375" height="370"/>
+                                <rect key="frame" x="0.0" y="131" width="414" height="370"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="370" id="kFF-w3-haL"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="roomCell" id="Kkd-rv-86G" customClass="RoomTableViewCell" customModule="iRevatureTrainingRoomRequests" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kkd-rv-86G" id="Hed-pJ-fWQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start/End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8O-pI-Ryk">
@@ -346,7 +346,7 @@
                                 <sections/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77e-5R-gTE">
-                                <rect key="frame" x="73.5" y="596" width="228" height="44"/>
+                                <rect key="frame" x="93" y="791" width="228" height="44"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.52156862749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="R7k-Qb-ACs"/>
@@ -361,7 +361,7 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ux-Ga-n1w">
-                                <rect key="frame" x="0.0" y="465" width="375" height="123"/>
+                                <rect key="frame" x="0.0" y="509" width="414" height="216"/>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

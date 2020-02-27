@@ -42,6 +42,7 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
     @IBAction func viewAllRoomsButton(_ sender: Any) {
             let objSecondVC = self.storyboard!.instantiateViewController(withIdentifier: "TrainerWorkFlow0") as! RoomPickerController
             objSecondVC.roomResult = selectedRoom2!
+            objSecondVC.modalPresentationStyle = .fullScreen
             self.navigationController?.pushViewController(objSecondVC, animated: true)
             self.present(objSecondVC, animated: true, completion: nil)
     }
@@ -66,6 +67,7 @@ class RequestController: UIViewController, UITableViewDataSource, UITableViewDel
             objSecondVC.dateRange2 = dateRange
             objSecondVC.startDate = selectedDate
             objSecondVC.endDate = selectedDate2
+            objSecondVC.modalPresentationStyle = .fullScreen
             self.navigationController?.pushViewController(objSecondVC, animated: true)
             os_log("Move to swap request",log: OSLog.default, type: .info)
             self.present(objSecondVC, animated: true, completion: nil)
