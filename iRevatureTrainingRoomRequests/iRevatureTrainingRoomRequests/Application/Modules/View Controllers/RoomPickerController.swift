@@ -23,6 +23,13 @@ class RoomPickerController: UIViewController, UITableViewDataSource, UITableView
     var room: Room = Room()
     public var displayedRoom: [String] = []
     
+    //back to location picker
+    @IBAction func backToLocations(_ sender: Any) {
+        let locationVC:LocationPickerController = UIStoryboard(name: "LocationPicker", bundle:nil).instantiateViewController(withIdentifier: "LocationPicker") as! LocationPickerController
+        os_log("Make Request",log: OSLog.default, type: .info)
+        present(locationVC, animated: false, completion: nil)
+    }
+    
     //Initializes the table view and picker view
     override func viewDidLoad() {
         super.viewDidLoad()

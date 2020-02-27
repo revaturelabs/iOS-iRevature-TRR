@@ -12,7 +12,7 @@ import Alamofire
 import SwiftyJSON
 
 //View controller class that handles the login screen
-class LoginController: BaseController,UITextFieldDelegate{
+class LoginController: BaseController, UITextFieldDelegate{
     @IBOutlet weak var keepMeLoggedSwitch: UISwitch!
     @IBOutlet weak var failureMsgLabel: UILabel!
     @IBOutlet weak var usernameTextField: UITextField!
@@ -24,7 +24,7 @@ class LoginController: BaseController,UITextFieldDelegate{
     //override the viewdid load to set userdefaults as the email
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.UITextfield.Delegate = self
+        passwordTextField.delegate = self
         //check for existing userinfo data in userdefaults if found update the email textfield
         if let currentUserInfo:User = userInfoBusinessService.getUserInfo()
         {
@@ -95,9 +95,17 @@ class LoginController: BaseController,UITextFieldDelegate{
     }
     
     //close keyboard if user touches outside of text fields
+   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+       
+      passwordTextField.resignFirstResponder()
+      return true
+    }
+     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-        super.touchesBegan(touches , with: event)
+       
+      passwordTextField.resignFirstResponder()
+      self.view.endEditing(true)
+       
     }
 }
 

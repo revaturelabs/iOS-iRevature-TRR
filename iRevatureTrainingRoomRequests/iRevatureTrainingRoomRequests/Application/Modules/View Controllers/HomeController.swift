@@ -18,6 +18,12 @@ class HomeController: BaseController{
     
     @IBOutlet weak var welcomeLabel: UILabel!
     
+    //logs out
+    @IBAction func logOutButton(_ sender: Any) {
+        let objSecondVC = self.storyboard!.instantiateViewController(withIdentifier: "Login") as! LoginController
+        self.navigationController?.pushViewController(objSecondVC, animated: true)
+    }
+    
     //Method that transitions to the Trainer workflow
     @IBAction func makeRequest(_ sender: Any) {
         let locationVC:LocationPickerController = UIStoryboard(name: "LocationPicker", bundle:nil).instantiateViewController(withIdentifier: "LocationPicker") as! LocationPickerController

@@ -32,7 +32,6 @@
                                 </state>
                                 <connections>
                                     <action selector="submitButton:" destination="tFo-WJ-o2v" eventType="touchDown" id="LAL-p9-zAD"/>
-                                    <segue destination="ffe-HO-fyJ" kind="show" id="T2g-aC-ne4"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBd-oK-49o">
@@ -58,7 +57,6 @@
                                 <state key="normal" backgroundImage="house.fill" catalog="system"/>
                                 <connections>
                                     <action selector="logOutButton:" destination="tFo-WJ-o2v" eventType="touchDown" id="foX-jX-aK9"/>
-                                    <segue destination="A4r-kd-xR9" kind="show" id="KQa-Ns-nNG"/>
                                 </connections>
                             </button>
                         </subviews>
