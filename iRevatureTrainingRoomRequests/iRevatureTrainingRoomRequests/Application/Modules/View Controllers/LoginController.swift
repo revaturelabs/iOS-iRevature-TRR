@@ -75,7 +75,7 @@ class LoginController: BaseController, UITextFieldDelegate{
                 let userData = User(name: login.username, role: user.currentSystemRole.name, email: login.username, token: user.loginToken, keepmelogged: userKeepMeLogged)
                 if self.userInfoBusinessService.setUserInfo(userObject: userData) {
                     print("User preferences stored")
-                    self.navigateToLocationPicker()
+                    self.navigateToHome()
                 } else {
                     print("Something went wrong")
                 }
@@ -87,11 +87,11 @@ class LoginController: BaseController, UITextFieldDelegate{
     }
     
     //navigates to the LocationPicker view controller
-    func navigateToLocationPicker(){
-        let storyboard = UIStoryboard(name: "LocationPicker", bundle: nil)
-        let view = storyboard.instantiateInitialViewController()
-        view?.modalPresentationStyle = .fullScreen
-        self.present(view!, animated: true, completion: nil)
+    func navigateToHome(){
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let customViewController = storyboard.instantiateViewController(withIdentifier: "HomeScreen")
+        customViewController.modalPresentationStyle = .fullScreen
+        present(customViewController, animated: false, completion: nil)
     }
     
     //close keyboard if user touches outside of text fields
