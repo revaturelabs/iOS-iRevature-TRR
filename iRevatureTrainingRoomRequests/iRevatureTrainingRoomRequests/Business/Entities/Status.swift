@@ -92,9 +92,6 @@ extension Status: Codable {
             return "assigned"
         case .unassigned:
             return  "unassigned"
-        default:
-            print("invalid status")
-            return nil
         }
     }
 }
